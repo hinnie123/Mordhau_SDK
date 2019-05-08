@@ -7611,6 +7611,99 @@ void AMordhauAIController::DestroyController()
 }
 
 
+// Function Mordhau.MordhauBeaconClient.ServerReserveSlots
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// TArray<struct FSteamID>        InSteamIDs                     (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void AMordhauBeaconClient::ServerReserveSlots(TArray<struct FSteamID> InSteamIDs)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauBeaconClient.ServerReserveSlots");
+
+	AMordhauBeaconClient_ServerReserveSlots_Params params;
+	params.InSteamIDs = InSteamIDs;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauBeaconClient.ReserveSlots
+// (Final, Native, Public, HasOutParms)
+// Parameters:
+// struct FURL                    ConnectURL                     (Parm, OutParm)
+// TArray<struct FSteamID>        InSteamIDs                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMordhauBeaconClient::ReserveSlots(TArray<struct FSteamID> InSteamIDs, struct FURL* ConnectURL)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauBeaconClient.ReserveSlots");
+
+	AMordhauBeaconClient_ReserveSlots_Params params;
+	params.InSteamIDs = InSteamIDs;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (ConnectURL != nullptr)
+		*ConnectURL = params.ConnectURL;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauBeaconClient.ClientNotifyReservationStatus
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// int                            OpenSlots                      (Parm, ZeroConstructor, IsPlainOldData)
+// EReservationStatus             ReservationStatus              (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauBeaconClient::ClientNotifyReservationStatus(int OpenSlots, EReservationStatus ReservationStatus)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauBeaconClient.ClientNotifyReservationStatus");
+
+	AMordhauBeaconClient_ClientNotifyReservationStatus_Params params;
+	params.OpenSlots = OpenSlots;
+	params.ReservationStatus = ReservationStatus;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauBeaconClient.ClientNotifyOpenSlots
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// int                            OpenSlots                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauBeaconClient::ClientNotifyOpenSlots(int OpenSlots)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauBeaconClient.ClientNotifyOpenSlots");
+
+	AMordhauBeaconClient_ClientNotifyOpenSlots_Params params;
+	params.OpenSlots = OpenSlots;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauCameraComponent.UpdateCamera
 // (Native, Event, Public, BlueprintEvent)
 
@@ -15137,28 +15230,6 @@ bool UMordhauGameUserSettings::ShouldShowHitMarker()
 }
 
 
-// Function Mordhau.MordhauGameUserSettings.ShouldShowFriendlyMarkers
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UMordhauGameUserSettings::ShouldShowFriendlyMarkers()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.ShouldShowFriendlyMarkers");
-
-	UMordhauGameUserSettings_ShouldShowFriendlyMarkers_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function Mordhau.MordhauGameUserSettings.ShouldShowEquipment
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -15399,6 +15470,27 @@ void UMordhauGameUserSettings::SetTracersStayTime(float NewStayTime)
 }
 
 
+// Function Mordhau.MordhauGameUserSettings.SetThirdPersonDeathcamera
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewThirdPersonDeathCamera      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetThirdPersonDeathcamera(int NewThirdPersonDeathCamera)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetThirdPersonDeathcamera");
+
+	UMordhauGameUserSettings_SetThirdPersonDeathcamera_Params params;
+	params.NewThirdPersonDeathCamera = NewThirdPersonDeathCamera;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauGameUserSettings.SetShowTips
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -15620,27 +15712,6 @@ void UMordhauGameUserSettings::SetShowHitMarker(int NewShowHitMarker)
 
 	UMordhauGameUserSettings_SetShowHitMarker_Params params;
 	params.NewShowHitMarker = NewShowHitMarker;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Mordhau.MordhauGameUserSettings.SetShowFriendlyMarkers
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            NewShowFriendlyMarkers         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UMordhauGameUserSettings::SetShowFriendlyMarkers(int NewShowFriendlyMarkers)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetShowFriendlyMarkers");
-
-	UMordhauGameUserSettings_SetShowFriendlyMarkers_Params params;
-	params.NewShowFriendlyMarkers = NewShowFriendlyMarkers;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16197,6 +16268,27 @@ void UMordhauGameUserSettings::SetGamma(float NewGamma)
 }
 
 
+// Function Mordhau.MordhauGameUserSettings.SetFriendlyMarkers
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewFriendlyMarkers             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetFriendlyMarkers(int NewFriendlyMarkers)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetFriendlyMarkers");
+
+	UMordhauGameUserSettings_SetFriendlyMarkers_Params params;
+	params.NewFriendlyMarkers = NewFriendlyMarkers;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauGameUserSettings.SetFieldOfView
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -16473,6 +16565,28 @@ float UMordhauGameUserSettings::GetTracersStayTime()
 }
 
 
+// Function Mordhau.MordhauGameUserSettings.GetThirdPersonDeathCamera
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMordhauGameUserSettings::GetThirdPersonDeathCamera()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetThirdPersonDeathCamera");
+
+	UMordhauGameUserSettings_GetThirdPersonDeathCamera_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauGameUserSettings.GetShowTips
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -16659,28 +16773,6 @@ int UMordhauGameUserSettings::GetShowHitMarker()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetShowHitMarker");
 
 	UMordhauGameUserSettings_GetShowHitMarker_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function Mordhau.MordhauGameUserSettings.GetShowFriendlyMarkers
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UMordhauGameUserSettings::GetShowFriendlyMarkers()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetShowFriendlyMarkers");
-
-	UMordhauGameUserSettings_GetShowFriendlyMarkers_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -17407,6 +17499,28 @@ float UMordhauGameUserSettings::GetGamma()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetGamma");
 
 	UMordhauGameUserSettings_GetGamma_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetFriendlyMarkers
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMordhauGameUserSettings::GetFriendlyMarkers()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetFriendlyMarkers");
+
+	UMordhauGameUserSettings_GetFriendlyMarkers_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -20099,6 +20213,28 @@ int UMordhauInventory::STATIC_GetGoldItemDefID()
 }
 
 
+// Function Mordhau.MordhauInventory.GetGoldCompensationItemDefID
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMordhauInventory::STATIC_GetGoldCompensationItemDefID()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauInventory.GetGoldCompensationItemDefID");
+
+	UMordhauInventory_GetGoldCompensationItemDefID_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauInventory.FakeRewardDrop
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -22312,6 +22448,24 @@ void AMordhauPlayerController::FlushPendingAnglingInputs()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.FlushPendingAnglingInputs");
 
 	AMordhauPlayerController_FlushPendingAnglingInputs_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauPlayerController.FixGhostBug
+// (Final, Exec, Native, Public)
+
+void AMordhauPlayerController::FixGhostBug()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.FixGhostBug");
+
+	AMordhauPlayerController_FixGhostBug_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -25003,6 +25157,34 @@ class UDestroyMatchmakingSession* UDestroyMatchmakingSession::STATIC_DestroyMatc
 }
 
 
+// Function Mordhau.ReserveMordhauServerSessionSlots.ReserveMordhauServerSessionSlots
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// struct FServerSearchResult     SearchResult                   (ConstParm, Parm, OutParm, ReferenceParm)
+// TArray<struct FSteamID>        PartyMembers                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UReserveMordhauServerSessionSlots* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UReserveMordhauServerSessionSlots* UReserveMordhauServerSessionSlots::STATIC_ReserveMordhauServerSessionSlots(class UObject* WorldContextObject, const struct FServerSearchResult& SearchResult, TArray<struct FSteamID> PartyMembers)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.ReserveMordhauServerSessionSlots.ReserveMordhauServerSessionSlots");
+
+	UReserveMordhauServerSessionSlots_ReserveMordhauServerSessionSlots_Params params;
+	params.WorldContextObject = WorldContextObject;
+	params.SearchResult = SearchResult;
+	params.PartyMembers = PartyMembers;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauSingleton.SpawnEquipment
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -26234,6 +26416,29 @@ void UMordhauStats::IsAchievementUnlocked(const struct FAchievement& Achievement
 		*CallResult = params.CallResult;
 	if (bIsUnlocked != nullptr)
 		*bIsUnlocked = params.bIsUnlocked;
+}
+
+
+// Function Mordhau.MordhauStats.IncrementIntStatValueChecked
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UWorld*                  World                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FStatInt                Stat                           (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UMordhauStats::IncrementIntStatValueChecked(class UWorld* World, const struct FStatInt& Stat)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauStats.IncrementIntStatValueChecked");
+
+	UMordhauStats_IncrementIntStatValueChecked_Params params;
+	params.World = World;
+	params.Stat = Stat;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -27721,10 +27926,10 @@ bool UMordhauUtilityLibrary::STATIC_IsTestingBranch()
 // Function Mordhau.MordhauUtilityLibrary.IsSteamFriend
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class APlayerController*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AMordhauPlayerState*     Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauUtilityLibrary::STATIC_IsSteamFriend(class APlayerController* Player)
+bool UMordhauUtilityLibrary::STATIC_IsSteamFriend(class AMordhauPlayerState* Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.IsSteamFriend");
 
@@ -27833,10 +28038,10 @@ bool UMordhauUtilityLibrary::STATIC_IsPlayInEditor()
 // Function Mordhau.MordhauUtilityLibrary.IsPartyMember
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class APlayerController*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AMordhauPlayerState*     Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauUtilityLibrary::STATIC_IsPartyMember(class APlayerController* Player)
+bool UMordhauUtilityLibrary::STATIC_IsPartyMember(class AMordhauPlayerState* Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.IsPartyMember");
 

@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void SetColor(class UImage* Image, TArray<struct FLinearColor> Team_Color_Array, unsigned char Team);
+	void SetColor(class UImage* Image, TArray<struct FLinearColor> Team_Color_Array, unsigned char Team, class APlayerState* PlayerState);
 	void UpdateSpawnScreenIcons();
 	struct FEventReply OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent);
 	void UpdateSpawnPointWidgets();

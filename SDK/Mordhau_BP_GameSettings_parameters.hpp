@@ -14,6 +14,26 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_GameSettings.BP_GameSettings_C.UpdateThirdPersonDeathCameraCheckbox
+struct UBP_GameSettings_C_UpdateThirdPersonDeathCameraCheckbox_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.ApplyThirdPersonDeathCamera
+struct UBP_GameSettings_C_ApplyThirdPersonDeathCamera_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.ApplyKilledBy
+struct UBP_GameSettings_C_ApplyKilledBy_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.UpdateKilledByCheckbox
+struct UBP_GameSettings_C_UpdateKilledByCheckbox_Params
+{
+};
+
 // Function BP_GameSettings.BP_GameSettings_C.ApplyNoTeamColorsOnGear
 struct UBP_GameSettings_C_ApplyNoTeamColorsOnGear_Params
 {
@@ -89,8 +109,8 @@ struct UBP_GameSettings_C_ApplyHitmarker_Params
 {
 };
 
-// Function BP_GameSettings.BP_GameSettings_C.UpdateFriendlyMarkersCheckbox
-struct UBP_GameSettings_C_UpdateFriendlyMarkersCheckbox_Params
+// Function BP_GameSettings.BP_GameSettings_C.UpdateFriendlyMarkersDropdown
+struct UBP_GameSettings_C_UpdateFriendlyMarkersDropdown_Params
 {
 };
 
@@ -295,6 +315,16 @@ struct UBP_GameSettings_C_Update_Widgets_Params
 {
 };
 
+// Function BP_GameSettings.BP_GameSettings_C.OnShown
+struct UBP_GameSettings_C_OnShown_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
+struct UBP_GameSettings_C_BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__HideHudCheckbox_K2Node_ComponentBoundEvent_26_OnHovered__DelegateSignature
 struct UBP_GameSettings_C_BndEvt__HideHudCheckbox_K2Node_ComponentBoundEvent_26_OnHovered__DelegateSignature_Params
 {
@@ -307,16 +337,6 @@ struct UBP_GameSettings_C_BndEvt__GoreDropdown_K2Node_ComponentBoundEvent_30_OnH
 
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__RagdollLimitSlider_K2Node_ComponentBoundEvent_37_OnHovered__DelegateSignature
 struct UBP_GameSettings_C_BndEvt__RagdollLimitSlider_K2Node_ComponentBoundEvent_37_OnHovered__DelegateSignature_Params
-{
-};
-
-// Function BP_GameSettings.BP_GameSettings_C.BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
-struct UBP_GameSettings_C_BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function BP_GameSettings.BP_GameSettings_C.OnShown
-struct UBP_GameSettings_C_OnShown_Params
 {
 };
 
@@ -410,6 +430,11 @@ struct UBP_GameSettings_C_BndEvt__AmmoCheckbox_K2Node_ComponentBoundEvent_782_On
 {
 };
 
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature
+struct UBP_GameSettings_C_BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature_Params
+{
+};
+
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__AnnouncementsCheckbox_K2Node_ComponentBoundEvent_1001_OnHovered__DelegateSignature
 struct UBP_GameSettings_C_BndEvt__AnnouncementsCheckbox_K2Node_ComponentBoundEvent_1001_OnHovered__DelegateSignature_Params
 {
@@ -430,18 +455,18 @@ struct UBP_GameSettings_C_BndEvt__KillFeedCheckbox_K2Node_ComponentBoundEvent_13
 {
 };
 
-// Function BP_GameSettings.BP_GameSettings_C.BndEvt__FriendlyMarkersCheckboxHIDDEN_K2Node_ComponentBoundEvent_1475_OnHovered__DelegateSignature
-struct UBP_GameSettings_C_BndEvt__FriendlyMarkersCheckboxHIDDEN_K2Node_ComponentBoundEvent_1475_OnHovered__DelegateSignature_Params
-{
-};
-
-// Function BP_GameSettings.BP_GameSettings_C.BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature
-struct UBP_GameSettings_C_BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__NoTeamColorsOnGear_K2Node_ComponentBoundEvent_0_OnHovered__DelegateSignature
 struct UBP_GameSettings_C_BndEvt__NoTeamColorsOnGear_K2Node_ComponentBoundEvent_0_OnHovered__DelegateSignature_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature
+struct UBP_GameSettings_C_BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature
+struct UBP_GameSettings_C_BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature_Params
 {
 };
 

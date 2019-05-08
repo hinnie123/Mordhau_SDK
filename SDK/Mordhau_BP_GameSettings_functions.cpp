@@ -12,6 +12,74 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_GameSettings.BP_GameSettings_C.UpdateThirdPersonDeathCameraCheckbox
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::UpdateThirdPersonDeathCameraCheckbox()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.UpdateThirdPersonDeathCameraCheckbox");
+
+	UBP_GameSettings_C_UpdateThirdPersonDeathCameraCheckbox_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.ApplyThirdPersonDeathCamera
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::ApplyThirdPersonDeathCamera()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.ApplyThirdPersonDeathCamera");
+
+	UBP_GameSettings_C_ApplyThirdPersonDeathCamera_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.ApplyKilledBy
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::ApplyKilledBy()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.ApplyKilledBy");
+
+	UBP_GameSettings_C_ApplyKilledBy_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.UpdateKilledByCheckbox
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::UpdateKilledByCheckbox()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.UpdateKilledByCheckbox");
+
+	UBP_GameSettings_C_UpdateKilledByCheckbox_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_GameSettings.BP_GameSettings_C.ApplyNoTeamColorsOnGear
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -267,14 +335,14 @@ void UBP_GameSettings_C::ApplyHitmarker()
 }
 
 
-// Function BP_GameSettings.BP_GameSettings_C.UpdateFriendlyMarkersCheckbox
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_GameSettings.BP_GameSettings_C.UpdateFriendlyMarkersDropdown
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBP_GameSettings_C::UpdateFriendlyMarkersCheckbox()
+void UBP_GameSettings_C::UpdateFriendlyMarkersDropdown()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.UpdateFriendlyMarkersCheckbox");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.UpdateFriendlyMarkersDropdown");
 
-	UBP_GameSettings_C_UpdateFriendlyMarkersCheckbox_Params params;
+	UBP_GameSettings_C_UpdateFriendlyMarkersDropdown_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -968,6 +1036,40 @@ void UBP_GameSettings_C::Update_Widgets()
 }
 
 
+// Function BP_GameSettings.BP_GameSettings_C.OnShown
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::OnShown()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.OnShown");
+
+	UBP_GameSettings_C_OnShown_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_GameSettings_C::BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
+
+	UBP_GameSettings_C_BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__HideHudCheckbox_K2Node_ComponentBoundEvent_26_OnHovered__DelegateSignature
 // (BlueprintEvent)
 
@@ -1010,40 +1112,6 @@ void UBP_GameSettings_C::BndEvt__RagdollLimitSlider_K2Node_ComponentBoundEvent_3
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__RagdollLimitSlider_K2Node_ComponentBoundEvent_37_OnHovered__DelegateSignature");
 
 	UBP_GameSettings_C_BndEvt__RagdollLimitSlider_K2Node_ComponentBoundEvent_37_OnHovered__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GameSettings.BP_GameSettings_C.BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_GameSettings_C::BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature");
-
-	UBP_GameSettings_C_BndEvt__applyButton_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GameSettings.BP_GameSettings_C.OnShown
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_GameSettings_C::OnShown()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.OnShown");
-
-	UBP_GameSettings_C_OnShown_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1359,6 +1427,23 @@ void UBP_GameSettings_C::BndEvt__AmmoCheckbox_K2Node_ComponentBoundEvent_782_OnH
 }
 
 
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_GameSettings_C::BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature");
+
+	UBP_GameSettings_C_BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__AnnouncementsCheckbox_K2Node_ComponentBoundEvent_1001_OnHovered__DelegateSignature
 // (BlueprintEvent)
 
@@ -1427,40 +1512,6 @@ void UBP_GameSettings_C::BndEvt__KillFeedCheckbox_K2Node_ComponentBoundEvent_135
 }
 
 
-// Function BP_GameSettings.BP_GameSettings_C.BndEvt__FriendlyMarkersCheckboxHIDDEN_K2Node_ComponentBoundEvent_1475_OnHovered__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_GameSettings_C::BndEvt__FriendlyMarkersCheckboxHIDDEN_K2Node_ComponentBoundEvent_1475_OnHovered__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__FriendlyMarkersCheckboxHIDDEN_K2Node_ComponentBoundEvent_1475_OnHovered__DelegateSignature");
-
-	UBP_GameSettings_C_BndEvt__FriendlyMarkersCheckboxHIDDEN_K2Node_ComponentBoundEvent_1475_OnHovered__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GameSettings.BP_GameSettings_C.BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_GameSettings_C::BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature");
-
-	UBP_GameSettings_C_BndEvt__resetButton_K2Node_ComponentBoundEvent_60_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__NoTeamColorsOnGear_K2Node_ComponentBoundEvent_0_OnHovered__DelegateSignature
 // (BlueprintEvent)
 
@@ -1469,6 +1520,40 @@ void UBP_GameSettings_C::BndEvt__NoTeamColorsOnGear_K2Node_ComponentBoundEvent_0
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__NoTeamColorsOnGear_K2Node_ComponentBoundEvent_0_OnHovered__DelegateSignature");
 
 	UBP_GameSettings_C_BndEvt__NoTeamColorsOnGear_K2Node_ComponentBoundEvent_0_OnHovered__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_GameSettings_C::BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature");
+
+	UBP_GameSettings_C_BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_OnHovered__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_GameSettings_C::BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature");
+
+	UBP_GameSettings_C_BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

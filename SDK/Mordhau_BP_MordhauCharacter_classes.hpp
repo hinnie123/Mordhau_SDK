@@ -13,14 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauCharacter.BP_MordhauCharacter_C
-// 0x0020 (0x1B80 - 0x1B60)
+// 0x0020 (0x1BE0 - 0x1BC0)
 class ABP_MordhauCharacter_C : public AMordhauCharacter
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1B60(0x0008) (Transient, DuplicateTransient)
-	class UThudderComponent*                           Thudder;                                                  // 0x1B68(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBP_CharacterCameraComponent_C*              Camera;                                                   // 0x1B70(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               BlockColliderBP;                                          // 0x1B78(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1BC0(0x0008) (Transient, DuplicateTransient)
+	class UThudderComponent*                           Thudder;                                                  // 0x1BC8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBP_CharacterCameraComponent_C*              Camera;                                                   // 0x1BD0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               BlockColliderBP;                                          // 0x1BD8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

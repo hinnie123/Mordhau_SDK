@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_HomeScreen.BP_HomeScreen_C.GetVisibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_HomeScreen_C::GetVisibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.GetVisibility_1");
+
+	UBP_HomeScreen_C_GetVisibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_HomeScreen.BP_HomeScreen_C.Get_TextBlock_14_Text_1
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -406,6 +427,40 @@ void UBP_HomeScreen_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonCli
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
 
 	UBP_HomeScreen_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_1
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_HomeScreen_C::CustomEvent_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_1");
+
+	UBP_HomeScreen_C_CustomEvent_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_HomeScreen_C::CustomEvent_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_2");
+
+	UBP_HomeScreen_C_CustomEvent_2_Params params;
 
 	auto flags = fn->FunctionFlags;
 

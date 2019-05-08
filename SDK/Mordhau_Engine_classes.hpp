@@ -10738,49 +10738,12 @@ public:
 
 // Class Engine.Level
 // 0x0260 (0x0288 - 0x0028)
-class ULevel : public UObject
+class ULevel
 {
 public:
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0028(0x0098) MISSED OFFSET
-	class UWorld*                                      OwningWorld;                                              // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UModel*                                      Model;                                                    // 0x00C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UModelComponent*>                     ModelComponents;                                          // 0x00D0(0x0010) (ExportObject, ZeroConstructor)
-	class ULevelActorContainer*                        ActorCluster;                                             // 0x00E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData)
-	int                                                NumTextureStreamingUnbuiltComponents;                     // 0x00E8(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                NumTextureStreamingDirtyResources;                        // 0x00EC(0x0004) (ZeroConstructor, IsPlainOldData)
-	class ALevelScriptActor*                           LevelScriptActor;                                         // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ANavigationObjectBase*                       NavListStart;                                             // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ANavigationObjectBase*                       NavListEnd;                                               // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UNavigationDataChunk*>                NavDataChunks;                                            // 0x0108(0x0010) (ZeroConstructor)
-	float                                              LightmapTotalSize;                                        // 0x0118(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              ShadowmapTotalSize;                                       // 0x011C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	TArray<struct FVector>                             StaticNavigableGeometry;                                  // 0x0120(0x0010) (ZeroConstructor)
-	TArray<struct FGuid>                               StreamingTextureGuids;                                    // 0x0130(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x90];                                      // 0x0140(0x0090) MISSED OFFSET
-	bool                                               bIsLightingScenario;                                      // 0x01D0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x01D1(0x0003) MISSED OFFSET
-	struct FGuid                                       LevelBuildDataId;                                         // 0x01D4(0x0010) (IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x01E4(0x0004) MISSED OFFSET
-	class UMapBuildDataRegistry*                       MapBuildData;                                             // 0x01E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FIntVector                                  LightBuildLevelOffset;                                    // 0x01F0(0x000C) (IsPlainOldData)
-	unsigned char                                      UnknownData04 : 2;                                        // 0x01FC(0x0001)
-	unsigned char                                      bTextureStreamingRotationChanged : 1;                     // 0x01FC(0x0001)
-	unsigned char                                      bStaticComponentsRegisteredInStreamingManager : 1;        // 0x01FC(0x0001) (Transient, DuplicateTransient)
-	unsigned char                                      bIsVisible : 1;                                           // 0x01FC(0x0001) (Transient)
-	unsigned char                                      UnknownData05[0x4B];                                      // 0x01FD(0x004B) MISSED OFFSET
-	class AWorldSettings*                              WorldSettings;                                            // 0x0248(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x8];                                       // 0x0250(0x0008) MISSED OFFSET
-	TArray<class UAssetUserData*>                      AssetUserData;                                            // 0x0258(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData07[0x10];                                      // 0x0268(0x0010) MISSED OFFSET
-	TArray<struct FReplicatedStaticActorDestructionInfo> DestroyedReplicatedStaticActors;                          // 0x0278(0x0010) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Engine.Level");
-		return ptr;
-	}
-
-};
+	char pad_0000[160]; //0x0000
+	TArray<class AActor*> actors; //0x00A0
+}; //Size: 0x0440
 
 
 // Class Engine.LevelActorContainer

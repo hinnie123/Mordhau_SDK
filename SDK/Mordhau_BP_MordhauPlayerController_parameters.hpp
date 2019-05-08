@@ -70,14 +70,20 @@ struct ABP_MordhauPlayerController_C_UserConstructionScript_Params
 {
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Main Menu_K2Node_InputActionEvent_13
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Main_Menu_K2Node_InputActionEvent_13_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Main Menu_K2Node_InputActionEvent_14
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Main_Menu_K2Node_InputActionEvent_14_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Chat_K2Node_InputActionEvent_12
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Chat_K2Node_InputActionEvent_12_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Chat_K2Node_InputActionEvent_13
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Chat_K2Node_InputActionEvent_13_Params
+{
+	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Scoreboard_K2Node_InputActionEvent_12
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Scoreboard_K2Node_InputActionEvent_12_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
@@ -88,62 +94,62 @@ struct ABP_MordhauPlayerController_C_InpActEvt_Show_Scoreboard_K2Node_InputActio
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Scoreboard_K2Node_InputActionEvent_10
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Scoreboard_K2Node_InputActionEvent_10_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Profile Select_K2Node_InputActionEvent_10
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Profile_Select_K2Node_InputActionEvent_10_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Profile Select_K2Node_InputActionEvent_9
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Profile_Select_K2Node_InputActionEvent_9_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Team Select_K2Node_InputActionEvent_9
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Team_Select_K2Node_InputActionEvent_9_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Team Select_K2Node_InputActionEvent_8
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Team_Select_K2Node_InputActionEvent_8_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Emote Menu_K2Node_InputActionEvent_8
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Emote_Menu_K2Node_InputActionEvent_8_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Emote Menu_K2Node_InputActionEvent_7
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Emote_Menu_K2Node_InputActionEvent_7_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Team Chat_K2Node_InputActionEvent_7
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Team_Chat_K2Node_InputActionEvent_7_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Team Chat_K2Node_InputActionEvent_6
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Team_Chat_K2Node_InputActionEvent_6_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Voice Menu_K2Node_InputActionEvent_6
+struct ABP_MordhauPlayerController_C_InpActEvt_Show_Voice_Menu_K2Node_InputActionEvent_6_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Show Voice Menu_K2Node_InputActionEvent_5
-struct ABP_MordhauPlayerController_C_InpActEvt_Show_Voice_Menu_K2Node_InputActionEvent_5_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Battlecry_K2Node_InputActionEvent_5
+struct ABP_MordhauPlayerController_C_InpActEvt_Battlecry_K2Node_InputActionEvent_5_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Battlecry_K2Node_InputActionEvent_4
-struct ABP_MordhauPlayerController_C_InpActEvt_Battlecry_K2Node_InputActionEvent_4_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Mute Target_K2Node_InputActionEvent_4
+struct ABP_MordhauPlayerController_C_InpActEvt_Mute_Target_K2Node_InputActionEvent_4_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Mute Target_K2Node_InputActionEvent_3
-struct ABP_MordhauPlayerController_C_InpActEvt_Mute_Target_K2Node_InputActionEvent_3_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Vote Yes_K2Node_InputActionEvent_3
+struct ABP_MordhauPlayerController_C_InpActEvt_Vote_Yes_K2Node_InputActionEvent_3_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Vote Yes_K2Node_InputActionEvent_2
-struct ABP_MordhauPlayerController_C_InpActEvt_Vote_Yes_K2Node_InputActionEvent_2_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Vote No_K2Node_InputActionEvent_2
+struct ABP_MordhauPlayerController_C_InpActEvt_Vote_No_K2Node_InputActionEvent_2_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Vote No_K2Node_InputActionEvent_1
-struct ABP_MordhauPlayerController_C_InpActEvt_Vote_No_K2Node_InputActionEvent_1_Params
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.InpActEvt_Toggle UI Markers_K2Node_InputActionEvent_1
+struct ABP_MordhauPlayerController_C_InpActEvt_Toggle_UI_Markers_K2Node_InputActionEvent_1_Params
 {
 	struct FKey                                        Key;                                                      // (BlueprintVisible, BlueprintReadOnly, Parm)
 };

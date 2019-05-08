@@ -15,14 +15,38 @@ namespace SDK
 // Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.GetJoiningText
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FServerSearchResult     Session                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// bool                           bIsFull                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (Parm, OutParm)
 
-void UBP_MordhauGameInstance_C::GetJoiningText(const struct FServerSearchResult& Session, struct FText* Text)
+void UBP_MordhauGameInstance_C::GetJoiningText(bool bIsFull, struct FText* Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.GetJoiningText");
 
 	UBP_MordhauGameInstance_C_GetJoiningText_Params params;
+	params.bIsFull = bIsFull;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Text != nullptr)
+		*Text = params.Text;
+}
+
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.GetJoiningTextOld
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FServerSearchResult     Session                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   Text                           (Parm, OutParm)
+
+void UBP_MordhauGameInstance_C::GetJoiningTextOld(const struct FServerSearchResult& Session, struct FText* Text)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.GetJoiningTextOld");
+
+	UBP_MordhauGameInstance_C_GetJoiningTextOld_Params params;
 	params.Session = Session;
 
 	auto flags = fn->FunctionFlags;
@@ -135,6 +159,57 @@ void UBP_MordhauGameInstance_C::OnSuccess_E564B5624B7FDB47DBB2E08126C636D7()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_E564B5624B7FDB47DBB2E08126C636D7");
 
 	UBP_MordhauGameInstance_C_OnSuccess_E564B5624B7FDB47DBB2E08126C636D7_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_4643A5C64229EB24E86C05B71625BDC1
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MordhauGameInstance_C::OnFailure_4643A5C64229EB24E86C05B71625BDC1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_4643A5C64229EB24E86C05B71625BDC1");
+
+	UBP_MordhauGameInstance_C_OnFailure_4643A5C64229EB24E86C05B71625BDC1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFull_4643A5C64229EB24E86C05B71625BDC1
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MordhauGameInstance_C::OnFull_4643A5C64229EB24E86C05B71625BDC1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFull_4643A5C64229EB24E86C05B71625BDC1");
+
+	UBP_MordhauGameInstance_C_OnFull_4643A5C64229EB24E86C05B71625BDC1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_4643A5C64229EB24E86C05B71625BDC1
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MordhauGameInstance_C::OnSuccess_4643A5C64229EB24E86C05B71625BDC1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_4643A5C64229EB24E86C05B71625BDC1");
+
+	UBP_MordhauGameInstance_C_OnSuccess_4643A5C64229EB24E86C05B71625BDC1_Params params;
 
 	auto flags = fn->FunctionFlags;
 

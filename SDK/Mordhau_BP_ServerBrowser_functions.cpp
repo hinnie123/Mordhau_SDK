@@ -479,6 +479,50 @@ void UBP_ServerBrowser_C::OnShown()
 }
 
 
+// Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// struct FText                   SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm)
+// TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ServerBrowser_C::BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature(const struct FText& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature");
+
+	UBP_ServerBrowser_C_BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature_Params params;
+	params.SelectedItem = SelectedItem;
+	params.SelectionType = SelectionType;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ServerBrowser_C::BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature");
+
+	UBP_ServerBrowser_C_BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_ServerBrowser.BP_ServerBrowser_C.ExecuteUbergraph_BP_ServerBrowser
 // (HasDefaults)
 // Parameters:

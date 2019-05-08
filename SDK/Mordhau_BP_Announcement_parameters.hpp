@@ -36,7 +36,7 @@ struct UBP_Announcement_C_TimerEvent_Params
 struct UBP_Announcement_C_Show_Params
 {
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       SubText;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       Subtext;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 

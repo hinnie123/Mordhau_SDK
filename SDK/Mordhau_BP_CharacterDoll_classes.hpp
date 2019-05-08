@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CharacterDoll.BP_CharacterDoll_C
-// 0x0000 (0x1B80 - 0x1B80)
+// 0x0000 (0x1BE0 - 0x1BE0)
 class ABP_CharacterDoll_C : public ABP_MordhauCharacter_C
 {
 public:

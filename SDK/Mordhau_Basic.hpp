@@ -54,12 +54,12 @@ class TUObjectArray
 public:
 	inline int32_t Num() const
 	{
-		return *(int*)((uintptr_t)GetModuleHandleA(0) + 0x2C49844);
+		return *(int*)((uintptr_t)GetModuleHandleA(0) + 0x2C51494);
 	}
 
 	inline UObject* GetByIndex(int32_t index) const
 	{
-		static auto objects = *(uintptr_t*)((uintptr_t)GetModuleHandleA(0) + 0x2C49830);
+		static auto objects = *(uintptr_t*)((uintptr_t)GetModuleHandleA(0) + 0x2C51480);
 		return (UObject*)(*(uintptr_t*)(*(uintptr_t*)(objects + 8i64 * (index / 66560)) + 24i64 * (index % 66560)));
 	}
 

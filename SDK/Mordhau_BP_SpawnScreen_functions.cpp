@@ -18,8 +18,9 @@ namespace SDK
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // TArray<struct FLinearColor>    Team_Color_Array               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // unsigned char                  Team                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class APlayerState*            PlayerState                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_SpawnScreen_C::SetColor(class UImage* Image, TArray<struct FLinearColor> Team_Color_Array, unsigned char Team)
+void UBP_SpawnScreen_C::SetColor(class UImage* Image, TArray<struct FLinearColor> Team_Color_Array, unsigned char Team, class APlayerState* PlayerState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawnScreen.BP_SpawnScreen_C.SetColor");
 
@@ -27,6 +28,7 @@ void UBP_SpawnScreen_C::SetColor(class UImage* Image, TArray<struct FLinearColor
 	params.Image = Image;
 	params.Team_Color_Array = Team_Color_Array;
 	params.Team = Team;
+	params.PlayerState = PlayerState;
 
 	auto flags = fn->FunctionFlags;
 

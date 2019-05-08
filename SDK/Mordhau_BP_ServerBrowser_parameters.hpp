@@ -152,6 +152,20 @@ struct UBP_ServerBrowser_C_OnShown_Params
 {
 };
 
+// Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature
+struct UBP_ServerBrowser_C_BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature_Params
+{
+	struct FText                                       SelectedItem;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
+	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature
+struct UBP_ServerBrowser_C_BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature_Params
+{
+	struct FText                                       Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TEnumAsByte<ETextCommit>                           CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_ServerBrowser.BP_ServerBrowser_C.ExecuteUbergraph_BP_ServerBrowser
 struct UBP_ServerBrowser_C_ExecuteUbergraph_BP_ServerBrowser_Params
 {

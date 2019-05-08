@@ -119,6 +119,16 @@ enum class EAIFacingMode : uint8_t
 };
 
 
+// Enum Mordhau.EReservationStatus
+enum class EReservationStatus : uint8_t
+{
+	Success                        = 0,
+	Full                           = 1,
+	Failure                        = 2,
+	EReservationStatus_MAX         = 3
+};
+
+
 // Enum Mordhau.EMotionType
 enum class EMotionType : uint8_t
 {
@@ -1123,14 +1133,6 @@ struct FCapturePointGroup
 	TArray<class AControlPoint*>                       CapturePoints;                                            // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
-// ScriptStruct Mordhau.PermutationValuePair
-// 0x0008
-struct FPermutationValuePair
-{
-	int                                                Permutation;                                              // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Value;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Mordhau.DigitalActionKey
 // 0x0020
 struct FDigitalActionKey
@@ -1210,7 +1212,7 @@ struct FReplicatedProjectileInfo
 };
 
 // ScriptStruct Mordhau.FindServerSessionsFilter
-// 0x0028
+// 0x0038
 struct FFindServerSessionsFilter
 {
 	bool                                               bIsNotFull;                                               // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -1223,9 +1225,10 @@ struct FFindServerSessionsFilter
 	EAntiCheat                                         AntiCheat;                                                // 0x0007(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                MinOpenSlots;                                             // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                MaxPing;                                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FString>                             GameModes;                                                // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	ERegion                                            Region;                                                   // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
+	struct FString                                     ServerName;                                               // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     GameMode;                                                 // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	ERegion                                            Region;                                                   // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct Mordhau.FindLobbySessionsFilter
@@ -1563,6 +1566,14 @@ struct FSoundClassInfo
 {
 	class USoundClass*                                 SoundClass;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	TArray<class USoundMix*>                           SoundMixes;                                               // 0x0008(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Mordhau.PermutationValuePair
+// 0x0008
+struct FPermutationValuePair
+{
+	int                                                Permutation;                                              // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Value;                                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Mordhau.MordhauWebAPIRequest

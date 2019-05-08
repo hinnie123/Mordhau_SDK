@@ -17,6 +17,13 @@ namespace SDK
 // Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.GetJoiningText
 struct UBP_MordhauGameInstance_C_GetJoiningText_Params
 {
+	bool                                               bIsFull;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Text;                                                     // (Parm, OutParm)
+};
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.GetJoiningTextOld
+struct UBP_MordhauGameInstance_C_GetJoiningTextOld_Params
+{
 	struct FServerSearchResult                         Session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Text;                                                     // (Parm, OutParm)
 };
@@ -50,6 +57,21 @@ struct UBP_MordhauGameInstance_C_OnFailure_E564B5624B7FDB47DBB2E08126C636D7_Para
 
 // Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_E564B5624B7FDB47DBB2E08126C636D7
 struct UBP_MordhauGameInstance_C_OnSuccess_E564B5624B7FDB47DBB2E08126C636D7_Params
+{
+};
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_4643A5C64229EB24E86C05B71625BDC1
+struct UBP_MordhauGameInstance_C_OnFailure_4643A5C64229EB24E86C05B71625BDC1_Params
+{
+};
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFull_4643A5C64229EB24E86C05B71625BDC1
+struct UBP_MordhauGameInstance_C_OnFull_4643A5C64229EB24E86C05B71625BDC1_Params
+{
+};
+
+// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_4643A5C64229EB24E86C05B71625BDC1
+struct UBP_MordhauGameInstance_C_OnSuccess_4643A5C64229EB24E86C05B71625BDC1_Params
 {
 };
 

@@ -120,6 +120,8 @@ public:
 	void OnPartyUpdated(TArray<struct FSteamID> PartyMembers);
 	void BndEvt__RentServerButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void OnShown();
+	void BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature(const struct FText& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod);
 	void ExecuteUbergraph_BP_ServerBrowser(int EntryPoint);
 };
 

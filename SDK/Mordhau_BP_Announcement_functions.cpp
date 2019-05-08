@@ -76,16 +76,16 @@ void UBP_Announcement_C::TimerEvent()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   SubText                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   Subtext                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Announcement_C::Show(const struct FText& Text, const struct FText& SubText, float Duration)
+void UBP_Announcement_C::Show(const struct FText& Text, const struct FText& Subtext, float Duration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Announcement.BP_Announcement_C.Show");
 
 	UBP_Announcement_C_Show_Params params;
 	params.Text = Text;
-	params.SubText = SubText;
+	params.Subtext = Subtext;
 	params.Duration = Duration;
 
 	auto flags = fn->FunctionFlags;
