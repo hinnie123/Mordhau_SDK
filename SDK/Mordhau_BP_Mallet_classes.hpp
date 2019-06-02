@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Mallet.BP_Mallet_C
-// 0x0000 (0x1A38 - 0x1A38)
+// 0x0000 (0x1A88 - 0x1A88)
 class ABP_Mallet_C : public ABP_OneHandedSword_C
 {
 public:

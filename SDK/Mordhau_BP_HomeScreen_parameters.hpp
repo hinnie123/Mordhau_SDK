@@ -26,18 +26,6 @@ struct UBP_HomeScreen_C_Get_TextBlock_14_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function BP_HomeScreen.BP_HomeScreen_C.GetXPText
-struct UBP_HomeScreen_C_GetXPText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_HomeScreen.BP_HomeScreen_C.GetGoldText
-struct UBP_HomeScreen_C_GetGoldText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
 // Function BP_HomeScreen.BP_HomeScreen_C.GetCurrentVersionText
 struct UBP_HomeScreen_C_GetCurrentVersionText_Params
 {
@@ -136,16 +124,6 @@ struct UBP_HomeScreen_C_ToggleNews_Params
 
 // Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
 struct UBP_HomeScreen_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params
-{
-};
-
-// Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_1
-struct UBP_HomeScreen_C_CustomEvent_1_Params
-{
-};
-
-// Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_2
-struct UBP_HomeScreen_C_CustomEvent_2_Params
 {
 };
 

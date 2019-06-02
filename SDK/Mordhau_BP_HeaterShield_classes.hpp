@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HeaterShield.BP_HeaterShield_C
-// 0x0000 (0x1A38 - 0x1A38)
+// 0x0000 (0x1A88 - 0x1A88)
 class ABP_HeaterShield_C : public ABP_MordhauShield_C
 {
 public:

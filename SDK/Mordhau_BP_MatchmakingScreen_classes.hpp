@@ -67,6 +67,8 @@ public:
 	void IsServerValidForLobby(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyID, const struct FLobbySearchResult& Lobby, bool* bIsValid);
 	void GetSelectedGameModes(TArray<struct FString>* GameModes);
 	void CanPlayerSearch(bool* bCanSearch);
+	void OnFailure_4A04F7DD47F85B488D7272BBFC905448();
+	void OnSuccess_4A04F7DD47F85B488D7272BBFC905448();
 	void OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E();
 	void OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E();
 	void OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4();
@@ -77,8 +79,6 @@ public:
 	void OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3();
 	void OnFailure_172C61C348390EAFE87BFF990AF8D445(TArray<struct FServerSearchResult> Results);
 	void OnSuccess_172C61C348390EAFE87BFF990AF8D445(TArray<struct FServerSearchResult> Results);
-	void OnFailure_4A04F7DD47F85B488D7272BBFC905448();
-	void OnSuccess_4A04F7DD47F85B488D7272BBFC905448();
 	void OnFailure_2B3FD13E440DB5A2FE18339FEEDFA46A();
 	void OnFull_2B3FD13E440DB5A2FE18339FEEDFA46A();
 	void OnSuccess_2B3FD13E440DB5A2FE18339FEEDFA46A();
@@ -86,8 +86,8 @@ public:
 	void OnSuccess_8E0D6DDA4E196C4EC73D18BF6DB3F22B(const struct FServerSearchResult& Result);
 	void OnFailure_07D688D243F2FD3D918664AF5494E771();
 	void OnSuccess_07D688D243F2FD3D918664AF5494E771();
-	void BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature(const struct FText& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void UpdatePartyValues();
+	void BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature(const struct FText& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void FindMatchmakingSessions();
 	void StartSearchTimer();
 	void CancelSearch();

@@ -125,54 +125,6 @@ struct FText UBP_Rewards_C::Get_EarnedXPText_Text_1()
 }
 
 
-// Function BP_Rewards.BP_Rewards_C.GetCurrentXP
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FSteamID                SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// int                            CurrentXP                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UBP_Rewards_C::GetCurrentXP(const struct FSteamID& SteamID, int* CurrentXP)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.GetCurrentXP");
-
-	UBP_Rewards_C_GetCurrentXP_Params params;
-	params.SteamID = SteamID;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (CurrentXP != nullptr)
-		*CurrentXP = params.CurrentXP;
-}
-
-
-// Function BP_Rewards.BP_Rewards_C.GetCurrentGold
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FSteamID                SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// int                            CurrentGold                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UBP_Rewards_C::GetCurrentGold(const struct FSteamID& SteamID, int* CurrentGold)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.GetCurrentGold");
-
-	UBP_Rewards_C_GetCurrentGold_Params params;
-	params.SteamID = SteamID;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (CurrentGold != nullptr)
-		*CurrentGold = params.CurrentGold;
-}
-
-
 // Function BP_Rewards.BP_Rewards_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 

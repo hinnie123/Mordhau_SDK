@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Crossbow.BP_Crossbow_C
-// 0x0008 (0x0CA0 - 0x0C98)
+// 0x0008 (0x0CB0 - 0x0CA8)
 class ABP_Crossbow_C : public ABP_MissileEquipment_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C98(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CA8(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

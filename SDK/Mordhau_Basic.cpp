@@ -10,6 +10,8 @@ namespace SDK
 {
 TNameEntryArray* FName::GNames = nullptr;
 FUObjectArray* UObject::GObjects = nullptr;
+uintptr_t TUObjectArray::g_total_objects = 0;
+uintptr_t TUObjectArray::g_objects = 0;
 //---------------------------------------------------------------------------
 bool FWeakObjectPtr::IsValid() const
 {

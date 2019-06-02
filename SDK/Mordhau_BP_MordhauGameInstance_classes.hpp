@@ -13,19 +13,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauGameInstance.BP_MordhauGameInstance_C
-// 0x0229 (0x0A39 - 0x0810)
+// 0x0229 (0x09E9 - 0x07C0)
 class UBP_MordhauGameInstance_C : public UMordhauGameInstance
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0810(0x0008) (Transient, DuplicateTransient)
-	class UBP_TextInputDialog_C*                       PasswordDialog;                                           // 0x0818(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBP_InformationDialog_C*                     NetworkErrorDialog;                                       // 0x0820(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBP_InformationDialog_C*                     JoiningDialog;                                            // 0x0828(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	float                                              JoinDelay;                                                // 0x0830(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0834(0x0004) MISSED OFFSET
-	struct FTimerHandle                                JoinDelayTimer;                                           // 0x0838(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FServerSearchResult                         SessionToJoin;                                            // 0x0840(0x01F8) (Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                               WantsBRRequeue;                                           // 0x0A38(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07C0(0x0008) (Transient, DuplicateTransient)
+	class UBP_TextInputDialog_C*                       PasswordDialog;                                           // 0x07C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBP_InformationDialog_C*                     NetworkErrorDialog;                                       // 0x07D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBP_InformationDialog_C*                     JoiningDialog;                                            // 0x07D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	float                                              JoinDelay;                                                // 0x07E0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x07E4(0x0004) MISSED OFFSET
+	struct FTimerHandle                                JoinDelayTimer;                                           // 0x07E8(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FServerSearchResult                         SessionToJoin;                                            // 0x07F0(0x01F8) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               WantsBRRequeue;                                           // 0x09E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

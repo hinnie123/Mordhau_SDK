@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauPlayerState.BP_MordhauPlayerState_C
-// 0x0008 (0x0458 - 0x0450)
+// 0x0008 (0x0460 - 0x0458)
 class ABP_MordhauPlayerState_C : public AMordhauPlayerState
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0458(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -13,19 +13,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PaviseShield.BP_PaviseShield_C
-// 0x0038 (0x1A70 - 0x1A38)
+// 0x0038 (0x1AC0 - 0x1A88)
 class ABP_PaviseShield_C : public ABP_MordhauShield_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A38(0x0008) (Transient, DuplicateTransient)
-	class UBoxComponent*                               MovementBlocker;                                          // 0x1A40(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AController*                                 PlanterController;                                        // 0x1A48(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              ReceivedDamage;                                           // 0x1A50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DamageToDestroy;                                          // 0x1A54(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ParryMaskUnplanted;                                       // 0x1A58(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                ParryMaskPlanted;                                         // 0x1A5C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AMordhauCharacter*                           PlanterCharacter;                                         // 0x1A60(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	class USoundCue*                                   DestroySound;                                             // 0x1A68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A88(0x0008) (Transient, DuplicateTransient)
+	class UBoxComponent*                               MovementBlocker;                                          // 0x1A90(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AController*                                 PlanterController;                                        // 0x1A98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	float                                              ReceivedDamage;                                           // 0x1AA0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DamageToDestroy;                                          // 0x1AA4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                ParryMaskUnplanted;                                       // 0x1AA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                ParryMaskPlanted;                                         // 0x1AAC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class AMordhauCharacter*                           PlanterCharacter;                                         // 0x1AB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class USoundCue*                                   DestroySound;                                             // 0x1AB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

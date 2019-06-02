@@ -66,8 +66,6 @@ public:
 	void XP_Interpolation(class UBP_CasualRankWidget_C* Casual_Rank_Widget_Ref, float Delta_Time);
 	void InitializeRankValues(class UBP_CasualRankWidget_C* Casual_Rank_Widget_Ref);
 	struct FText Get_EarnedXPText_Text_1();
-	void GetCurrentXP(const struct FSteamID& SteamID, int* CurrentXP);
-	void GetCurrentGold(const struct FSteamID& SteamID, int* CurrentGold);
 	void Construct();
 	void ItemsDropped(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks);
 	void BeginGoldAnimation();

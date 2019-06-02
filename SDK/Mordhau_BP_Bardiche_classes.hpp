@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bardiche.BP_Bardiche_C
-// 0x0000 (0x1A38 - 0x1A38)
+// 0x0000 (0x1A88 - 0x1A88)
 class ABP_Bardiche_C : public ABP_Polearm_C
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_2HThrowableBase.BP_2HThrowableBase_C
-// 0x0000 (0x0C90 - 0x0C90)
+// 0x0000 (0x0CA0 - 0x0CA0)
 class ABP_2HThrowableBase_C : public AMordhauEquipment
 {
 public:

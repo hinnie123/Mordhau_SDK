@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shortsword.BP_Shortsword_C
-// 0x0000 (0x1A38 - 0x1A38)
+// 0x0000 (0x1A88 - 0x1A88)
 class ABP_Shortsword_C : public ABP_OneHandedSword_C
 {
 public:

@@ -57,7 +57,7 @@ public:
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0391(0x0003) MISSED OFFSET
 	int                                                GoldRequirement;                                          // 0x0394(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                RankRequirement;                                          // 0x0398(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CurrentRank;                                              // 0x039C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CurrentLevel;                                             // 0x039C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                CurrentGold;                                              // 0x03A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -77,13 +77,13 @@ public:
 	struct FText Get_CostText_ToolTipText_1();
 	struct FSlateColor Get_CostText_ColorAndOpacity_1();
 	struct FSlateColor Get_NameText_ColorAndOpacity_1();
+	void BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature();
 	void Initialize();
 	void BndEvt__Button_512_K2Node_ComponentBoundEvent_147_OnButtonClickedEvent__DelegateSignature();
 	void RequestUnlock();
 	void PurchaseConfirm();
 	void PurchaseCancel();
 	void ItemsUnlocked(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks);
-	void BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature();
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_BP_GenericItemEntry(int EntryPoint);
 };

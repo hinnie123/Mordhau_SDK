@@ -86,6 +86,16 @@ struct UBP_MatchmakingScreen_C_CanPlayerSearch_Params
 	bool                                               bCanSearch;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448
+struct UBP_MatchmakingScreen_C_OnFailure_4A04F7DD47F85B488D7272BBFC905448_Params
+{
+};
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448
+struct UBP_MatchmakingScreen_C_OnSuccess_4A04F7DD47F85B488D7272BBFC905448_Params
+{
+};
+
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E
 struct UBP_MatchmakingScreen_C_OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E_Params
 {
@@ -138,16 +148,6 @@ struct UBP_MatchmakingScreen_C_OnSuccess_172C61C348390EAFE87BFF990AF8D445_Params
 	TArray<struct FServerSearchResult>                 Results;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448
-struct UBP_MatchmakingScreen_C_OnFailure_4A04F7DD47F85B488D7272BBFC905448_Params
-{
-};
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448
-struct UBP_MatchmakingScreen_C_OnSuccess_4A04F7DD47F85B488D7272BBFC905448_Params
-{
-};
-
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_2B3FD13E440DB5A2FE18339FEEDFA46A
 struct UBP_MatchmakingScreen_C_OnFailure_2B3FD13E440DB5A2FE18339FEEDFA46A_Params
 {
@@ -185,16 +185,16 @@ struct UBP_MatchmakingScreen_C_OnSuccess_07D688D243F2FD3D918664AF5494E771_Params
 {
 };
 
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues
+struct UBP_MatchmakingScreen_C_UpdatePartyValues_Params
+{
+};
+
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature
 struct UBP_MatchmakingScreen_C_BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature_Params
 {
 	struct FText                                       SelectedItem;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 	TEnumAsByte<ESelectInfo>                           SelectionType;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues
-struct UBP_MatchmakingScreen_C_UpdatePartyValues_Params
-{
 };
 
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.FindMatchmakingSessions

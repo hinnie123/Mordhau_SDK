@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauMainMenuGameMode.BP_MordhauMainMenuGameMode_C
-// 0x0008 (0x0518 - 0x0510)
+// 0x0008 (0x0508 - 0x0500)
 class ABP_MordhauMainMenuGameMode_C : public AMordhauGameMode
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

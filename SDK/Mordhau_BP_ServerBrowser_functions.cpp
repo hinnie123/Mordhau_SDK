@@ -523,6 +523,28 @@ void UBP_ServerBrowser_C::BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_
 }
 
 
+// Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ServerBrowser_C::BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature");
+
+	UBP_ServerBrowser_C_BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
+	params.Text = Text;
+	params.CommitMethod = CommitMethod;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_ServerBrowser.BP_ServerBrowser_C.ExecuteUbergraph_BP_ServerBrowser
 // (HasDefaults)
 // Parameters:

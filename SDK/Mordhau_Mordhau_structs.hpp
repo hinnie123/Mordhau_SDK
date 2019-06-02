@@ -283,18 +283,19 @@ enum class EInputTextMode : uint8_t
 };
 
 
-// Enum Mordhau.EInventoryMethod
-enum class EInventoryMethod : uint8_t
+// Enum Mordhau.EInventoryOperation
+enum class EInventoryOperation : uint8_t
 {
-	Refresh                        = 0,
-	Serialize                      = 1,
-	Deserialize                    = 2,
-	Consolidate                    = 3,
-	Unlock                         = 4,
-	Consume                        = 5,
+	RefreshItems                   = 0,
+	SerializeItems                 = 1,
+	DeserializeItems               = 2,
+	ConsolidateItems               = 3,
+	UnlockItem                     = 4,
+	ConsumeItem                    = 5,
 	AddItem                        = 6,
-	DropItems                      = 7,
-	EInventoryMethod_MAX           = 8
+	AddItems                       = 7,
+	DropItems                      = 8,
+	EInventoryOperation_MAX        = 9
 };
 
 
@@ -1486,13 +1487,6 @@ struct FRichPresence
 	struct FString                                     MapName;                                                  // 0x0018(0x0010) (ZeroConstructor)
 };
 
-// ScriptStruct Mordhau.InventoryResult
-// 0x0018
-struct FInventoryResult
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
-};
-
 // ScriptStruct Mordhau.ResponseData
 // 0x0010
 struct FResponseData
@@ -1523,6 +1517,62 @@ struct FItemData
 	struct FString                                     State;                                                    // 0x0060(0x0010) (ZeroConstructor)
 	struct FString                                     Origin;                                                   // 0x0070(0x0010) (ZeroConstructor)
 	struct FString                                     state_changed_timestamp;                                  // 0x0080(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct Mordhau.InventoryOperation
+// 0x0010
+struct FInventoryOperation
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct Mordhau.DropItemsOperation
+// 0x0010 (0x0020 - 0x0010)
+struct FDropItemsOperation : public FInventoryOperation
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct Mordhau.DeserializeItemsOperation
+// 0x0020 (0x0030 - 0x0010)
+struct FDeserializeItemsOperation : public FInventoryOperation
+{
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0010(0x0020) MISSED OFFSET
+};
+
+// ScriptStruct Mordhau.SerializeItemsOperation
+// 0x0000 (0x0010 - 0x0010)
+struct FSerializeItemsOperation : public FInventoryOperation
+{
+
+};
+
+// ScriptStruct Mordhau.UnlockItemOperation
+// 0x0008 (0x0018 - 0x0010)
+struct FUnlockItemOperation : public FInventoryOperation
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct Mordhau.AddItemsOperation
+// 0x0010 (0x0020 - 0x0010)
+struct FAddItemsOperation : public FInventoryOperation
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct Mordhau.AddItemOperation
+// 0x0008 (0x0018 - 0x0010)
+struct FAddItemOperation : public FInventoryOperation
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct Mordhau.RefreshItemsOperation
+// 0x0000 (0x0010 - 0x0010)
+struct FRefreshItemsOperation : public FInventoryOperation
+{
+
 };
 
 // ScriptStruct Mordhau.ColorTableEntry

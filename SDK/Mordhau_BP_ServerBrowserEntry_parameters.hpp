@@ -14,28 +14,10 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetTextColorAndOpacity
-struct UBP_ServerBrowserEntry_C_GetTextColorAndOpacity_Params
+// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Update
+struct UBP_ServerBrowserEntry_C_Update_Params
 {
-	struct FSlateColor                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetPasswordVisibility
-struct UBP_ServerBrowserEntry_C_GetPasswordVisibility_Params
-{
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetVacVisibility
-struct UBP_ServerBrowserEntry_C_GetVacVisibility_Params
-{
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetOfficialVisibility
-struct UBP_ServerBrowserEntry_C_GetOfficialVisibility_Params
-{
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FServerSearchResult                         Session;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetServerBrowser
@@ -48,42 +30,6 @@ struct UBP_ServerBrowserEntry_C_GetServerBrowser_Params
 struct UBP_ServerBrowserEntry_C_Select_Params
 {
 	bool                                               IsSelected;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetGameModeText
-struct UBP_ServerBrowserEntry_C_GetGameModeText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetMapText
-struct UBP_ServerBrowserEntry_C_GetMapText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetServerNameText
-struct UBP_ServerBrowserEntry_C_GetServerNameText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetPingText
-struct UBP_ServerBrowserEntry_C_GetPingText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetMaxPlayersText
-struct UBP_ServerBrowserEntry_C_GetMaxPlayersText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetCurrentPlayersText
-struct UBP_ServerBrowserEntry_C_GetCurrentPlayersText_Params
-{
-	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Construct

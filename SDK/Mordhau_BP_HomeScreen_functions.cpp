@@ -54,48 +54,6 @@ struct FText UBP_HomeScreen_C::Get_TextBlock_14_Text_1()
 }
 
 
-// Function BP_HomeScreen.BP_HomeScreen_C.GetXPText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_HomeScreen_C::GetXPText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.GetXPText");
-
-	UBP_HomeScreen_C_GetXPText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_HomeScreen.BP_HomeScreen_C.GetGoldText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_HomeScreen_C::GetGoldText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.GetGoldText");
-
-	UBP_HomeScreen_C_GetGoldText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function BP_HomeScreen.BP_HomeScreen_C.GetCurrentVersionText
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -427,40 +385,6 @@ void UBP_HomeScreen_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonCli
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
 
 	UBP_HomeScreen_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_1
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HomeScreen_C::CustomEvent_1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_1");
-
-	UBP_HomeScreen_C_CustomEvent_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_2
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HomeScreen_C::CustomEvent_2()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.CustomEvent_2");
-
-	UBP_HomeScreen_C_CustomEvent_2_Params params;
 
 	auto flags = fn->FunctionFlags;
 

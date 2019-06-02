@@ -258,6 +258,40 @@ void UBP_MatchmakingScreen_C::CanPlayerSearch(bool* bCanSearch)
 }
 
 
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_4A04F7DD47F85B488D7272BBFC905448()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448");
+
+	UBP_MatchmakingScreen_C_OnFailure_4A04F7DD47F85B488D7272BBFC905448_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_4A04F7DD47F85B488D7272BBFC905448()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448");
+
+	UBP_MatchmakingScreen_C_OnSuccess_4A04F7DD47F85B488D7272BBFC905448_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E
 // (BlueprintCallable, BlueprintEvent)
 
@@ -434,40 +468,6 @@ void UBP_MatchmakingScreen_C::OnSuccess_172C61C348390EAFE87BFF990AF8D445(TArray<
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::OnFailure_4A04F7DD47F85B488D7272BBFC905448()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448");
-
-	UBP_MatchmakingScreen_C_OnFailure_4A04F7DD47F85B488D7272BBFC905448_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::OnSuccess_4A04F7DD47F85B488D7272BBFC905448()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448");
-
-	UBP_MatchmakingScreen_C_OnSuccess_4A04F7DD47F85B488D7272BBFC905448_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_2B3FD13E440DB5A2FE18339FEEDFA46A
 // (BlueprintCallable, BlueprintEvent)
 
@@ -593,6 +593,23 @@ void UBP_MatchmakingScreen_C::OnSuccess_07D688D243F2FD3D918664AF5494E771()
 }
 
 
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::UpdatePartyValues()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues");
+
+	UBP_MatchmakingScreen_C_UpdatePartyValues_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -606,23 +623,6 @@ void UBP_MatchmakingScreen_C::BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_
 	UBP_MatchmakingScreen_C_BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature_Params params;
 	params.SelectedItem = SelectedItem;
 	params.SelectionType = SelectionType;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::UpdatePartyValues()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues");
-
-	UBP_MatchmakingScreen_C_UpdatePartyValues_Params params;
 
 	auto flags = fn->FunctionFlags;
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Longbow.BP_Longbow_C
-// 0x0000 (0x0CA0 - 0x0CA0)
+// 0x0000 (0x0CB0 - 0x0CB0)
 class ABP_Longbow_C : public ABP_Bow_C
 {
 public:

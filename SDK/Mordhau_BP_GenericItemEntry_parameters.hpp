@@ -69,6 +69,11 @@ struct UBP_GenericItemEntry_C_Get_NameText_ColorAndOpacity_1_Params
 	struct FSlateColor                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature
+struct UBP_GenericItemEntry_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature_Params
+{
+};
+
 // Function BP_GenericItemEntry.BP_GenericItemEntry_C.Initialize
 struct UBP_GenericItemEntry_C_Initialize_Params
 {
@@ -100,11 +105,6 @@ struct UBP_GenericItemEntry_C_ItemsUnlocked_Params
 	bool                                               bWasSuccessful;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FSteamID                                    SteamID;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature
-struct UBP_GenericItemEntry_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature_Params
-{
 };
 
 // Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature

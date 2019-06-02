@@ -12,87 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetTextColorAndOpacity
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Update
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
+// struct FServerSearchResult     Session                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-struct FSlateColor UBP_ServerBrowserEntry_C::GetTextColorAndOpacity()
+void UBP_ServerBrowserEntry_C::Update(const struct FServerSearchResult& Session)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetTextColorAndOpacity");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Update");
 
-	UBP_ServerBrowserEntry_C_GetTextColorAndOpacity_Params params;
+	UBP_ServerBrowserEntry_C_Update_Params params;
+	params.Session = Session;
 
 	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetPasswordVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-ESlateVisibility UBP_ServerBrowserEntry_C::GetPasswordVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetPasswordVisibility");
-
-	UBP_ServerBrowserEntry_C_GetPasswordVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetVacVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-ESlateVisibility UBP_ServerBrowserEntry_C::GetVacVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetVacVisibility");
-
-	UBP_ServerBrowserEntry_C_GetVacVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetOfficialVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-ESlateVisibility UBP_ServerBrowserEntry_C::GetOfficialVisibility()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetOfficialVisibility");
-
-	UBP_ServerBrowserEntry_C_GetOfficialVisibility_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -135,132 +71,6 @@ void UBP_ServerBrowserEntry_C::Select(bool IsSelected)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetGameModeText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_ServerBrowserEntry_C::GetGameModeText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetGameModeText");
-
-	UBP_ServerBrowserEntry_C_GetGameModeText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetMapText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_ServerBrowserEntry_C::GetMapText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetMapText");
-
-	UBP_ServerBrowserEntry_C_GetMapText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetServerNameText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_ServerBrowserEntry_C::GetServerNameText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetServerNameText");
-
-	UBP_ServerBrowserEntry_C_GetServerNameText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetPingText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_ServerBrowserEntry_C::GetPingText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetPingText");
-
-	UBP_ServerBrowserEntry_C_GetPingText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetMaxPlayersText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_ServerBrowserEntry_C::GetMaxPlayersText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetMaxPlayersText");
-
-	UBP_ServerBrowserEntry_C_GetMaxPlayersText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetCurrentPlayersText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FText UBP_ServerBrowserEntry_C::GetCurrentPlayersText()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.GetCurrentPlayersText");
-
-	UBP_ServerBrowserEntry_C_GetCurrentPlayersText_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 

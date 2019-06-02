@@ -13,17 +13,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ToolBox.BP_ToolBox_C
-// 0x0030 (0x0CC0 - 0x0C90)
+// 0x0030 (0x0CD0 - 0x0CA0)
 class ABP_ToolBox_C : public ABP_2HThrowableBase_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C90(0x0008) (Transient, DuplicateTransient)
-	int                                                ObjectType;                                               // 0x0C98(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0C9C(0x0004) MISSED OFFSET
-	TArray<struct FBP_ToolBoxSpawnable>                SpawnableObjects;                                         // 0x0CA0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	class UMeshComponent*                              PreviewMeshComponent;                                     // 0x0CB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              NextAvailableTime;                                        // 0x0CB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Cooldown;                                                 // 0x0CBC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CA0(0x0008) (Transient, DuplicateTransient)
+	int                                                ObjectType;                                               // 0x0CA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0CAC(0x0004) MISSED OFFSET
+	TArray<struct FBP_ToolBoxSpawnable>                SpawnableObjects;                                         // 0x0CB0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UMeshComponent*                              PreviewMeshComponent;                                     // 0x0CC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              NextAvailableTime;                                        // 0x0CC8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Cooldown;                                                 // 0x0CCC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

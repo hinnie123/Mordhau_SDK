@@ -49,20 +49,6 @@ struct UBP_Rewards_C_Get_EarnedXPText_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function BP_Rewards.BP_Rewards_C.GetCurrentXP
-struct UBP_Rewards_C_GetCurrentXP_Params
-{
-	struct FSteamID                                    SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                CurrentXP;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BP_Rewards.BP_Rewards_C.GetCurrentGold
-struct UBP_Rewards_C_GetCurrentGold_Params
-{
-	struct FSteamID                                    SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                CurrentGold;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_Rewards.BP_Rewards_C.Construct
 struct UBP_Rewards_C_Construct_Params
 {

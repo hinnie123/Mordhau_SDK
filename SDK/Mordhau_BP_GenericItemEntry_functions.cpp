@@ -203,6 +203,23 @@ struct FSlateColor UBP_GenericItemEntry_C::Get_NameText_ColorAndOpacity_1()
 }
 
 
+// Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_GenericItemEntry_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature");
+
+	UBP_GenericItemEntry_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_GenericItemEntry.BP_GenericItemEntry_C.Initialize
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -303,23 +320,6 @@ void UBP_GenericItemEntry_C::ItemsUnlocked(bool bWasSuccessful, const struct FSt
 	params.bWasSuccessful = bWasSuccessful;
 	params.SteamID = SteamID;
 	params.ItemStacks = ItemStacks;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_GenericItemEntry_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_GenericItemEntry.BP_GenericItemEntry_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature");
-
-	UBP_GenericItemEntry_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_20_OnButtonHoverEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

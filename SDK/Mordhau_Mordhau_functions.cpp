@@ -15848,6 +15848,132 @@ void UMordhauGameUserSettings::SetShowAmmo(int NewShowAmmo)
 }
 
 
+// Function Mordhau.MordhauGameUserSettings.SetServerBrowserServerName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 NewServerName                  (Parm, ZeroConstructor)
+
+void UMordhauGameUserSettings::SetServerBrowserServerName(const struct FString& NewServerName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetServerBrowserServerName");
+
+	UMordhauGameUserSettings_SetServerBrowserServerName_Params params;
+	params.NewServerName = NewServerName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetServerBrowserNotFull
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewNotFull                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetServerBrowserNotFull(bool bNewNotFull)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetServerBrowserNotFull");
+
+	UMordhauGameUserSettings_SetServerBrowserNotFull_Params params;
+	params.bNewNotFull = bNewNotFull;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetServerBrowserNoPassword
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewNoPassword                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetServerBrowserNoPassword(bool bNewNoPassword)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetServerBrowserNoPassword");
+
+	UMordhauGameUserSettings_SetServerBrowserNoPassword_Params params;
+	params.bNewNoPassword = bNewNoPassword;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetServerBrowserMaxPing
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewMaxPing                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetServerBrowserMaxPing(int NewMaxPing)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetServerBrowserMaxPing");
+
+	UMordhauGameUserSettings_SetServerBrowserMaxPing_Params params;
+	params.NewMaxPing = NewMaxPing;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetServerBrowserHasPlayers
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bNewHasPlayers                 (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetServerBrowserHasPlayers(bool bNewHasPlayers)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetServerBrowserHasPlayers");
+
+	UMordhauGameUserSettings_SetServerBrowserHasPlayers_Params params;
+	params.bNewHasPlayers = bNewHasPlayers;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetServerBrowserGameMode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 NewGameMode                    (Parm, ZeroConstructor)
+
+void UMordhauGameUserSettings::SetServerBrowserGameMode(const struct FString& NewGameMode)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetServerBrowserGameMode");
+
+	UMordhauGameUserSettings_SetServerBrowserGameMode_Params params;
+	params.NewGameMode = NewGameMode;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauGameUserSettings.SetScreenSpaceReflections
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -16048,6 +16174,48 @@ void UMordhauGameUserSettings::SetMaxRagdolls(int NewMax)
 
 	UMordhauGameUserSettings_SetMaxRagdolls_Params params;
 	params.NewMax = NewMax;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetMatchmakingRegion
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// ERegion                        NewRegion                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetMatchmakingRegion(ERegion NewRegion)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetMatchmakingRegion");
+
+	UMordhauGameUserSettings_SetMatchmakingRegion_Params params;
+	params.NewRegion = NewRegion;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetMatchmakingGameModes
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<struct FString>         NewGameModes                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UMordhauGameUserSettings::SetMatchmakingGameModes(TArray<struct FString> NewGameModes)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetMatchmakingGameModes");
+
+	UMordhauGameUserSettings_SetMatchmakingGameModes_Params params;
+	params.NewGameModes = NewGameModes;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16917,6 +17085,138 @@ int UMordhauGameUserSettings::GetShowAmmo()
 }
 
 
+// Function Mordhau.MordhauGameUserSettings.GetServerBrowserServerName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UMordhauGameUserSettings::GetServerBrowserServerName()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetServerBrowserServerName");
+
+	UMordhauGameUserSettings_GetServerBrowserServerName_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetServerBrowserNotFull
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMordhauGameUserSettings::GetServerBrowserNotFull()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetServerBrowserNotFull");
+
+	UMordhauGameUserSettings_GetServerBrowserNotFull_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetServerBrowserNoPassword
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMordhauGameUserSettings::GetServerBrowserNoPassword()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetServerBrowserNoPassword");
+
+	UMordhauGameUserSettings_GetServerBrowserNoPassword_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetServerBrowserMaxPing
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMordhauGameUserSettings::GetServerBrowserMaxPing()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetServerBrowserMaxPing");
+
+	UMordhauGameUserSettings_GetServerBrowserMaxPing_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetServerBrowserHasPlayers
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMordhauGameUserSettings::GetServerBrowserHasPlayers()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetServerBrowserHasPlayers");
+
+	UMordhauGameUserSettings_GetServerBrowserHasPlayers_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetServerBrowserGameMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString UMordhauGameUserSettings::GetServerBrowserGameMode()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetServerBrowserGameMode");
+
+	UMordhauGameUserSettings_GetServerBrowserGameMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauGameUserSettings.GetScreenSpaceReflections
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -17235,6 +17535,50 @@ int UMordhauGameUserSettings::GetMaxRagdolls()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetMaxRagdolls");
 
 	UMordhauGameUserSettings_GetMaxRagdolls_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetMatchmakingRegion
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ERegion                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ERegion UMordhauGameUserSettings::GetMatchmakingRegion()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetMatchmakingRegion");
+
+	UMordhauGameUserSettings_GetMatchmakingRegion_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetMatchmakingGameModes
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FString>         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FString> UMordhauGameUserSettings::GetMatchmakingGameModes()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetMatchmakingGameModes");
+
+	UMordhauGameUserSettings_GetMatchmakingGameModes_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -19469,12 +19813,12 @@ void UMordhauInput::AddActionKeyBinding(const struct FName& ActionName, const st
 
 
 // Function Mordhau.MordhauInventory.UnlockLevelUnlocks
-// (Final, Native, Public, HasOutParms)
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
+// ECallResult                    CallResult                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FSteamID                SteamID                        (ConstParm, Parm, OutParm, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauInventory::UnlockLevelUnlocks(const struct FSteamID& SteamID)
+void UMordhauInventory::UnlockLevelUnlocks(const struct FSteamID& SteamID, ECallResult* CallResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauInventory.UnlockLevelUnlocks");
 
@@ -19488,7 +19832,8 @@ bool UMordhauInventory::UnlockLevelUnlocks(const struct FSteamID& SteamID)
 
 	fn->FunctionFlags = flags;
 
-	return params.ReturnValue;
+	if (CallResult != nullptr)
+		*CallResult = params.CallResult;
 }
 
 
@@ -19935,6 +20280,28 @@ int UMordhauInventory::STATIC_GetXPItemDefID()
 }
 
 
+// Function Mordhau.MordhauInventory.GetXP
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMordhauInventory::GetXP()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauInventory.GetXP");
+
+	UMordhauInventory_GetXP_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauInventory.GetUnlockRequirements
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
@@ -20213,16 +20580,16 @@ int UMordhauInventory::STATIC_GetGoldItemDefID()
 }
 
 
-// Function Mordhau.MordhauInventory.GetGoldCompensationItemDefID
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Function Mordhau.MordhauInventory.GetGold
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UMordhauInventory::STATIC_GetGoldCompensationItemDefID()
+int UMordhauInventory::GetGold()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauInventory.GetGoldCompensationItemDefID");
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauInventory.GetGold");
 
-	UMordhauInventory_GetGoldCompensationItemDefID_Params params;
+	UMordhauInventory_GetGold_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -21408,6 +21775,24 @@ void AMordhauPlayerController::ServerKickPlayer(uint64_t SteamID, const struct F
 }
 
 
+// Function Mordhau.MordhauPlayerController.ServerHasPassedMoveCheck
+// (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+
+void AMordhauPlayerController::ServerHasPassedMoveCheck()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.ServerHasPassedMoveCheck");
+
+	AMordhauPlayerController_ServerHasPassedMoveCheck_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauPlayerController.ServerGetServerStats
 // (Net, Native, Event, Public, NetServer, NetValidate)
 
@@ -22448,24 +22833,6 @@ void AMordhauPlayerController::FlushPendingAnglingInputs()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.FlushPendingAnglingInputs");
 
 	AMordhauPlayerController_FlushPendingAnglingInputs_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function Mordhau.MordhauPlayerController.FixGhostBug
-// (Final, Exec, Native, Public)
-
-void AMordhauPlayerController::FixGhostBug()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.FixGhostBug");
-
-	AMordhauPlayerController_FixGhostBug_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -23555,6 +23922,29 @@ class AMordhauCharacter* AMordhauPlayerState::GetLastPossessedMordhauCharacter()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauPlayerState.BanPlayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            BanDuration                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 BanReason                      (Parm, ZeroConstructor)
+
+void AMordhauPlayerState::BanPlayer(int BanDuration, const struct FString& BanReason)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerState.BanPlayer");
+
+	AMordhauPlayerState_BanPlayer_Params params;
+	params.BanDuration = BanDuration;
+	params.BanReason = BanReason;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
@@ -27725,9 +28115,10 @@ bool UMordhauUtilityLibrary::STATIC_NotEqual_SteamID(const struct FSteamID& A, c
 // class AActor*                  DamageCauser                   (Parm, ZeroConstructor, IsPlainOldData)
 // class AController*             InstigatedByController         (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> DamagePreventionChannel        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIgnoreFriendly                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauUtilityLibrary::STATIC_MordhauApplyRadialDamageWithFalloff(class UObject* WorldContextObject, float BaseDamage, float MinimumDamage, float BaseStructureDamage, float MinimumStructureDamage, const struct FVector& Origin, float DamageInnerRadius, float DamageOuterRadius, float DamageFalloff, TArray<class AActor*> IgnoreActors, float BaseKnockback, float MinimumKnockback, float RagdollFallRadius, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel)
+bool UMordhauUtilityLibrary::STATIC_MordhauApplyRadialDamageWithFalloff(class UObject* WorldContextObject, float BaseDamage, float MinimumDamage, float BaseStructureDamage, float MinimumStructureDamage, const struct FVector& Origin, float DamageInnerRadius, float DamageOuterRadius, float DamageFalloff, TArray<class AActor*> IgnoreActors, float BaseKnockback, float MinimumKnockback, float RagdollFallRadius, class AActor* DamageCauser, class AController* InstigatedByController, TEnumAsByte<ECollisionChannel> DamagePreventionChannel, bool bIgnoreFriendly)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.MordhauApplyRadialDamageWithFalloff");
 
@@ -27748,6 +28139,7 @@ bool UMordhauUtilityLibrary::STATIC_MordhauApplyRadialDamageWithFalloff(class UO
 	params.DamageCauser = DamageCauser;
 	params.InstigatedByController = InstigatedByController;
 	params.DamagePreventionChannel = DamagePreventionChannel;
+	params.bIgnoreFriendly = bIgnoreFriendly;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

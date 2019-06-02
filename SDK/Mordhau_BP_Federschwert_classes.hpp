@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Federschwert.BP_Federschwert_C
-// 0x0008 (0x1A40 - 0x1A38)
+// 0x0008 (0x1A90 - 0x1A88)
 class ABP_Federschwert_C : public ABP_TwoHandedSword_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A38(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A88(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
