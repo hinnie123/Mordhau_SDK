@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Pitchfork.BP_Pitchfork_C
-// 0x0000 (0x1A88 - 0x1A88)
+// 0x0000 (0x1A98 - 0x1A98)
 class ABP_Pitchfork_C : public ABP_Halberd_C
 {
 public:

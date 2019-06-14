@@ -13,14 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BattleRoyaleHUD.BP_BattleRoyaleHUD_C
-// 0x001F (0x0578 - 0x0559)
+// 0x0018 (0x0580 - 0x0568)
 class ABP_BattleRoyaleHUD_C : public ABP_MordhauHUD_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0559(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0560(0x0008) (Transient, DuplicateTransient)
-	class UBP_BattleRoyaleHUDWidget_C*                 BattleRoyaleHUDWidget;                                    // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UBP_BattleRoyaleEndScreen_C*                 BattleRoyaleEndScreen;                                    // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0568(0x0008) (Transient, DuplicateTransient)
+	class UBP_BattleRoyaleHUDWidget_C*                 BattleRoyaleHUDWidget;                                    // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBP_BattleRoyaleEndScreen_C*                 BattleRoyaleEndScreen;                                    // 0x0578(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

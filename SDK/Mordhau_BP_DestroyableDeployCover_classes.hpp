@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DestroyableDeployCover.BP_DestroyableDeployCover_C
-// 0x0000 (0x0504 - 0x0504)
+// 0x0000 (0x0515 - 0x0515)
 class ABP_DestroyableDeployCover_C : public ABP_DestroyableActor_C
 {
 public:

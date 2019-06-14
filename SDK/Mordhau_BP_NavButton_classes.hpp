@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BP_NavButton.BP_NavButton_C
-// 0x0094 (0x029C - 0x0208)
+// 0x00A0 (0x02A8 - 0x0208)
 class UBP_NavButton_C : public UUserWidget
 {
 public:
@@ -31,6 +31,8 @@ public:
 	struct FMargin                                     IconPadding;                                              // 0x026C(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
 	struct FLinearColor                                IconNeutralColor;                                         // 0x027C(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
 	struct FLinearColor                                IconPressedColor;                                         // 0x028C(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x029C(0x0004) MISSED OFFSET
+	class UBP_MainMenu_C*                              MainMenu;                                                 // 0x02A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -42,8 +44,9 @@ public:
 	ESlateVisibility Get_NavText_Visibility_1();
 	struct FText GetText();
 	void Update();
-	void BndEvt__NavButton_K2Node_ComponentBoundEvent_43_OnButtonClickedEvent__DelegateSignature();
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void Construct();
+	void BndEvt__NavButton_K2Node_ComponentBoundEvent_43_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_BP_NavButton(int EntryPoint);
 	void OnClick__DelegateSignature();
 };

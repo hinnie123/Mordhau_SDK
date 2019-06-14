@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauHUD.BP_MordhauHUD_C
-// 0x0129 (0x0559 - 0x0430)
+// 0x0138 (0x0568 - 0x0430)
 class ABP_MordhauHUD_C : public AMordhauHUD
 {
 public:
@@ -55,6 +55,8 @@ public:
 	class UBP_PostMatchScreen_C*                       PostMatchScreen;                                          // 0x0548(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UBP_VoteKickMenu_C*                          VoteKickMenu;                                             // 0x0550(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	bool                                               LoadedSingleton;                                          // 0x0558(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0559(0x0007) MISSED OFFSET
+	class UBP_ContextPopupWrapper_C*                   ContextPopupWrapper;                                      // 0x0560(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -63,6 +65,7 @@ public:
 	}
 
 
+	void CreateContextPopupWrapper();
 	void HideVoteKickMenu();
 	void ShowVoteKickMenu();
 	void CreateVoteKickMenu();

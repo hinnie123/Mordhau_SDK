@@ -38,6 +38,7 @@ public:
 	void AddBots(int* Amount, int* Team);
 	void RemoveBots(int* Amount, int* Team);
 	void OnMatchStateChanged(struct FName* OldState, struct FName* NewState);
+	void K2_OnLogout(class AController** ExitingController);
 	void ExecuteUbergraph_BP_MordhauGameMode(int EntryPoint);
 };
 

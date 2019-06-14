@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rake.BP_Rake_C
-// 0x0000 (0x1A88 - 0x1A88)
+// 0x0000 (0x1A98 - 0x1A98)
 class ABP_Rake_C : public ABP_Halberd_C
 {
 public:

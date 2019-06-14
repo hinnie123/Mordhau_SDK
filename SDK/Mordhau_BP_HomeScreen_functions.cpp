@@ -75,26 +75,6 @@ struct FText UBP_HomeScreen_C::GetCurrentVersionText()
 }
 
 
-// Function BP_HomeScreen.BP_HomeScreen_C.OnUrlChanged
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_HomeScreen_C::OnUrlChanged(const struct FText& Text)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.OnUrlChanged");
-
-	UBP_HomeScreen_C_OnUrlChanged_Params params;
-	params.Text = Text;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__ChangelogsButton_K2Node_ComponentBoundEvent_118_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -154,23 +134,6 @@ void UBP_HomeScreen_C::OnShown()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.OnShown");
 
 	UBP_HomeScreen_C_OnShown_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_HomeScreen.BP_HomeScreen_C.OnHidden
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_HomeScreen_C::OnHidden()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.OnHidden");
-
-	UBP_HomeScreen_C_OnHidden_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -326,40 +289,6 @@ void UBP_HomeScreen_C::UpdatePartyList()
 }
 
 
-// Function BP_HomeScreen.BP_HomeScreen_C.TutorialPopupConfirm
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HomeScreen_C::TutorialPopupConfirm()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.TutorialPopupConfirm");
-
-	UBP_HomeScreen_C_TutorialPopupConfirm_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_HomeScreen.BP_HomeScreen_C.TutorialPopupCancel
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_HomeScreen_C::TutorialPopupCancel()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.TutorialPopupCancel");
-
-	UBP_HomeScreen_C_TutorialPopupCancel_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_HomeScreen.BP_HomeScreen_C.ToggleNews
 // (BlueprintCallable, BlueprintEvent)
 
@@ -368,23 +297,6 @@ void UBP_HomeScreen_C::ToggleNews()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.ToggleNews");
 
 	UBP_HomeScreen_C_ToggleNews_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_HomeScreen_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
-
-	UBP_HomeScreen_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

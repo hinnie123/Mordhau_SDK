@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rapier.BP_Rapier_C
-// 0x0000 (0x1A88 - 0x1A88)
+// 0x0000 (0x1A98 - 0x1A98)
 class ABP_Rapier_C : public ABP_OneHandedSword_C
 {
 public:

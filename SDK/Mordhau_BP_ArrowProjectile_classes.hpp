@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ArrowProjectile.BP_ArrowProjectile_C
-// 0x0008 (0x0888 - 0x0880)
+// 0x0008 (0x0898 - 0x0890)
 class ABP_ArrowProjectile_C : public ABP_MissileProjectile_C
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x0880(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x0890(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

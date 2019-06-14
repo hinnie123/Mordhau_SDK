@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_2HStoneProjectile.BP_2HStoneProjectile_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_2HStoneProjectile_C : public ABP_MordhauProjectile_C
 {
 public:

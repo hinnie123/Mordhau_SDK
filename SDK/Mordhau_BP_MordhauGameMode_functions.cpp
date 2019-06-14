@@ -164,6 +164,26 @@ void ABP_MordhauGameMode_C::OnMatchStateChanged(struct FName* OldState, struct F
 }
 
 
+// Function BP_MordhauGameMode.BP_MordhauGameMode_C.K2_OnLogout
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AController**            ExitingController              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_MordhauGameMode_C::K2_OnLogout(class AController** ExitingController)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameMode.BP_MordhauGameMode_C.K2_OnLogout");
+
+	ABP_MordhauGameMode_C_K2_OnLogout_Params params;
+	params.ExitingController = ExitingController;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MordhauGameMode.BP_MordhauGameMode_C.ExecuteUbergraph_BP_MordhauGameMode
 // (HasDefaults)
 // Parameters:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ThrowingAxe.BP_ThrowingAxe_C
-// 0x0000 (0x0CA8 - 0x0CA8)
+// 0x0000 (0x0CB8 - 0x0CB8)
 class ABP_ThrowingAxe_C : public ABP_ThrowableEquipment_C
 {
 public:

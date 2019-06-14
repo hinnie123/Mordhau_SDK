@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MissileEquipment.BP_MissileEquipment_C
-// 0x0008 (0x0CA8 - 0x0CA0)
+// 0x0008 (0x0CB8 - 0x0CB0)
 class ABP_MissileEquipment_C : public AMordhauEquipment
 {
 public:
-	class USkeletalMeshComponent*                      Missile;                                                  // 0x0CA0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      Missile;                                                  // 0x0CB0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

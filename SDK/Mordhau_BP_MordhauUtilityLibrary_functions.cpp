@@ -12,6 +12,32 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.CreateContextPopup
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<struct FString, struct FText> Option_Map                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UBP_ContextPopupWrapper_C* Context_Popup_Wrapper          (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UBP_MordhauUtilityLibrary_C::STATIC_CreateContextPopup(TMap<struct FString, struct FText> Option_Map, class UObject* __WorldContext, class UBP_ContextPopupWrapper_C** Context_Popup_Wrapper)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.CreateContextPopup");
+
+	UBP_MordhauUtilityLibrary_C_CreateContextPopup_Params params;
+	params.Option_Map = Option_Map;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Context_Popup_Wrapper != nullptr)
+		*Context_Popup_Wrapper = params.Context_Popup_Wrapper;
+}
+
+
 // Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.GetGoldAndRankUnlockRequirement
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

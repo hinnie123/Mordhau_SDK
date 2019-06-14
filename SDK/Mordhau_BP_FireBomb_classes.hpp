@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FireBomb.BP_FireBomb_C
-// 0x0000 (0x0CA8 - 0x0CA8)
+// 0x0000 (0x0CB8 - 0x0CB8)
 class ABP_FireBomb_C : public ABP_ThrowableEquipment_C
 {
 public:

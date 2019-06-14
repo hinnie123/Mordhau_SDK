@@ -24,7 +24,7 @@ struct FEngineServiceNotification
 // 0x0010
 struct FEngineServiceTerminate
 {
-	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     Username;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct EngineMessages.EngineServiceExecuteCommand
@@ -32,14 +32,14 @@ struct FEngineServiceTerminate
 struct FEngineServiceExecuteCommand
 {
 	struct FString                                     Command;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FString                                     UserName;                                                 // 0x0010(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     Username;                                                 // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct EngineMessages.EngineServiceAuthGrant
 // 0x0020
 struct FEngineServiceAuthGrant
 {
-	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     Username;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
 	struct FString                                     UserToGrant;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
@@ -47,7 +47,7 @@ struct FEngineServiceAuthGrant
 // 0x0020
 struct FEngineServiceAuthDeny
 {
-	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     Username;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
 	struct FString                                     UserToDeny;                                               // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 

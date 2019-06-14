@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tier2LegsPickup.BP_Tier2LegsPickup_C
-// 0x0000 (0x04F0 - 0x04F0)
+// 0x0000 (0x0500 - 0x0500)
 class ABP_Tier2LegsPickup_C : public ABP_LegsPickup_C
 {
 public:

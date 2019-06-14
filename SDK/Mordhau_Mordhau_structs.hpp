@@ -378,8 +378,8 @@ enum class EStatSetBy : uint8_t
 };
 
 
-// Enum Mordhau.ERegion
-enum class ERegion : uint8_t
+// Enum Mordhau.EServerRegion
+enum class EServerRegion : uint8_t
 {
 	East_Asia                      = 0,
 	Europe                         = 1,
@@ -390,26 +390,7 @@ enum class ERegion : uint8_t
 	US_East                        = 6,
 	US_West                        = 7,
 	Worldwide                      = 8,
-	ERegion_MAX                    = 9
-};
-
-
-// Enum Mordhau.ECheatReportSource
-enum class ECheatReportSource : uint8_t
-{
-	Detection                      = 0,
-	Heuristic                      = 1,
-	PlayerReport                   = 2,
-	ECheatReportSource_MAX         = 3
-};
-
-
-// Enum Mordhau.ECheatReportType
-enum class ECheatReportType : uint8_t
-{
-	Unspecified                    = 0,
-	Speedhack                      = 1,
-	ECheatReportType_MAX           = 2
+	EServerRegion_MAX              = 9
 };
 
 
@@ -1228,7 +1209,7 @@ struct FFindServerSessionsFilter
 	int                                                MaxPing;                                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FString                                     ServerName;                                               // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FString                                     GameMode;                                                 // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	ERegion                                            Region;                                                   // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EServerRegion                                      Region;                                                   // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 };
 
@@ -1241,7 +1222,7 @@ struct FFindLobbySessionsFilter
 	int                                                MMR;                                                      // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	TArray<struct FString>                             GameModes;                                                // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	ERegion                                            Region;                                                   // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	EServerRegion                                      Region;                                                   // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
 };
 
@@ -1506,7 +1487,7 @@ struct FInventoryData
 struct FItemData
 {
 	struct FString                                     accountid;                                                // 0x0000(0x0010) (ZeroConstructor)
-	struct FString                                     itemid;                                                   // 0x0010(0x0010) (ZeroConstructor)
+	struct FString                                     ItemId;                                                   // 0x0010(0x0010) (ZeroConstructor)
 	int                                                quantity;                                                 // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 	struct FString                                     originalitemid;                                           // 0x0028(0x0010) (ZeroConstructor)
@@ -1589,16 +1570,6 @@ struct FMordhauColorTable
 {
 	struct FText                                       TableName;                                                // 0x0000(0x0018) (Edit, BlueprintVisible)
 	TArray<struct FColorTableEntry>                    Entries;                                                  // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct Mordhau.CheatReport
-// 0x0010
-struct FCheatReport
-{
-	struct FSteamID                                    SteamID;                                                  // 0x0000(0x0008)
-	ECheatReportType                                   Type;                                                     // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
-	ECheatReportSource                                 Source;                                                   // 0x0009(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct Mordhau.CachedAvatars

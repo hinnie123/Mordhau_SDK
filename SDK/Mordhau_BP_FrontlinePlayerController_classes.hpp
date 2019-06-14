@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontlinePlayerController.BP_FrontlinePlayerController_C
-// 0x0008 (0x0B40 - 0x0B38)
+// 0x0008 (0x0B98 - 0x0B90)
 class ABP_FrontlinePlayerController_C : public ABP_MordhauPlayerController_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B38(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B90(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

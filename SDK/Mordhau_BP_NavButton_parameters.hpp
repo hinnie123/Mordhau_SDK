@@ -31,13 +31,20 @@ struct UBP_NavButton_C_Update_Params
 {
 };
 
-// Function BP_NavButton.BP_NavButton_C.BndEvt__NavButton_K2Node_ComponentBoundEvent_43_OnButtonClickedEvent__DelegateSignature
-struct UBP_NavButton_C_BndEvt__NavButton_K2Node_ComponentBoundEvent_43_OnButtonClickedEvent__DelegateSignature_Params
+// Function BP_NavButton.BP_NavButton_C.Tick
+struct UBP_NavButton_C_Tick_Params
 {
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_NavButton.BP_NavButton_C.Construct
 struct UBP_NavButton_C_Construct_Params
+{
+};
+
+// Function BP_NavButton.BP_NavButton_C.BndEvt__NavButton_K2Node_ComponentBoundEvent_43_OnButtonClickedEvent__DelegateSignature
+struct UBP_NavButton_C_BndEvt__NavButton_K2Node_ComponentBoundEvent_43_OnButtonClickedEvent__DelegateSignature_Params
 {
 };
 

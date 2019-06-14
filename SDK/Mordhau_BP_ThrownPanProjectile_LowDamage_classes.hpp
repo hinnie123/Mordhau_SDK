@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ThrownPanProjectile_LowDamage.BP_ThrownPanProjectile_LowDamage_C
-// 0x0000 (0x0888 - 0x0888)
+// 0x0000 (0x0898 - 0x0898)
 class ABP_ThrownPanProjectile_LowDamage_C : public ABP_ThrownSpinningProjectile_C
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TurdProjectile.BP_TurdProjectile_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_TurdProjectile_C : public ABP_MordhauProjectile_C
 {
 public:

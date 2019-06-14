@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FireBombProjectile.BP_FireBombProjectile_C
-// 0x0008 (0x0888 - 0x0880)
+// 0x0008 (0x0898 - 0x0890)
 class ABP_FireBombProjectile_C : public ABP_MordhauProjectile_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0880(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0890(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

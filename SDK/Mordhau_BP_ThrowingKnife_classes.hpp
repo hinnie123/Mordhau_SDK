@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ThrowingKnife.BP_ThrowingKnife_C
-// 0x0000 (0x0CA8 - 0x0CA8)
+// 0x0000 (0x0CB8 - 0x0CB8)
 class ABP_ThrowingKnife_C : public ABP_ThrowableEquipment_C
 {
 public:

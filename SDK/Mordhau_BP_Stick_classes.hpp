@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Stick.BP_Stick_C
-// 0x0000 (0x1A88 - 0x1A88)
+// 0x0000 (0x1A98 - 0x1A98)
 class ABP_Stick_C : public ABP_Mace_C
 {
 public:

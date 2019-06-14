@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LongbowArrow.BP_LongbowArrow_C
-// 0x0000 (0x0888 - 0x0888)
+// 0x0000 (0x0898 - 0x0898)
 class ABP_LongbowArrow_C : public ABP_ArrowProjectile_C
 {
 public:

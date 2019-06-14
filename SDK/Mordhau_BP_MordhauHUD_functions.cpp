@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauHUD.BP_MordhauHUD_C.CreateContextPopupWrapper
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_MordhauHUD_C::CreateContextPopupWrapper()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauHUD.BP_MordhauHUD_C.CreateContextPopupWrapper");
+
+	ABP_MordhauHUD_C_CreateContextPopupWrapper_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MordhauHUD.BP_MordhauHUD_C.HideVoteKickMenu
 // (Public, BlueprintCallable, BlueprintEvent)
 

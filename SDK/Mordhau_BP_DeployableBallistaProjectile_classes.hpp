@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DeployableBallistaProjectile.BP_DeployableBallistaProjectile_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_DeployableBallistaProjectile_C : public ABP_MordhauProjectile_C
 {
 public:

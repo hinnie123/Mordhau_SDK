@@ -4819,6 +4819,30 @@ void AMordhauActor::OnHeldInteractionStart(class AMordhauCharacter* Character)
 }
 
 
+// Function Mordhau.MordhauActor.IsAnyInstanceOwner
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class AMordhauPlayerController*> ControllerArray                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMordhauActor::IsAnyInstanceOwner(TArray<class AMordhauPlayerController*> ControllerArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauActor.IsAnyInstanceOwner");
+
+	AMordhauActor_IsAnyInstanceOwner_Params params;
+	params.ControllerArray = ControllerArray;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauActor.InteractPassively
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -12424,14 +12448,14 @@ void UMordhauGameInstance::SetPartyMemberProfile(const struct FSteamID& SteamID,
 // Function Mordhau.MordhauGameInstance.SetPartyMatchmakingLobbyID
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSteamID                LobbyID                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSteamID                LobbyId                        (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UMordhauGameInstance::SetPartyMatchmakingLobbyID(const struct FSteamID& LobbyID)
+void UMordhauGameInstance::SetPartyMatchmakingLobbyID(const struct FSteamID& LobbyId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameInstance.SetPartyMatchmakingLobbyID");
 
 	UMordhauGameInstance_SetPartyMatchmakingLobbyID_Params params;
-	params.LobbyID = LobbyID;
+	params.LobbyId = LobbyId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -12665,15 +12689,15 @@ void UMordhauGameInstance::JoinPartyGameServer()
 // Function Mordhau.MordhauGameInstance.JoinMatchmakingLobbyByID
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FSteamID                LobbyID                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSteamID                LobbyId                        (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauGameInstance::JoinMatchmakingLobbyByID(const struct FSteamID& LobbyID)
+bool UMordhauGameInstance::JoinMatchmakingLobbyByID(const struct FSteamID& LobbyId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameInstance.JoinMatchmakingLobbyByID");
 
 	UMordhauGameInstance_JoinMatchmakingLobbyByID_Params params;
-	params.LobbyID = LobbyID;
+	params.LobbyId = LobbyId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -13194,10 +13218,10 @@ struct FString UMordhauGameInstance::GetAuthTicket()
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // TArray<struct FString>         InGameModes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// ERegion                        InRegion                       (Parm, ZeroConstructor, IsPlainOldData)
+// EServerRegion                  InRegion                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauGameInstance::CreateMatchmakingLobby(TArray<struct FString> InGameModes, ERegion InRegion)
+bool UMordhauGameInstance::CreateMatchmakingLobby(TArray<struct FString> InGameModes, EServerRegion InRegion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameInstance.CreateMatchmakingLobby");
 
@@ -14190,34 +14214,6 @@ void AMordhauGameSession::TriggerRewardDrop()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function Mordhau.MordhauGameSession.ReportPlayer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class APlayerController*       Player                         (Parm, ZeroConstructor, IsPlainOldData)
-// ECheatReportType               ReportType                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// ECheatReportSource             ReportSource                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AMordhauGameSession::ReportPlayer(class APlayerController* Player, ECheatReportType ReportType, ECheatReportSource ReportSource)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameSession.ReportPlayer");
-
-	AMordhauGameSession_ReportPlayer_Params params;
-	params.Player = Player;
-	params.ReportType = ReportType;
-	params.ReportSource = ReportSource;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -16187,9 +16183,9 @@ void UMordhauGameUserSettings::SetMaxRagdolls(int NewMax)
 // Function Mordhau.MordhauGameUserSettings.SetMatchmakingRegion
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// ERegion                        NewRegion                      (Parm, ZeroConstructor, IsPlainOldData)
+// EServerRegion                  NewRegion                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UMordhauGameUserSettings::SetMatchmakingRegion(ERegion NewRegion)
+void UMordhauGameUserSettings::SetMatchmakingRegion(EServerRegion NewRegion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetMatchmakingRegion");
 
@@ -17550,9 +17546,9 @@ int UMordhauGameUserSettings::GetMaxRagdolls()
 // Function Mordhau.MordhauGameUserSettings.GetMatchmakingRegion
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// ERegion                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EServerRegion                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ERegion UMordhauGameUserSettings::GetMatchmakingRegion()
+EServerRegion UMordhauGameUserSettings::GetMatchmakingRegion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetMatchmakingRegion");
 
@@ -21240,6 +21236,30 @@ void AMordhauPlayerController::ShowAuthTraces(bool bValue)
 }
 
 
+// Function Mordhau.MordhauPlayerController.SharesInstanceWith
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  OtherActor                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMordhauPlayerController::SharesInstanceWith(class AActor* OtherActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.SharesInstanceWith");
+
+	AMordhauPlayerController_SharesInstanceWith_Params params;
+	params.OtherActor = OtherActor;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauPlayerController.SetChoiceMenuConsumesInput
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -21775,14 +21795,17 @@ void AMordhauPlayerController::ServerKickPlayer(uint64_t SteamID, const struct F
 }
 
 
-// Function Mordhau.MordhauPlayerController.ServerHasPassedMoveCheck
+// Function Mordhau.MordhauPlayerController.ServerHasPassedCheck
 // (Net, NetReliable, Native, Event, Public, NetServer, NetValidate)
+// Parameters:
+// unsigned char                  Param                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMordhauPlayerController::ServerHasPassedMoveCheck()
+void AMordhauPlayerController::ServerHasPassedCheck(unsigned char Param)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.ServerHasPassedMoveCheck");
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.ServerHasPassedCheck");
 
-	AMordhauPlayerController_ServerHasPassedMoveCheck_Params params;
+	AMordhauPlayerController_ServerHasPassedCheck_Params params;
+	params.Param = Param;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -24918,9 +24941,9 @@ EServerList UFindMordhauServerSessions::STATIC_GetServerList(const struct FServe
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FServerSearchResult     Result                         (ConstParm, Parm, OutParm, ReferenceParm)
-// ERegion                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EServerRegion                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ERegion UFindMordhauServerSessions::STATIC_GetRegion(const struct FServerSearchResult& Result)
+EServerRegion UFindMordhauServerSessions::STATIC_GetRegion(const struct FServerSearchResult& Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.FindMordhauServerSessions.GetRegion");
 
@@ -25448,10 +25471,10 @@ class UDestroyMordhauServerSession* UDestroyMordhauServerSession::STATIC_Destroy
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FString>         InGameModes                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// ERegion                        InRegion                       (Parm, ZeroConstructor, IsPlainOldData)
+// EServerRegion                  InRegion                       (Parm, ZeroConstructor, IsPlainOldData)
 // class UCreateMatchmakingSession* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCreateMatchmakingSession* UCreateMatchmakingSession::STATIC_CreateMatchmakingSession(class UObject* WorldContextObject, TArray<struct FString> InGameModes, ERegion InRegion)
+class UCreateMatchmakingSession* UCreateMatchmakingSession::STATIC_CreateMatchmakingSession(class UObject* WorldContextObject, TArray<struct FString> InGameModes, EServerRegion InRegion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.CreateMatchmakingSession.CreateMatchmakingSession");
 
@@ -25475,16 +25498,16 @@ class UCreateMatchmakingSession* UCreateMatchmakingSession::STATIC_CreateMatchma
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// struct FSteamID                LobbyID                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FSteamID                LobbyId                        (ConstParm, Parm, OutParm, ReferenceParm)
 // class UJoinMatchmakingSession* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UJoinMatchmakingSession* UJoinMatchmakingSession::STATIC_JoinMatchmakingSessionByID(class UObject* WorldContextObject, const struct FSteamID& LobbyID)
+class UJoinMatchmakingSession* UJoinMatchmakingSession::STATIC_JoinMatchmakingSessionByID(class UObject* WorldContextObject, const struct FSteamID& LobbyId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.JoinMatchmakingSession.JoinMatchmakingSessionByID");
 
 	UJoinMatchmakingSession_JoinMatchmakingSessionByID_Params params;
 	params.WorldContextObject = WorldContextObject;
-	params.LobbyID = LobbyID;
+	params.LobbyId = LobbyId;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -29229,10 +29252,10 @@ TEnumAsByte<ENetRole> UMordhauUtilityLibrary::STATIC_GetRole(class AActor* Actor
 // Function Mordhau.MordhauUtilityLibrary.GetRegionName
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// ERegion                        Region                         (Parm, ZeroConstructor, IsPlainOldData)
+// EServerRegion                  Region                         (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UMordhauUtilityLibrary::STATIC_GetRegionName(ERegion Region)
+struct FString UMordhauUtilityLibrary::STATIC_GetRegionName(EServerRegion Region)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.GetRegionName");
 
@@ -29254,9 +29277,9 @@ struct FString UMordhauUtilityLibrary::STATIC_GetRegionName(ERegion Region)
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 RegionName                     (Parm, ZeroConstructor)
-// ERegion                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// EServerRegion                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ERegion UMordhauUtilityLibrary::STATIC_GetRegion(const struct FString& RegionName)
+EServerRegion UMordhauUtilityLibrary::STATIC_GetRegion(const struct FString& RegionName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.GetRegion");
 
@@ -30356,17 +30379,17 @@ int UMordhauUtilityLibrary::STATIC_GetFaceIndex(const struct FHitResult& Hit)
 }
 
 
-// Function Mordhau.MordhauUtilityLibrary.GetErrorText
+// Function Mordhau.MordhauUtilityLibrary.getErrorText
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 ErrorString                    (Parm, ZeroConstructor)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UMordhauUtilityLibrary::STATIC_GetErrorText(const struct FString& ErrorString)
+struct FText UMordhauUtilityLibrary::STATIC_getErrorText(const struct FString& ErrorString)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.GetErrorText");
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.getErrorText");
 
-	UMordhauUtilityLibrary_GetErrorText_Params params;
+	UMordhauUtilityLibrary_getErrorText_Params params;
 	params.ErrorString = ErrorString;
 
 	auto flags = fn->FunctionFlags;

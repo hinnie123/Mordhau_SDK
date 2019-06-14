@@ -63,6 +63,12 @@ struct ABP_MordhauGameMode_C_OnMatchStateChanged_Params
 	struct FName*                                      NewState;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
+// Function BP_MordhauGameMode.BP_MordhauGameMode_C.K2_OnLogout
+struct ABP_MordhauGameMode_C_K2_OnLogout_Params
+{
+	class AController**                                ExitingController;                                        // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MordhauGameMode.BP_MordhauGameMode_C.ExecuteUbergraph_BP_MordhauGameMode
 struct ABP_MordhauGameMode_C_ExecuteUbergraph_BP_MordhauGameMode_Params
 {

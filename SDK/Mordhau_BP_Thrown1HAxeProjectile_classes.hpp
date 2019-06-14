@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Thrown1HAxeProjectile.BP_Thrown1HAxeProjectile_C
-// 0x0000 (0x0888 - 0x0888)
+// 0x0000 (0x0898 - 0x0898)
 class ABP_Thrown1HAxeProjectile_C : public ABP_ThrownSpinningProjectile_C
 {
 public:

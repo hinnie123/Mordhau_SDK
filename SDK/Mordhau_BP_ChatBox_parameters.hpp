@@ -14,6 +14,62 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ChatBox.BP_ChatBox_C.Repopulate Muted Player List
+struct UBP_ChatBox_C_Repopulate_Muted_Player_List_Params
+{
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.RemovePlayerFromMutedMap
+struct UBP_ChatBox_C_RemovePlayerFromMutedMap_Params
+{
+	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	int                                                SteamID_Index;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.IsPlayerMuted
+struct UBP_ChatBox_C_IsPlayerMuted_Params
+{
+	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	TEnumAsByte<E_ChatMuteTypes>                       Mute_Type;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               isMuted;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.AddPlayerToMutedMap
+struct UBP_ChatBox_C_AddPlayerToMutedMap_Params
+{
+	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	TEnumAsByte<E_ChatMuteTypes>                       Mute_Type;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Player_Name;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.Get Keys From Value
+struct UBP_ChatBox_C_Get_Keys_From_Value_Params
+{
+	TMap<class UBP_ChatBoxEntry_C*, struct FString>    PreviousMessagesMap;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FString                                     Value__SteamID_;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	TArray<class UBP_ChatBoxEntry_C*>                  Keys;                                                     // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.UnMutePlayer
+struct UBP_ChatBox_C_UnMutePlayer_Params
+{
+	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.MutePlayer
+struct UBP_ChatBox_C_MutePlayer_Params
+{
+	TEnumAsByte<E_ChatMuteTypes>                       MuteType;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	struct FText                                       PlayerName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.GetVisibility_1
+struct UBP_ChatBox_C_GetVisibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_ChatBox.BP_ChatBox_C.ResetThreshold
 struct UBP_ChatBox_C_ResetThreshold_Params
 {
@@ -96,10 +152,11 @@ struct UBP_ChatBox_C_OnPreviewKeyDown_Params
 // Function BP_ChatBox.BP_ChatBox_C.AddEntry
 struct UBP_ChatBox_C_AddEntry_Params
 {
-	struct FText                                       CharacterName;                                            // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       PlayerName;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FText                                       Message;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FLinearColor                                NameColor;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	struct FText                                       Prefix;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
 
 // Function BP_ChatBox.BP_ChatBox_C.Tick

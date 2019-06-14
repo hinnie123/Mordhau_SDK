@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauShield.BP_MordhauShield_C
-// 0x0018 (0x1A88 - 0x1A70)
+// 0x0018 (0x1A98 - 0x1A80)
 class ABP_MordhauShield_C : public AMordhauShield
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A70(0x0008) (Transient, DuplicateTransient)
-	class UBoxComponent*                               BlockColliderBP;                                          // 0x1A78(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               ProjectileBlock;                                          // 0x1A80(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A80(0x0008) (Transient, DuplicateTransient)
+	class UBoxComponent*                               BlockColliderBP;                                          // 0x1A88(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               ProjectileBlock;                                          // 0x1A90(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

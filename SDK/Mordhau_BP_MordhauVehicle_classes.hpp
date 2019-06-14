@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauVehicle.BP_MordhauVehicle_C
-// 0x0000 (0x0D00 - 0x0D00)
+// 0x0000 (0x0D10 - 0x0D10)
 class ABP_MordhauVehicle_C : public AMordhauVehicle
 {
 public:

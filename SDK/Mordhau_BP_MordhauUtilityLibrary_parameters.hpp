@@ -14,6 +14,14 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.CreateContextPopup
+struct UBP_MordhauUtilityLibrary_C_CreateContextPopup_Params
+{
+	TMap<struct FString, struct FText>                 Option_Map;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UBP_ContextPopupWrapper_C*                   Context_Popup_Wrapper;                                    // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
 // Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.GetGoldAndRankUnlockRequirement
 struct UBP_MordhauUtilityLibrary_C_GetGoldAndRankUnlockRequirement_Params
 {

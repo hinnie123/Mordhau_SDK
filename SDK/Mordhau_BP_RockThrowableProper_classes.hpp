@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RockThrowableProper.BP_RockThrowableProper_C
-// 0x0000 (0x0CA8 - 0x0CA8)
+// 0x0000 (0x0CB8 - 0x0CB8)
 class ABP_RockThrowableProper_C : public ABP_ThrowableEquipment_C
 {
 public:

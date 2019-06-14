@@ -13,14 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RandomProfileDoll.BP_RandomProfileDoll_C
-// 0x00AD (0x1C8D - 0x1BE0)
+// 0x00AD (0x1C9D - 0x1BF0)
 class ABP_RandomProfileDoll_C : public ABP_CharacterDoll_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1BE0(0x0008) (Transient, DuplicateTransient)
-	struct FCharacterProfile                           CurrentProfileStored;                                     // 0x1BE8(0x00A0) (Edit, BlueprintVisible, DisableEditOnInstance)
-	int                                                RerolledFrame;                                            // 0x1C88(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               SkippedFirstFrame;                                        // 0x1C8C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1BF0(0x0008) (Transient, DuplicateTransient)
+	struct FCharacterProfile                           CurrentProfileStored;                                     // 0x1BF8(0x00A0) (Edit, BlueprintVisible, DisableEditOnInstance)
+	int                                                RerolledFrame;                                            // 0x1C98(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               SkippedFirstFrame;                                        // 0x1C9C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

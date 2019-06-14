@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontlineCharacter.BP_FrontlineCharacter_C
-// 0x0000 (0x1BE0 - 0x1BE0)
+// 0x0000 (0x1BF0 - 0x1BF0)
 class ABP_FrontlineCharacter_C : public ABP_MordhauCharacter_C
 {
 public:

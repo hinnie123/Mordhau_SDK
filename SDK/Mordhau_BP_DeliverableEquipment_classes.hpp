@@ -13,17 +13,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DeliverableEquipment.BP_DeliverableEquipment_C
-// 0x0020 (0x0CC0 - 0x0CA0)
+// 0x0020 (0x0CD0 - 0x0CB0)
 class ABP_DeliverableEquipment_C : public AMordhauEquipment
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CA0(0x0008) (Transient, DuplicateTransient)
-	class UBoxComponent*                               DeliverableCollision;                                     // 0x0CA8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               Consumed;                                                 // 0x0CB0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               MustThrow;                                                // 0x0CB1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DestroysOnDelivery;                                       // 0x0CB2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x5];                                       // 0x0CB3(0x0005) MISSED OFFSET
-	class AMordhauPlayerController*                    LastEquippedByPlayerController;                           // 0x0CB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CB0(0x0008) (Transient, DuplicateTransient)
+	class UBoxComponent*                               DeliverableCollision;                                     // 0x0CB8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               Consumed;                                                 // 0x0CC0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               MustThrow;                                                // 0x0CC1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DestroysOnDelivery;                                       // 0x0CC2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x5];                                       // 0x0CC3(0x0005) MISSED OFFSET
+	class AMordhauPlayerController*                    LastEquippedByPlayerController;                           // 0x0CC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -41,7 +41,7 @@ public:
 	TArray<int>                                        UsedBoneIndices;                                          // 0x0148(0x0010) (ZeroConstructor)
 	int                                                ReferenceBoneIndex;                                       // 0x0158(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x015C(0x0004) MISSED OFFSET
-	class UClothingAssetCustomData*                    CustomData;                                               // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClothingAssetCustomData*                    customData;                                               // 0x0160(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

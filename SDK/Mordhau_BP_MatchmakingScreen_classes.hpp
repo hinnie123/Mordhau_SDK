@@ -45,7 +45,7 @@ public:
 	TArray<struct FSteamID>                            BlacklistedLobbies;                                       // 0x02A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int                                                ServerIdx;                                                // 0x02B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsJoining;                                                // 0x02B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	ERegion                                            LobbyRegion;                                              // 0x02B5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      LobbyRegion;                                              // 0x02B5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData04[0x2];                                       // 0x02B6(0x0002) MISSED OFFSET
 	struct FString                                     GameMode;                                                 // 0x02B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
@@ -56,15 +56,15 @@ public:
 	}
 
 
-	void IsLobbyBlacklisted(const struct FSteamID& LobbyID, bool* bIsBlacklisted);
+	void IsLobbyBlacklisted(const struct FSteamID& LobbyId, bool* bIsBlacklisted);
 	void IsServerValidForPlayer(const struct FServerSearchResult& SearchResult, bool* bIsValid);
 	ESlateVisibility Get_DebugTextBox_Visibility_1();
 	void IsPlayerPartyLeader(bool* IsLeader);
 	void DebugSearch();
-	void DebugServer(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyID, bool HasAuthority);
+	void DebugServer(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyId, bool HasAuthority);
 	void AddDebugMessage(const struct FString& Message);
 	void HasPlayerSearchAuthority(bool* HasAuthority);
-	void IsServerValidForLobby(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyID, const struct FLobbySearchResult& Lobby, bool* bIsValid);
+	void IsServerValidForLobby(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyId, const struct FLobbySearchResult& Lobby, bool* bIsValid);
 	void GetSelectedGameModes(TArray<struct FString>* GameModes);
 	void CanPlayerSearch(bool* bCanSearch);
 	void OnFailure_4A04F7DD47F85B488D7272BBFC905448();

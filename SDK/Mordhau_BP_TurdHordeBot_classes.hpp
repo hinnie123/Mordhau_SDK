@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TurdHordeBot.BP_TurdHordeBot_C
-// 0x0000 (0x0CA8 - 0x0CA8)
+// 0x0000 (0x0CB8 - 0x0CB8)
 class ABP_TurdHordeBot_C : public ABP_Turd_C
 {
 public:

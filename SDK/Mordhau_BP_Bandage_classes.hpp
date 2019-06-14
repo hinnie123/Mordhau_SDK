@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bandage.BP_Bandage_C
-// 0x000C (0x0CAC - 0x0CA0)
+// 0x000C (0x0CBC - 0x0CB0)
 class ABP_Bandage_C : public AMordhauEquipment
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CA0(0x0008) (Transient, DuplicateTransient)
-	int                                                HealAmount;                                               // 0x0CA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CB0(0x0008) (Transient, DuplicateTransient)
+	int                                                HealAmount;                                               // 0x0CB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

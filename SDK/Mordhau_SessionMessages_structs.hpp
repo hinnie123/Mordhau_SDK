@@ -62,7 +62,7 @@ struct FSessionServicePong
 // 0x0010
 struct FSessionServicePing
 {
-	struct FString                                     UserName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     Username;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 }

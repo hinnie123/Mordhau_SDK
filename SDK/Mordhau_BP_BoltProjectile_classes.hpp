@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BoltProjectile.BP_BoltProjectile_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_BoltProjectile_C : public ABP_MissileProjectile_C
 {
 public:

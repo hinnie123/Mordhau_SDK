@@ -15,15 +15,15 @@ namespace SDK
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.IsLobbyBlacklisted
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FSteamID                LobbyID                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSteamID                LobbyId                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           bIsBlacklisted                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MatchmakingScreen_C::IsLobbyBlacklisted(const struct FSteamID& LobbyID, bool* bIsBlacklisted)
+void UBP_MatchmakingScreen_C::IsLobbyBlacklisted(const struct FSteamID& LobbyId, bool* bIsBlacklisted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.IsLobbyBlacklisted");
 
 	UBP_MatchmakingScreen_C_IsLobbyBlacklisted_Params params;
-	params.LobbyID = LobbyID;
+	params.LobbyId = LobbyId;
 
 	auto flags = fn->FunctionFlags;
 
@@ -124,16 +124,16 @@ void UBP_MatchmakingScreen_C::DebugSearch()
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FServerSearchResult     SearchResult                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FSteamID                LobbyID                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSteamID                LobbyId                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           HasAuthority                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MatchmakingScreen_C::DebugServer(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyID, bool HasAuthority)
+void UBP_MatchmakingScreen_C::DebugServer(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyId, bool HasAuthority)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.DebugServer");
 
 	UBP_MatchmakingScreen_C_DebugServer_Params params;
 	params.SearchResult = SearchResult;
-	params.LobbyID = LobbyID;
+	params.LobbyId = LobbyId;
 	params.HasAuthority = HasAuthority;
 
 	auto flags = fn->FunctionFlags;
@@ -190,17 +190,17 @@ void UBP_MatchmakingScreen_C::HasPlayerSearchAuthority(bool* HasAuthority)
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FServerSearchResult     SearchResult                   (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FSteamID                LobbyID                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FSteamID                LobbyId                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FLobbySearchResult      Lobby                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           bIsValid                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MatchmakingScreen_C::IsServerValidForLobby(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyID, const struct FLobbySearchResult& Lobby, bool* bIsValid)
+void UBP_MatchmakingScreen_C::IsServerValidForLobby(const struct FServerSearchResult& SearchResult, const struct FSteamID& LobbyId, const struct FLobbySearchResult& Lobby, bool* bIsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.IsServerValidForLobby");
 
 	UBP_MatchmakingScreen_C_IsServerValidForLobby_Params params;
 	params.SearchResult = SearchResult;
-	params.LobbyID = LobbyID;
+	params.LobbyId = LobbyId;
 	params.Lobby = Lobby;
 
 	auto flags = fn->FunctionFlags;

@@ -297,7 +297,7 @@ struct FMovieSceneSegmentIdentifier
 // 0x0004 (0x000C - 0x0008)
 struct FMovieSceneEvaluationFieldSegmentPtr : public FMovieSceneEvaluationFieldTrackPtr
 {
-	struct FMovieSceneSegmentIdentifier                SegmentID;                                                // 0x0008(0x0004)
+	struct FMovieSceneSegmentIdentifier                SegmentId;                                                // 0x0008(0x0004)
 };
 
 // ScriptStruct MovieScene.MovieSceneEvaluationGroup

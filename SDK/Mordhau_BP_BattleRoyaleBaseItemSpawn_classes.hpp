@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BattleRoyaleBaseItemSpawn.BP_BattleRoyaleBaseItemSpawn_C
-// 0x0050 (0x04B0 - 0x0460)
+// 0x0050 (0x04C0 - 0x0470)
 class ABP_BattleRoyaleBaseItemSpawn_C : public AMordhauActor
 {
 public:
-	TMap<class UClass*, float>                         ItemList;                                                 // 0x0460(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	TMap<class UClass*, float>                         ItemList;                                                 // 0x0470(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -13,13 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HordeHUD.BP_HordeHUD_C
-// 0x0017 (0x0570 - 0x0559)
+// 0x0010 (0x0578 - 0x0568)
 class ABP_HordeHUD_C : public ABP_MordhauHUD_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0559(0x0007) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0560(0x0008) (Transient, DuplicateTransient)
-	class UBP_HordeHUDWidget_C*                        HordeHUDWidget;                                           // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0568(0x0008) (Transient, DuplicateTransient)
+	class UBP_HordeHUDWidget_C*                        HordeHUDWidget;                                           // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

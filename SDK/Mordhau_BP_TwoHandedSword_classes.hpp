@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TwoHandedSword.BP_TwoHandedSword_C
-// 0x0000 (0x1A88 - 0x1A88)
+// 0x0000 (0x1A98 - 0x1A98)
 class ABP_TwoHandedSword_C : public ABP_MordhauWeapon_C
 {
 public:

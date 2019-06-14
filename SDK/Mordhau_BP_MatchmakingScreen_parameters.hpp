@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.IsLobbyBlacklisted
 struct UBP_MatchmakingScreen_C_IsLobbyBlacklisted_Params
 {
-	struct FSteamID                                    LobbyID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSteamID                                    LobbyId;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               bIsBlacklisted;                                           // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -49,7 +49,7 @@ struct UBP_MatchmakingScreen_C_DebugSearch_Params
 struct UBP_MatchmakingScreen_C_DebugServer_Params
 {
 	struct FServerSearchResult                         SearchResult;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FSteamID                                    LobbyID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSteamID                                    LobbyId;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               HasAuthority;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -69,7 +69,7 @@ struct UBP_MatchmakingScreen_C_HasPlayerSearchAuthority_Params
 struct UBP_MatchmakingScreen_C_IsServerValidForLobby_Params
 {
 	struct FServerSearchResult                         SearchResult;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FSteamID                                    LobbyID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FSteamID                                    LobbyId;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	struct FLobbySearchResult                          Lobby;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                               bIsValid;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

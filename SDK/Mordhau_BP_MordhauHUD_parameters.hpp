@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauHUD.BP_MordhauHUD_C.CreateContextPopupWrapper
+struct ABP_MordhauHUD_C_CreateContextPopupWrapper_Params
+{
+};
+
 // Function BP_MordhauHUD.BP_MordhauHUD_C.HideVoteKickMenu
 struct ABP_MordhauHUD_C_HideVoteKickMenu_Params
 {

@@ -12,6 +12,65 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Right
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainMenu_C::Request_Main_Navigation_Right()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Right");
+
+	UBP_MainMenu_C_Request_Main_Navigation_Right_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Left
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_MainMenu_C::Request_Main_Navigation_Left()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Left");
+
+	UBP_MainMenu_C_Request_Main_Navigation_Left_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.OnKeyDown
+// (BlueprintCosmetic, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry*              MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FKeyEvent*              InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FEventReply UBP_MainMenu_C::OnKeyDown(struct FGeometry* MyGeometry, struct FKeyEvent* InKeyEvent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnKeyDown");
+
+	UBP_MainMenu_C_OnKeyDown_Params params;
+	params.MyGeometry = MyGeometry;
+	params.InKeyEvent = InKeyEvent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_MainMenu.BP_MainMenu_C.Get_ArmorySubNav_Visibility_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -995,6 +1054,23 @@ void UBP_MainMenu_C::GoToMatchMaking()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.GoToMatchMaking");
 
 	UBP_MainMenu_C_GoToMatchMaking_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_MainMenu_C::BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature");
+
+	UBP_MainMenu_C_BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

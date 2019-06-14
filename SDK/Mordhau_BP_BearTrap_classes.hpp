@@ -13,23 +13,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BearTrap.BP_BearTrap_C
-// 0x0058 (0x0CF8 - 0x0CA0)
+// 0x0058 (0x0D08 - 0x0CB0)
 class ABP_BearTrap_C : public AMordhauEquipment
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CA0(0x0008) (Transient, DuplicateTransient)
-	class UBoxComponent*                               Box;                                                      // 0x0CA8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AController*                                 PlanterController;                                        // 0x0CB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	float                                              SafeTime;                                                 // 0x0CB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0CBC(0x0004) MISSED OFFSET
-	TArray<float>                                      DamageByArmorTier;                                        // 0x0CC0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              DamageToHorse;                                            // 0x0CD0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0CD4(0x0004) MISSED OFFSET
-	class USoundCue*                                   TrapTriggerSound;                                         // 0x0CD8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class AMordhauCharacter*                           PlanterCharacter;                                         // 0x0CE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxTrapsPerPlayer;                                        // 0x0CE8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0CEC(0x0004) MISSED OFFSET
-	struct FName                                       PlaceableLimitName;                                       // 0x0CF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0CB0(0x0008) (Transient, DuplicateTransient)
+	class UBoxComponent*                               Box;                                                      // 0x0CB8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AController*                                 PlanterController;                                        // 0x0CC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	float                                              SafeTime;                                                 // 0x0CC8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0CCC(0x0004) MISSED OFFSET
+	TArray<float>                                      DamageByArmorTier;                                        // 0x0CD0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              DamageToHorse;                                            // 0x0CE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0CE4(0x0004) MISSED OFFSET
+	class USoundCue*                                   TrapTriggerSound;                                         // 0x0CE8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class AMordhauCharacter*                           PlanterCharacter;                                         // 0x0CF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxTrapsPerPlayer;                                        // 0x0CF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0CFC(0x0004) MISSED OFFSET
+	struct FName                                       PlaceableLimitName;                                       // 0x0D00(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

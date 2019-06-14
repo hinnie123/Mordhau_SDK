@@ -12,6 +12,189 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ChatBox.BP_ChatBox_C.Repopulate Muted Player List
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_ChatBox_C::Repopulate_Muted_Player_List()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.Repopulate Muted Player List");
+
+	UBP_ChatBox_C_Repopulate_Muted_Player_List_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.RemovePlayerFromMutedMap
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// int                            SteamID_Index                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ChatBox_C::RemovePlayerFromMutedMap(const struct FString& SteamID, int* SteamID_Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.RemovePlayerFromMutedMap");
+
+	UBP_ChatBox_C_RemovePlayerFromMutedMap_Params params;
+	params.SteamID = SteamID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SteamID_Index != nullptr)
+		*SteamID_Index = params.SteamID_Index;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.IsPlayerMuted
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// TEnumAsByte<E_ChatMuteTypes>   Mute_Type                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           isMuted                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ChatBox_C::IsPlayerMuted(const struct FString& SteamID, TEnumAsByte<E_ChatMuteTypes>* Mute_Type, bool* isMuted)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.IsPlayerMuted");
+
+	UBP_ChatBox_C_IsPlayerMuted_Params params;
+	params.SteamID = SteamID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Mute_Type != nullptr)
+		*Mute_Type = params.Mute_Type;
+	if (isMuted != nullptr)
+		*isMuted = params.isMuted;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.AddPlayerToMutedMap
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// TEnumAsByte<E_ChatMuteTypes>   Mute_Type                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   Player_Name                    (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_ChatBox_C::AddPlayerToMutedMap(const struct FString& SteamID, TEnumAsByte<E_ChatMuteTypes> Mute_Type, const struct FText& Player_Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.AddPlayerToMutedMap");
+
+	UBP_ChatBox_C_AddPlayerToMutedMap_Params params;
+	params.SteamID = SteamID;
+	params.Mute_Type = Mute_Type;
+	params.Player_Name = Player_Name;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.Get Keys From Value
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<class UBP_ChatBoxEntry_C*, struct FString> PreviousMessagesMap            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FString                 Value__SteamID_                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// TArray<class UBP_ChatBoxEntry_C*> Keys                           (Parm, OutParm, ZeroConstructor)
+
+void UBP_ChatBox_C::Get_Keys_From_Value(TMap<class UBP_ChatBoxEntry_C*, struct FString> PreviousMessagesMap, const struct FString& Value__SteamID_, TArray<class UBP_ChatBoxEntry_C*>* Keys)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.Get Keys From Value");
+
+	UBP_ChatBox_C_Get_Keys_From_Value_Params params;
+	params.PreviousMessagesMap = PreviousMessagesMap;
+	params.Value__SteamID_ = Value__SteamID_;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Keys != nullptr)
+		*Keys = params.Keys;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.UnMutePlayer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+
+void UBP_ChatBox_C::UnMutePlayer(const struct FString& SteamID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.UnMutePlayer");
+
+	UBP_ChatBox_C_UnMutePlayer_Params params;
+	params.SteamID = SteamID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.MutePlayer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<E_ChatMuteTypes>   MuteType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// struct FText                   PlayerName                     (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_ChatBox_C::MutePlayer(TEnumAsByte<E_ChatMuteTypes> MuteType, const struct FString& SteamID, const struct FText& PlayerName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.MutePlayer");
+
+	UBP_ChatBox_C_MutePlayer_Params params;
+	params.MuteType = MuteType;
+	params.SteamID = SteamID;
+	params.PlayerName = PlayerName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.GetVisibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_ChatBox_C::GetVisibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.GetVisibility_1");
+
+	UBP_ChatBox_C_GetVisibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_ChatBox.BP_ChatBox_C.ResetThreshold
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -280,20 +463,22 @@ struct FEventReply UBP_ChatBox_C::OnPreviewKeyDown(struct FGeometry* MyGeometry,
 // Function BP_ChatBox.BP_ChatBox_C.AddEntry
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FText                   CharacterName                  (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   PlayerName                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Message                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FLinearColor            NameColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FText                   Prefix                         (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBP_ChatBox_C::AddEntry(const struct FText& CharacterName, const struct FText& Message, const struct FLinearColor& NameColor, const struct FText& Prefix)
+void UBP_ChatBox_C::AddEntry(const struct FText& PlayerName, const struct FText& Message, const struct FLinearColor& NameColor, const struct FText& Prefix, const struct FString& SteamID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.AddEntry");
 
 	UBP_ChatBox_C_AddEntry_Params params;
-	params.CharacterName = CharacterName;
+	params.PlayerName = PlayerName;
 	params.Message = Message;
 	params.NameColor = NameColor;
 	params.Prefix = Prefix;
+	params.SteamID = SteamID;
 
 	auto flags = fn->FunctionFlags;
 

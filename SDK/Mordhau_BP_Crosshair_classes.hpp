@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BP_Crosshair.BP_Crosshair_C
-// 0x0209 (0x0411 - 0x0208)
+// 0x0218 (0x0420 - 0x0208)
 class UBP_Crosshair_C : public UUserWidget
 {
 public:
@@ -51,6 +51,8 @@ public:
 	struct FSlateBrush                                 Crosshair_Dot;                                            // 0x0300(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FSlateBrush                                 Crosshair_Dot_Outline;                                    // 0x0388(0x0088) (Edit, BlueprintVisible, DisableEditOnInstance)
 	TEnumAsByte<E_CrosshairMode>                       CrosshairMode;                                            // 0x0410(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0411(0x0007) MISSED OFFSET
+	class UBP_TargetInfo_C*                            TargetInfo;                                               // 0x0418(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

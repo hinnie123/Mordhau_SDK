@@ -14,6 +14,24 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Right
+struct UBP_MainMenu_C_Request_Main_Navigation_Right_Params
+{
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Left
+struct UBP_MainMenu_C_Request_Main_Navigation_Left_Params
+{
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.OnKeyDown
+struct UBP_MainMenu_C_OnKeyDown_Params
+{
+	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+	struct FKeyEvent*                                  InKeyEvent;                                               // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEventReply                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function BP_MainMenu.BP_MainMenu_C.Get_ArmorySubNav_Visibility_1
 struct UBP_MainMenu_C_Get_ArmorySubNav_Visibility_1_Params
 {
@@ -304,6 +322,11 @@ struct UBP_MainMenu_C_Tick_Params
 
 // Function BP_MainMenu.BP_MainMenu_C.GoToMatchMaking
 struct UBP_MainMenu_C_GoToMatchMaking_Params
+{
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature
+struct UBP_MainMenu_C_BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature_Params
 {
 };
 
