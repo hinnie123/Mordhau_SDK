@@ -34,6 +34,106 @@ void ABP_FrontlineKillObjective_C::GetObjectiveProgress(float* Progress)
 }
 
 
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.AwardScorePointsIfApplicable
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AController*             Instigator                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Points                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_FrontlineKillObjective_C::AwardScorePointsIfApplicable(class AController* Instigator, int Points)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.AwardScorePointsIfApplicable");
+
+	ABP_FrontlineKillObjective_C_AwardScorePointsIfApplicable_Params params;
+	params.Instigator = Instigator;
+	params.Points = Points;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.CompileCandidatesList
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlineKillObjective_C::CompileCandidatesList()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.CompileCandidatesList");
+
+	ABP_FrontlineKillObjective_C_CompileCandidatesList_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.IsCandidateValidForPossession
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class ABP_FrontlinePlayerController_C* Candidate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABP_FrontlineKillObjective_C::IsCandidateValidForPossession(class ABP_FrontlinePlayerController_C* Candidate, bool* Valid)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.IsCandidateValidForPossession");
+
+	ABP_FrontlineKillObjective_C_IsCandidateValidForPossession_Params params;
+	params.Candidate = Candidate;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Valid != nullptr)
+		*Valid = params.Valid;
+}
+
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.NotifyCandidateForPossession
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlineKillObjective_C::NotifyCandidateForPossession()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.NotifyCandidateForPossession");
+
+	ABP_FrontlineKillObjective_C_NotifyCandidateForPossession_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.ProcessPossessionCandidates
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           NewParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_FrontlineKillObjective_C::ProcessPossessionCandidates(bool NewParam)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.ProcessPossessionCandidates");
+
+	ABP_FrontlineKillObjective_C_ProcessPossessionCandidates_Params params;
+	params.NewParam = NewParam;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.UpdateUIWidgets
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -239,6 +339,43 @@ void ABP_FrontlineKillObjective_C::OnHealthChanged()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.OnHealthChanged");
 
 	ABP_FrontlineKillObjective_C_OnHealthChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.BPLODTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_FrontlineKillObjective_C::BPLODTick(float* DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.BPLODTick");
+
+	ABP_FrontlineKillObjective_C_BPLODTick_Params params;
+	params.DeltaTime = DeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.OnAnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlineKillObjective_C::OnAnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.OnAnyObjectiveProgressChanged");
+
+	ABP_FrontlineKillObjective_C_OnAnyObjectiveProgressChanged_Params params;
 
 	auto flags = fn->FunctionFlags;
 

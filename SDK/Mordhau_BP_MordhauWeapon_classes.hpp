@@ -13,13 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauWeapon.BP_MordhauWeapon_C
-// 0x0018 (0x1A98 - 0x1A80)
+// 0x0018 (0x1AE8 - 0x1AD0)
 class ABP_MordhauWeapon_C : public AMordhauWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1A80(0x0008) (Transient, DuplicateTransient)
-	class UCapsuleComponent*                           ClashCapsuleBP;                                           // 0x1A88(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UParticleSystemComponent*                    ThrownParticle;                                           // 0x1A90(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1AD0(0x0008) (Transient, DuplicateTransient)
+	class UCapsuleComponent*                           ClashCapsuleBP;                                           // 0x1AD8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UParticleSystemComponent*                    ThrownParticle;                                           // 0x1AE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

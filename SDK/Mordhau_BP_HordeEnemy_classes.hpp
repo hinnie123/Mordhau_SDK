@@ -13,14 +13,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HordeEnemy.BP_HordeEnemy_C
-// 0x0018 (0x1C28 - 0x1C10)
+// 0x0018 (0x1C40 - 0x1C28)
 class ABP_HordeEnemy_C : public ABP_BattleRoyaleCharacter_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C10(0x0008) (Transient, DuplicateTransient)
-	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x1C18(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                KillReward;                                               // 0x1C20(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WoodDamageForPathClearing;                                // 0x1C24(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C28(0x0008) (Transient, DuplicateTransient)
+	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x1C30(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                KillReward;                                               // 0x1C38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WoodDamageForPathClearing;                                // 0x1C3C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

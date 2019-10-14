@@ -469,16 +469,16 @@ public:
 
 
 // Class PlayFab.PlayFabAuthenticationAPI
-// 0x00D0 (0x00F8 - 0x0028)
+// 0x00E0 (0x0108 - 0x0028)
 class UPlayFabAuthenticationAPI : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnPlayFabResponse;                                        // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0038(0x0058) MISSED OFFSET
-	class UPlayFabAuthenticationContext*               CallAuthenticationContext;                                // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPlayFabJsonObject*                          RequestJsonObj;                                           // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPlayFabJsonObject*                          ResponseJsonObj;                                          // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x00A8(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0038(0x0068) MISSED OFFSET
+	class UPlayFabAuthenticationContext*               CallAuthenticationContext;                                // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          RequestJsonObj;                                           // 0x00A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          ResponseJsonObj;                                          // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x00B8(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -487,8 +487,11 @@ public:
 	}
 
 
+	class UPlayFabAuthenticationAPI* STATIC_ValidateEntityToken(const struct FAuthenticationValidateEntityTokenRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
+	void HelperValidateEntityToken(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperGetEntityToken(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	class UPlayFabAuthenticationAPI* STATIC_GetEntityToken(const struct FAuthenticationGetEntityTokenRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
+	void DelegateOnSuccessValidateEntityToken__DelegateSignature(const struct FAuthenticationValidateEntityTokenResponse& Result, class UObject* customData);
 	void DelegateOnSuccessGetEntityToken__DelegateSignature(const struct FAuthenticationGetEntityTokenResponse& Result, class UObject* customData);
 	void DelegateOnFailurePlayFabError__DelegateSignature(const struct FPlayFabError& Error, class UObject* customData);
 };
@@ -507,6 +510,7 @@ public:
 	}
 
 
+	struct FAuthenticationValidateEntityTokenResponse STATIC_decodeValidateEntityTokenResponseResponse(class UPlayFabJsonObject* response);
 	struct FAuthenticationGetEntityTokenResponse STATIC_decodeGetEntityTokenResponseResponse(class UPlayFabJsonObject* response);
 };
 
@@ -1255,16 +1259,16 @@ public:
 
 
 // Class PlayFab.PlayFabEventsAPI
-// 0x00D0 (0x00F8 - 0x0028)
+// 0x00E0 (0x0108 - 0x0028)
 class UPlayFabEventsAPI : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnPlayFabResponse;                                        // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0038(0x0058) MISSED OFFSET
-	class UPlayFabAuthenticationContext*               CallAuthenticationContext;                                // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPlayFabJsonObject*                          RequestJsonObj;                                           // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPlayFabJsonObject*                          ResponseJsonObj;                                          // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x00A8(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x68];                                      // 0x0038(0x0068) MISSED OFFSET
+	class UPlayFabAuthenticationContext*               CallAuthenticationContext;                                // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          RequestJsonObj;                                           // 0x00A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          ResponseJsonObj;                                          // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x00B8(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1273,8 +1277,11 @@ public:
 	}
 
 
+	class UPlayFabEventsAPI* STATIC_WriteTelemetryEvents(const struct FEventsWriteEventsRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
 	class UPlayFabEventsAPI* STATIC_WriteEvents(const struct FEventsWriteEventsRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
+	void HelperWriteTelemetryEvents(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperWriteEvents(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
+	void DelegateOnSuccessWriteTelemetryEvents__DelegateSignature(const struct FEventsWriteEventsResponse& Result, class UObject* customData);
 	void DelegateOnSuccessWriteEvents__DelegateSignature(const struct FEventsWriteEventsResponse& Result, class UObject* customData);
 	void DelegateOnFailurePlayFabError__DelegateSignature(const struct FPlayFabError& Error, class UObject* customData);
 };
@@ -1788,16 +1795,16 @@ public:
 
 
 // Class PlayFab.PlayFabProfilesAPI
-// 0x0120 (0x0148 - 0x0028)
+// 0x0130 (0x0158 - 0x0028)
 class UPlayFabProfilesAPI : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnPlayFabResponse;                                        // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0038(0x00A8) MISSED OFFSET
-	class UPlayFabAuthenticationContext*               CallAuthenticationContext;                                // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPlayFabJsonObject*                          RequestJsonObj;                                           // 0x00E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPlayFabJsonObject*                          ResponseJsonObj;                                          // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x00F8(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xB8];                                      // 0x0038(0x00B8) MISSED OFFSET
+	class UPlayFabAuthenticationContext*               CallAuthenticationContext;                                // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          RequestJsonObj;                                           // 0x00F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          ResponseJsonObj;                                          // 0x0100(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0108(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1812,15 +1819,18 @@ public:
 	void HelperSetProfilePolicy(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperSetProfileLanguage(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperSetGlobalPolicy(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
+	void HelperGetTitlePlayersFromMasterPlayerAccountIds(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperGetProfiles(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperGetProfile(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
 	void HelperGetGlobalPolicy(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful);
+	class UPlayFabProfilesAPI* STATIC_GetTitlePlayersFromMasterPlayerAccountIds(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
 	class UPlayFabProfilesAPI* STATIC_GetProfiles(const struct FProfilesGetEntityProfilesRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
 	class UPlayFabProfilesAPI* STATIC_GetProfile(const struct FProfilesGetEntityProfileRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
 	class UPlayFabProfilesAPI* STATIC_GetGlobalPolicy(const struct FProfilesGetGlobalPolicyRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData);
 	void DelegateOnSuccessSetProfilePolicy__DelegateSignature(const struct FProfilesSetEntityProfilePolicyResponse& Result, class UObject* customData);
 	void DelegateOnSuccessSetProfileLanguage__DelegateSignature(const struct FProfilesSetProfileLanguageResponse& Result, class UObject* customData);
 	void DelegateOnSuccessSetGlobalPolicy__DelegateSignature(const struct FProfilesSetGlobalPolicyResponse& Result, class UObject* customData);
+	void DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse& Result, class UObject* customData);
 	void DelegateOnSuccessGetProfiles__DelegateSignature(const struct FProfilesGetEntityProfilesResponse& Result, class UObject* customData);
 	void DelegateOnSuccessGetProfile__DelegateSignature(const struct FProfilesGetEntityProfileResponse& Result, class UObject* customData);
 	void DelegateOnSuccessGetGlobalPolicy__DelegateSignature(const struct FProfilesGetGlobalPolicyResponse& Result, class UObject* customData);
@@ -1844,6 +1854,7 @@ public:
 	struct FProfilesSetProfileLanguageResponse STATIC_decodeSetProfileLanguageResponseResponse(class UPlayFabJsonObject* response);
 	struct FProfilesSetGlobalPolicyResponse STATIC_decodeSetGlobalPolicyResponseResponse(class UPlayFabJsonObject* response);
 	struct FProfilesSetEntityProfilePolicyResponse STATIC_decodeSetEntityProfilePolicyResponseResponse(class UPlayFabJsonObject* response);
+	struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse STATIC_decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse(class UPlayFabJsonObject* response);
 	struct FProfilesGetGlobalPolicyResponse STATIC_decodeGetGlobalPolicyResponseResponse(class UPlayFabJsonObject* response);
 	struct FProfilesGetEntityProfilesResponse STATIC_decodeGetEntityProfilesResponseResponse(class UPlayFabJsonObject* response);
 	struct FProfilesGetEntityProfileResponse STATIC_decodeGetEntityProfileResponseResponse(class UPlayFabJsonObject* response);
@@ -2386,7 +2397,7 @@ public:
 
 	void STATIC_setPlayFabSettings(const struct FString& GameTitleId, const struct FString& PlayFabSecretApiKey, const struct FString& PhotonRealtimeAppId, const struct FString& PhotonTurnbasedAppId, const struct FString& PhotonChatAppId);
 	struct FString STATIC_getPhotonAppId(bool Realtime, bool Chat, bool Turnbased);
-	struct FString STATIC_getErrorText(int code);
+	struct FString STATIC_getErrorText(int Code);
 };
 
 

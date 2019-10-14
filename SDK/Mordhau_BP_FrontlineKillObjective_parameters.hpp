@@ -20,6 +20,36 @@ struct ABP_FrontlineKillObjective_C_GetObjectiveProgress_Params
 	float                                              Progress;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.AwardScorePointsIfApplicable
+struct ABP_FrontlineKillObjective_C_AwardScorePointsIfApplicable_Params
+{
+	class AController*                                 Instigator;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Points;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.CompileCandidatesList
+struct ABP_FrontlineKillObjective_C_CompileCandidatesList_Params
+{
+};
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.IsCandidateValidForPossession
+struct ABP_FrontlineKillObjective_C_IsCandidateValidForPossession_Params
+{
+	class ABP_FrontlinePlayerController_C*             Candidate;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Valid;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.NotifyCandidateForPossession
+struct ABP_FrontlineKillObjective_C_NotifyCandidateForPossession_Params
+{
+};
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.ProcessPossessionCandidates
+struct ABP_FrontlineKillObjective_C_ProcessPossessionCandidates_Params
+{
+	bool                                               NewParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.UpdateUIWidgets
 struct ABP_FrontlineKillObjective_C_UpdateUIWidgets_Params
 {
@@ -84,6 +114,17 @@ struct ABP_FrontlineKillObjective_C_OnUpdateUIWidgets_Params
 
 // Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.OnHealthChanged
 struct ABP_FrontlineKillObjective_C_OnHealthChanged_Params
+{
+};
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.BPLODTick
+struct ABP_FrontlineKillObjective_C_BPLODTick_Params
+{
+	float*                                             DeltaTime;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.OnAnyObjectiveProgressChanged
+struct ABP_FrontlineKillObjective_C_OnAnyObjectiveProgressChanged_Params
 {
 };
 

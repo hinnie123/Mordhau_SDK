@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CatPerk.BP_CatPerk_C
-// 0x0000 (0x0060 - 0x0060)
+// 0x0000 (0x0070 - 0x0070)
 class UBP_CatPerk_C : public UBP_Perk_C
 {
 public:

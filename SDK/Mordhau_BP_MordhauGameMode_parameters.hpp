@@ -18,6 +18,7 @@ namespace SDK
 struct ABP_MordhauGameMode_C_UnpossessAndDestroyPawn_Params
 {
 	class AController*                                 Controller;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               RestartPlayer;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MordhauGameMode.BP_MordhauGameMode_C.UserConstructionScript

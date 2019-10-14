@@ -12,6 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MapEntryLocalPlay.BP_MapEntryLocalPlay_C.Update
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 GameModeMapName                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class UGameModeMetadata*       GameModeMetadata               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UMapMetadata*            MapMetadata                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_MapEntryLocalPlay_C::Update(const struct FString& GameModeMapName, class UGameModeMetadata* GameModeMetadata, class UMapMetadata* MapMetadata)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MapEntryLocalPlay.BP_MapEntryLocalPlay_C.Update");
+
+	UBP_MapEntryLocalPlay_C_Update_Params params;
+	params.GameModeMapName = GameModeMapName;
+	params.GameModeMetadata = GameModeMetadata;
+	params.MapMetadata = MapMetadata;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MapEntryLocalPlay.BP_MapEntryLocalPlay_C.SetThumbnail
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

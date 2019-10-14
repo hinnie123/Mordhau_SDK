@@ -12,6 +12,44 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Announcement.BP_Announcement_C.GetVisibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_Announcement_C::GetVisibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Announcement.BP_Announcement_C.GetVisibility_1");
+
+	UBP_Announcement_C_GetVisibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Announcement.BP_Announcement_C.ShowAnnouncement
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_Announcement_C::ShowAnnouncement()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Announcement.BP_Announcement_C.ShowAnnouncement");
+
+	UBP_Announcement_C_ShowAnnouncement_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Announcement.BP_Announcement_C.GetAnnouncementBoxVisibility
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -76,17 +114,19 @@ void UBP_Announcement_C::TimerEvent()
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Subtext                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   SubText                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<E_AnnouncementType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Announcement_C::Show(const struct FText& Text, const struct FText& Subtext, float Duration)
+void UBP_Announcement_C::Show(const struct FText& Text, const struct FText& SubText, float Duration, TEnumAsByte<E_AnnouncementType> Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Announcement.BP_Announcement_C.Show");
 
 	UBP_Announcement_C_Show_Params params;
 	params.Text = Text;
-	params.Subtext = Subtext;
+	params.SubText = SubText;
 	params.Duration = Duration;
+	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 
@@ -104,6 +144,23 @@ void UBP_Announcement_C::Construct()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Announcement.BP_Announcement_C.Construct");
 
 	UBP_Announcement_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Announcement.BP_Announcement_C.OnExitAnimFinish
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Announcement_C::OnExitAnimFinish()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Announcement.BP_Announcement_C.OnExitAnimFinish");
+
+	UBP_Announcement_C_OnExitAnimFinish_Params params;
 
 	auto flags = fn->FunctionFlags;
 

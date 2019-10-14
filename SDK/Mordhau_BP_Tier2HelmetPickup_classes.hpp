@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tier2HelmetPickup.BP_Tier2HelmetPickup_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ABP_Tier2HelmetPickup_C : public ABP_HelmetPickup_C
 {
 public:

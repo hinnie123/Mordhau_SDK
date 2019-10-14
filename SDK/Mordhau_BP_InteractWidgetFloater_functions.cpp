@@ -32,6 +32,23 @@ void UBP_InteractWidgetFloater_C::UpdateProgress(float NewProgress)
 }
 
 
+// Function BP_InteractWidgetFloater.BP_InteractWidgetFloater_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_InteractWidgetFloater_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractWidgetFloater.BP_InteractWidgetFloater_C.Construct");
+
+	UBP_InteractWidgetFloater_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_InteractWidgetFloater.BP_InteractWidgetFloater_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -45,23 +62,6 @@ void UBP_InteractWidgetFloater_C::Tick(struct FGeometry* MyGeometry, float* InDe
 	UBP_InteractWidgetFloater_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_InteractWidgetFloater.BP_InteractWidgetFloater_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBP_InteractWidgetFloater_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_InteractWidgetFloater.BP_InteractWidgetFloater_C.Construct");
-
-	UBP_InteractWidgetFloater_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

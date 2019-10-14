@@ -14,6 +14,13 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.Get1v1MMRFromStats
+struct UBP_MordhauUtilityLibrary_C_Get1v1MMRFromStats_Params
+{
+	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                MMR;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.CreateContextPopup
 struct UBP_MordhauUtilityLibrary_C_CreateContextPopup_Params
 {

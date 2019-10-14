@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_FrontlineObjective.BP_FrontlineObjective_C.OnAnyObjectiveProgressChanged
+struct UBP_FrontlineObjective_C_OnAnyObjectiveProgressChanged_Params
+{
+};
+
 // Function BP_FrontlineObjective.BP_FrontlineObjective_C.OnInitialize
 struct UBP_FrontlineObjective_C_OnInitialize_Params
 {

@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_LoadoutEntry.BP_LoadoutEntry_C.Get_ButtonEntry_ToolTipText_1
+struct UBP_LoadoutEntry_C_Get_ButtonEntry_ToolTipText_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function BP_LoadoutEntry.BP_LoadoutEntry_C.GetVisibility_1
 struct UBP_LoadoutEntry_C_GetVisibility_1_Params
 {

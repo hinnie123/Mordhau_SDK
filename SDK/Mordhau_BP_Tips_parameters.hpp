@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Tips.BP_Tips_C.Get_TeamTip_Visibility_1
+struct UBP_Tips_C_Get_TeamTip_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_Tips.BP_Tips_C.Get_LoadoutTip_Visibility_1
+struct UBP_Tips_C_Get_LoadoutTip_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_Tips.BP_Tips_C.Get_TeamTip_Text_1
 struct UBP_Tips_C_Get_TeamTip_Text_1_Params
 {

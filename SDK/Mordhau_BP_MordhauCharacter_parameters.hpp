@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauCharacter.BP_MordhauCharacter_C.GetOutOfBoundsSubtext
+struct ABP_MordhauCharacter_C_GetOutOfBoundsSubtext_Params
+{
+	struct FText                                       SubText;                                                  // (Parm, OutParm)
+};
+
+// Function BP_MordhauCharacter.BP_MordhauCharacter_C.GetOutOfBoundsText
+struct ABP_MordhauCharacter_C_GetOutOfBoundsText_Params
+{
+	struct FText                                       Header;                                                   // (Parm, OutParm)
+};
+
 // Function BP_MordhauCharacter.BP_MordhauCharacter_C.AddRagdollImpulse
 struct ABP_MordhauCharacter_C_AddRagdollImpulse_Params
 {

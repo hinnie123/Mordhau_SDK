@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_LoadoutEntry.BP_LoadoutEntry_C.Get_ButtonEntry_ToolTipText_1
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_LoadoutEntry_C::Get_ButtonEntry_ToolTipText_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_LoadoutEntry.BP_LoadoutEntry_C.Get_ButtonEntry_ToolTipText_1");
+
+	UBP_LoadoutEntry_C_Get_ButtonEntry_ToolTipText_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_LoadoutEntry.BP_LoadoutEntry_C.GetVisibility_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

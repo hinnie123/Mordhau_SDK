@@ -126,23 +126,6 @@ void UBP_HomeScreen_C::BndEvt__QuickstartGuideButton_K2Node_ComponentBoundEvent_
 }
 
 
-// Function BP_HomeScreen.BP_HomeScreen_C.OnShown
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_HomeScreen_C::OnShown()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.OnShown");
-
-	UBP_HomeScreen_C_OnShown_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_33_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
 // (BlueprintEvent)
 
@@ -232,16 +215,14 @@ void UBP_HomeScreen_C::Construct()
 // (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bWasSuccessful                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSteamID                SteamID                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<struct FItemStack>      ItemStacks                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_HomeScreen_C::OnItemsRefreshed(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks)
+void UBP_HomeScreen_C::OnItemsRefreshed(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HomeScreen.BP_HomeScreen_C.OnItemsRefreshed");
 
 	UBP_HomeScreen_C_OnItemsRefreshed_Params params;
 	params.bWasSuccessful = bWasSuccessful;
-	params.SteamID = SteamID;
 	params.ItemStacks = ItemStacks;
 
 	auto flags = fn->FunctionFlags;

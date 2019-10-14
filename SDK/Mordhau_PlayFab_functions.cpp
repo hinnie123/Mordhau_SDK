@@ -10592,6 +10592,61 @@ struct FAdminAddLocalizedNewsResult UPlayFabAdminModelDecoder::STATIC_decodeAddL
 }
 
 
+// Function PlayFab.PlayFabAuthenticationAPI.ValidateEntityToken
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FAuthenticationValidateEntityTokenRequest Request                        (Parm)
+// struct FScriptDelegate         onSuccess                      (Parm, ZeroConstructor)
+// struct FScriptDelegate         onFailure                      (Parm, ZeroConstructor)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPlayFabAuthenticationAPI* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UPlayFabAuthenticationAPI* UPlayFabAuthenticationAPI::STATIC_ValidateEntityToken(const struct FAuthenticationValidateEntityTokenRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabAuthenticationAPI.ValidateEntityToken");
+
+	UPlayFabAuthenticationAPI_ValidateEntityToken_Params params;
+	params.Request = Request;
+	params.onSuccess = onSuccess;
+	params.onFailure = onFailure;
+	params.customData = customData;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PlayFab.PlayFabAuthenticationAPI.HelperValidateEntityToken
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FPlayFabBaseModel       response                       (Parm)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           successful                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayFabAuthenticationAPI::HelperValidateEntityToken(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabAuthenticationAPI.HelperValidateEntityToken");
+
+	UPlayFabAuthenticationAPI_HelperValidateEntityToken_Params params;
+	params.response = response;
+	params.customData = customData;
+	params.successful = successful;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function PlayFab.PlayFabAuthenticationAPI.HelperGetEntityToken
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -10647,6 +10702,28 @@ class UPlayFabAuthenticationAPI* UPlayFabAuthenticationAPI::STATIC_GetEntityToke
 }
 
 
+// DelegateFunction PlayFab.PlayFabAuthenticationAPI.DelegateOnSuccessValidateEntityToken__DelegateSignature
+// (Public, Delegate)
+// Parameters:
+// struct FAuthenticationValidateEntityTokenResponse Result                         (Parm)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayFabAuthenticationAPI::DelegateOnSuccessValidateEntityToken__DelegateSignature(const struct FAuthenticationValidateEntityTokenResponse& Result, class UObject* customData)
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PlayFab.PlayFabAuthenticationAPI.DelegateOnSuccessValidateEntityToken__DelegateSignature");
+
+	UPlayFabAuthenticationAPI_DelegateOnSuccessValidateEntityToken__DelegateSignature_Params params;
+	params.Result = Result;
+	params.customData = customData;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // DelegateFunction PlayFab.PlayFabAuthenticationAPI.DelegateOnSuccessGetEntityToken__DelegateSignature
 // (Public, Delegate)
 // Parameters:
@@ -10688,6 +10765,30 @@ void UPlayFabAuthenticationAPI::DelegateOnFailurePlayFabError__DelegateSignature
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayFab.PlayFabAuthenticationModelDecoder.decodeValidateEntityTokenResponseResponse
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPlayFabJsonObject*      response                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAuthenticationValidateEntityTokenResponse ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FAuthenticationValidateEntityTokenResponse UPlayFabAuthenticationModelDecoder::STATIC_decodeValidateEntityTokenResponseResponse(class UPlayFabJsonObject* response)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabAuthenticationModelDecoder.decodeValidateEntityTokenResponseResponse");
+
+	UPlayFabAuthenticationModelDecoder_decodeValidateEntityTokenResponseResponse_Params params;
+	params.response = response;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -26625,6 +26726,36 @@ struct FDataAbortFileUploadsResponse UPlayFabDataModelDecoder::STATIC_decodeAbor
 }
 
 
+// Function PlayFab.PlayFabEventsAPI.WriteTelemetryEvents
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FEventsWriteEventsRequest Request                        (Parm)
+// struct FScriptDelegate         onSuccess                      (Parm, ZeroConstructor)
+// struct FScriptDelegate         onFailure                      (Parm, ZeroConstructor)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPlayFabEventsAPI*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UPlayFabEventsAPI* UPlayFabEventsAPI::STATIC_WriteTelemetryEvents(const struct FEventsWriteEventsRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabEventsAPI.WriteTelemetryEvents");
+
+	UPlayFabEventsAPI_WriteTelemetryEvents_Params params;
+	params.Request = Request;
+	params.onSuccess = onSuccess;
+	params.onFailure = onFailure;
+	params.customData = customData;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function PlayFab.PlayFabEventsAPI.WriteEvents
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -26655,6 +26786,31 @@ class UPlayFabEventsAPI* UPlayFabEventsAPI::STATIC_WriteEvents(const struct FEve
 }
 
 
+// Function PlayFab.PlayFabEventsAPI.HelperWriteTelemetryEvents
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FPlayFabBaseModel       response                       (Parm)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           successful                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayFabEventsAPI::HelperWriteTelemetryEvents(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabEventsAPI.HelperWriteTelemetryEvents");
+
+	UPlayFabEventsAPI_HelperWriteTelemetryEvents_Params params;
+	params.response = response;
+	params.customData = customData;
+	params.successful = successful;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function PlayFab.PlayFabEventsAPI.HelperWriteEvents
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -26673,6 +26829,28 @@ void UPlayFabEventsAPI::HelperWriteEvents(const struct FPlayFabBaseModel& respon
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// DelegateFunction PlayFab.PlayFabEventsAPI.DelegateOnSuccessWriteTelemetryEvents__DelegateSignature
+// (Public, Delegate)
+// Parameters:
+// struct FEventsWriteEventsResponse Result                         (Parm)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayFabEventsAPI::DelegateOnSuccessWriteTelemetryEvents__DelegateSignature(const struct FEventsWriteEventsResponse& Result, class UObject* customData)
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PlayFab.PlayFabEventsAPI.DelegateOnSuccessWriteTelemetryEvents__DelegateSignature");
+
+	UPlayFabEventsAPI_DelegateOnSuccessWriteTelemetryEvents__DelegateSignature_Params params;
+	params.Result = Result;
+	params.customData = customData;
+
+	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34513,6 +34691,31 @@ void UPlayFabProfilesAPI::HelperSetGlobalPolicy(const struct FPlayFabBaseModel& 
 }
 
 
+// Function PlayFab.PlayFabProfilesAPI.HelperGetTitlePlayersFromMasterPlayerAccountIds
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FPlayFabBaseModel       response                       (Parm)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           successful                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayFabProfilesAPI::HelperGetTitlePlayersFromMasterPlayerAccountIds(const struct FPlayFabBaseModel& response, class UObject* customData, bool successful)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabProfilesAPI.HelperGetTitlePlayersFromMasterPlayerAccountIds");
+
+	UPlayFabProfilesAPI_HelperGetTitlePlayersFromMasterPlayerAccountIds_Params params;
+	params.response = response;
+	params.customData = customData;
+	params.successful = successful;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function PlayFab.PlayFabProfilesAPI.HelperGetProfiles
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -34585,6 +34788,36 @@ void UPlayFabProfilesAPI::HelperGetGlobalPolicy(const struct FPlayFabBaseModel& 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function PlayFab.PlayFabProfilesAPI.GetTitlePlayersFromMasterPlayerAccountIds
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest Request                        (Parm)
+// struct FScriptDelegate         onSuccess                      (Parm, ZeroConstructor)
+// struct FScriptDelegate         onFailure                      (Parm, ZeroConstructor)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+// class UPlayFabProfilesAPI*     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UPlayFabProfilesAPI* UPlayFabProfilesAPI::STATIC_GetTitlePlayersFromMasterPlayerAccountIds(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest& Request, const struct FScriptDelegate& onSuccess, const struct FScriptDelegate& onFailure, class UObject* customData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabProfilesAPI.GetTitlePlayersFromMasterPlayerAccountIds");
+
+	UPlayFabProfilesAPI_GetTitlePlayersFromMasterPlayerAccountIds_Params params;
+	params.Request = Request;
+	params.onSuccess = onSuccess;
+	params.onFailure = onFailure;
+	params.customData = customData;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -34744,6 +34977,28 @@ void UPlayFabProfilesAPI::DelegateOnSuccessSetGlobalPolicy__DelegateSignature(co
 }
 
 
+// DelegateFunction PlayFab.PlayFabProfilesAPI.DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature
+// (Public, Delegate)
+// Parameters:
+// struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse Result                         (Parm)
+// class UObject*                 customData                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPlayFabProfilesAPI::DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature(const struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse& Result, class UObject* customData)
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction PlayFab.PlayFabProfilesAPI.DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature");
+
+	UPlayFabProfilesAPI_DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature_Params params;
+	params.Result = Result;
+	params.customData = customData;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // DelegateFunction PlayFab.PlayFabProfilesAPI.DelegateOnSuccessGetProfiles__DelegateSignature
 // (Public, Delegate)
 // Parameters:
@@ -34891,6 +35146,30 @@ struct FProfilesSetEntityProfilePolicyResponse UPlayFabProfilesModelDecoder::STA
 	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabProfilesModelDecoder.decodeSetEntityProfilePolicyResponseResponse");
 
 	UPlayFabProfilesModelDecoder_decodeSetEntityProfilePolicyResponseResponse_Params params;
+	params.response = response;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function PlayFab.PlayFabProfilesModelDecoder.decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPlayFabJsonObject*      response                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse UPlayFabProfilesModelDecoder::STATIC_decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse(class UPlayFabJsonObject* response)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabProfilesModelDecoder.decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse");
+
+	UPlayFabProfilesModelDecoder_decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse_Params params;
 	params.response = response;
 
 	auto flags = fn->FunctionFlags;
@@ -47266,15 +47545,15 @@ struct FString UPlayFabUtilities::STATIC_getPhotonAppId(bool Realtime, bool Chat
 // Function PlayFab.PlayFabUtilities.getErrorText
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// int                            code                           (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Code                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UPlayFabUtilities::STATIC_getErrorText(int code)
+struct FString UPlayFabUtilities::STATIC_getErrorText(int Code)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayFab.PlayFabUtilities.getErrorText");
 
 	UPlayFabUtilities_getErrorText_Params params;
-	params.code = code;
+	params.Code = Code;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;

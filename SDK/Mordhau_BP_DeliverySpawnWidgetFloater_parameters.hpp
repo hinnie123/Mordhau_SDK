@@ -14,12 +14,6 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_DeliverySpawnWidgetFloater.BP_DeliverySpawnWidgetFloater_C.GetVisibility_1
-struct UBP_DeliverySpawnWidgetFloater_C_GetVisibility_1_Params
-{
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function BP_DeliverySpawnWidgetFloater.BP_DeliverySpawnWidgetFloater_C.Tick
 struct UBP_DeliverySpawnWidgetFloater_C_Tick_Params
 {

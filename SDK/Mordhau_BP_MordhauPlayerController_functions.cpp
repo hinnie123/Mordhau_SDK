@@ -12,6 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamKill
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AMordhauPlayerState*     KilledBy                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Agent                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Damage                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_MordhauPlayerController_C::HandleTeamKill(class AMordhauPlayerState* KilledBy, class AActor* Agent, float Damage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamKill");
+
+	ABP_MordhauPlayerController_C_HandleTeamKill_Params params;
+	params.KilledBy = KilledBy;
+	params.Agent = Agent;
+	params.Damage = Damage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.OnRep_ReplicatedAmmoBoxCooldown
 // (BlueprintCallable, BlueprintEvent)
 
@@ -957,6 +981,60 @@ void ABP_MordhauPlayerController_C::ServerVoteKickVote(bool VotedYes)
 
 	ABP_MordhauPlayerController_C_ServerVoteKickVote_Params params;
 	params.VotedYes = VotedYes;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamSelect
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MordhauPlayerController_C::HandleTeamSelect()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamSelect");
+
+	ABP_MordhauPlayerController_C_HandleTeamSelect_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ForgivePlayer
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ABP_MordhauPlayerController_C::ForgivePlayer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ForgivePlayer");
+
+	ABP_MordhauPlayerController_C_ForgivePlayer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ReceiveOfferToForgive
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AMordhauPlayerState*     Candidate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_MordhauPlayerController_C::ReceiveOfferToForgive(class AMordhauPlayerState* Candidate)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ReceiveOfferToForgive");
+
+	ABP_MordhauPlayerController_C_ReceiveOfferToForgive_Params params;
+	params.Candidate = Candidate;
 
 	auto flags = fn->FunctionFlags;
 

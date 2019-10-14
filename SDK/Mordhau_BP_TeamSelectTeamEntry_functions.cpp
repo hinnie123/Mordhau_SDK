@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TeamSelectTeamEntry.BP_TeamSelectTeamEntry_C.Get_Role_Text_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_TeamSelectTeamEntry_C::Get_Role_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_TeamSelectTeamEntry.BP_TeamSelectTeamEntry_C.Get_Role_Text_1");
+
+	UBP_TeamSelectTeamEntry_C_Get_Role_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_TeamSelectTeamEntry.BP_TeamSelectTeamEntry_C.Get_TeamButton_bIsEnabled_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

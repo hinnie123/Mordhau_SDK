@@ -14,6 +14,14 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MapEntryLocalPlay.BP_MapEntryLocalPlay_C.Update
+struct UBP_MapEntryLocalPlay_C_Update_Params
+{
+	struct FString                                     GameModeMapName;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class UGameModeMetadata*                           GameModeMetadata;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UMapMetadata*                                MapMetadata;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MapEntryLocalPlay.BP_MapEntryLocalPlay_C.SetThumbnail
 struct UBP_MapEntryLocalPlay_C_SetThumbnail_Params
 {

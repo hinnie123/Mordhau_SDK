@@ -230,6 +230,23 @@ void ABP_FrontlinePushable_C::PushableArrivedAtDestination()
 }
 
 
+// Function BP_FrontlinePushable.BP_FrontlinePushable_C.OnAnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlinePushable_C::OnAnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlinePushable.BP_FrontlinePushable_C.OnAnyObjectiveProgressChanged");
+
+	ABP_FrontlinePushable_C_OnAnyObjectiveProgressChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlinePushable.BP_FrontlinePushable_C.ExecuteUbergraph_BP_FrontlinePushable
 // ()
 // Parameters:

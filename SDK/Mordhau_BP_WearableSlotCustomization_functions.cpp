@@ -536,16 +536,14 @@ void UBP_WearableSlotCustomization_C::Construct()
 // (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bWasSuccessful                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSteamID                SteamID                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<struct FItemStack>      ItemStacks                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_WearableSlotCustomization_C::OnItemsUnlocked(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks)
+void UBP_WearableSlotCustomization_C::OnItemsUnlocked(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_WearableSlotCustomization.BP_WearableSlotCustomization_C.OnItemsUnlocked");
 
 	UBP_WearableSlotCustomization_C_OnItemsUnlocked_Params params;
 	params.bWasSuccessful = bWasSuccessful;
-	params.SteamID = SteamID;
 	params.ItemStacks = ItemStacks;
 
 	auto flags = fn->FunctionFlags;

@@ -130,6 +130,57 @@ void UBP_PostMatchScreen_C::Construct()
 }
 
 
+// Function BP_PostMatchScreen.BP_PostMatchScreen_C.ShowScoreboard
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_PostMatchScreen_C::ShowScoreboard()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PostMatchScreen.BP_PostMatchScreen_C.ShowScoreboard");
+
+	UBP_PostMatchScreen_C_ShowScoreboard_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PostMatchScreen.BP_PostMatchScreen_C.HideScoreboard
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_PostMatchScreen_C::HideScoreboard()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PostMatchScreen.BP_PostMatchScreen_C.HideScoreboard");
+
+	UBP_PostMatchScreen_C_HideScoreboard_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PostMatchScreen.BP_PostMatchScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_PostMatchScreen_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PostMatchScreen.BP_PostMatchScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature");
+
+	UBP_PostMatchScreen_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_PostMatchScreen.BP_PostMatchScreen_C.ExecuteUbergraph_BP_PostMatchScreen
 // (HasDefaults)
 // Parameters:

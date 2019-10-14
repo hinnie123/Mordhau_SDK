@@ -99,6 +99,8 @@ public:
 	void OnSuccess_BBC3547C49248E80E0006694F0879DC3(TArray<struct FServerSearchResult> Results);
 	void OnFailure_0D81799A475BE46000BC0A8D4385A93C();
 	void OnSuccess_0D81799A475BE46000BC0A8D4385A93C();
+	void OnFailure_929D8817412E2618A9CB9FAC09AE12F1(TArray<int> Mods);
+	void OnSuccess_929D8817412E2618A9CB9FAC09AE12F1(TArray<int> Mods);
 	void Construct();
 	void Refresh();
 	void Join();
@@ -123,6 +125,12 @@ public:
 	void BndEvt__GameModeComboBox_K2Node_ComponentBoundEvent_1_OnSelectionChangedEvent__DelegateSignature(const struct FText& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void BndEvt__ServerNameFilter_K2Node_ComponentBoundEvent_2_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod);
 	void BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod);
+	void ShowModDownloadDialog(TArray<int> ModsRequired);
+	void ModDownloadCanceled();
+	void ModDownloadFailed();
+	void ModDownloadCompleted();
+	void OnOkClicked();
+	void OnOkClicked2();
 	void ExecuteUbergraph_BP_ServerBrowser(int EntryPoint);
 };
 

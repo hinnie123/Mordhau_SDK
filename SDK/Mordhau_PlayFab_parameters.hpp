@@ -3380,6 +3380,24 @@ struct UPlayFabAdminModelDecoder_decodeAddLocalizedNewsResultResponse_Params
 	struct FAdminAddLocalizedNewsResult                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function PlayFab.PlayFabAuthenticationAPI.ValidateEntityToken
+struct UPlayFabAuthenticationAPI_ValidateEntityToken_Params
+{
+	struct FAuthenticationValidateEntityTokenRequest   Request;                                                  // (Parm)
+	struct FScriptDelegate                             onSuccess;                                                // (Parm, ZeroConstructor)
+	struct FScriptDelegate                             onFailure;                                                // (Parm, ZeroConstructor)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPlayFabAuthenticationAPI*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function PlayFab.PlayFabAuthenticationAPI.HelperValidateEntityToken
+struct UPlayFabAuthenticationAPI_HelperValidateEntityToken_Params
+{
+	struct FPlayFabBaseModel                           response;                                                 // (Parm)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               successful;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function PlayFab.PlayFabAuthenticationAPI.HelperGetEntityToken
 struct UPlayFabAuthenticationAPI_HelperGetEntityToken_Params
 {
@@ -3398,6 +3416,13 @@ struct UPlayFabAuthenticationAPI_GetEntityToken_Params
 	class UPlayFabAuthenticationAPI*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// DelegateFunction PlayFab.PlayFabAuthenticationAPI.DelegateOnSuccessValidateEntityToken__DelegateSignature
+struct UPlayFabAuthenticationAPI_DelegateOnSuccessValidateEntityToken__DelegateSignature_Params
+{
+	struct FAuthenticationValidateEntityTokenResponse  Result;                                                   // (Parm)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // DelegateFunction PlayFab.PlayFabAuthenticationAPI.DelegateOnSuccessGetEntityToken__DelegateSignature
 struct UPlayFabAuthenticationAPI_DelegateOnSuccessGetEntityToken__DelegateSignature_Params
 {
@@ -3410,6 +3435,13 @@ struct UPlayFabAuthenticationAPI_DelegateOnFailurePlayFabError__DelegateSignatur
 {
 	struct FPlayFabError                               Error;                                                    // (Parm)
 	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PlayFab.PlayFabAuthenticationModelDecoder.decodeValidateEntityTokenResponseResponse
+struct UPlayFabAuthenticationModelDecoder_decodeValidateEntityTokenResponseResponse_Params
+{
+	class UPlayFabJsonObject*                          response;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FAuthenticationValidateEntityTokenResponse  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function PlayFab.PlayFabAuthenticationModelDecoder.decodeGetEntityTokenResponseResponse
@@ -8478,6 +8510,16 @@ struct UPlayFabDataModelDecoder_decodeAbortFileUploadsResponseResponse_Params
 	struct FDataAbortFileUploadsResponse               ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function PlayFab.PlayFabEventsAPI.WriteTelemetryEvents
+struct UPlayFabEventsAPI_WriteTelemetryEvents_Params
+{
+	struct FEventsWriteEventsRequest                   Request;                                                  // (Parm)
+	struct FScriptDelegate                             onSuccess;                                                // (Parm, ZeroConstructor)
+	struct FScriptDelegate                             onFailure;                                                // (Parm, ZeroConstructor)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPlayFabEventsAPI*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function PlayFab.PlayFabEventsAPI.WriteEvents
 struct UPlayFabEventsAPI_WriteEvents_Params
 {
@@ -8488,12 +8530,27 @@ struct UPlayFabEventsAPI_WriteEvents_Params
 	class UPlayFabEventsAPI*                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function PlayFab.PlayFabEventsAPI.HelperWriteTelemetryEvents
+struct UPlayFabEventsAPI_HelperWriteTelemetryEvents_Params
+{
+	struct FPlayFabBaseModel                           response;                                                 // (Parm)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               successful;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function PlayFab.PlayFabEventsAPI.HelperWriteEvents
 struct UPlayFabEventsAPI_HelperWriteEvents_Params
 {
 	struct FPlayFabBaseModel                           response;                                                 // (Parm)
 	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               successful;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// DelegateFunction PlayFab.PlayFabEventsAPI.DelegateOnSuccessWriteTelemetryEvents__DelegateSignature
+struct UPlayFabEventsAPI_DelegateOnSuccessWriteTelemetryEvents__DelegateSignature_Params
+{
+	struct FEventsWriteEventsResponse                  Result;                                                   // (Parm)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // DelegateFunction PlayFab.PlayFabEventsAPI.DelegateOnSuccessWriteEvents__DelegateSignature
@@ -10966,6 +11023,14 @@ struct UPlayFabProfilesAPI_HelperSetGlobalPolicy_Params
 	bool                                               successful;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function PlayFab.PlayFabProfilesAPI.HelperGetTitlePlayersFromMasterPlayerAccountIds
+struct UPlayFabProfilesAPI_HelperGetTitlePlayersFromMasterPlayerAccountIds_Params
+{
+	struct FPlayFabBaseModel                           response;                                                 // (Parm)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               successful;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function PlayFab.PlayFabProfilesAPI.HelperGetProfiles
 struct UPlayFabProfilesAPI_HelperGetProfiles_Params
 {
@@ -10988,6 +11053,16 @@ struct UPlayFabProfilesAPI_HelperGetGlobalPolicy_Params
 	struct FPlayFabBaseModel                           response;                                                 // (Parm)
 	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               successful;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function PlayFab.PlayFabProfilesAPI.GetTitlePlayersFromMasterPlayerAccountIds
+struct UPlayFabProfilesAPI_GetTitlePlayersFromMasterPlayerAccountIds_Params
+{
+	struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest Request;                                                  // (Parm)
+	struct FScriptDelegate                             onSuccess;                                                // (Parm, ZeroConstructor)
+	struct FScriptDelegate                             onFailure;                                                // (Parm, ZeroConstructor)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPlayFabProfilesAPI*                         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function PlayFab.PlayFabProfilesAPI.GetProfiles
@@ -11041,6 +11116,13 @@ struct UPlayFabProfilesAPI_DelegateOnSuccessSetGlobalPolicy__DelegateSignature_P
 	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// DelegateFunction PlayFab.PlayFabProfilesAPI.DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature
+struct UPlayFabProfilesAPI_DelegateOnSuccessGetTitlePlayersFromMasterPlayerAccountIds__DelegateSignature_Params
+{
+	struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse Result;                                                   // (Parm)
+	class UObject*                                     customData;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // DelegateFunction PlayFab.PlayFabProfilesAPI.DelegateOnSuccessGetProfiles__DelegateSignature
 struct UPlayFabProfilesAPI_DelegateOnSuccessGetProfiles__DelegateSignature_Params
 {
@@ -11088,6 +11170,13 @@ struct UPlayFabProfilesModelDecoder_decodeSetEntityProfilePolicyResponseResponse
 {
 	class UPlayFabJsonObject*                          response;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FProfilesSetEntityProfilePolicyResponse     ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function PlayFab.PlayFabProfilesModelDecoder.decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse
+struct UPlayFabProfilesModelDecoder_decodeGetTitlePlayersFromMasterPlayerAccountIdsResponseResponse_Params
+{
+	class UPlayFabJsonObject*                          response;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function PlayFab.PlayFabProfilesModelDecoder.decodeGetGlobalPolicyResponseResponse
@@ -15026,7 +15115,7 @@ struct UPlayFabUtilities_getPhotonAppId_Params
 // Function PlayFab.PlayFabUtilities.getErrorText
 struct UPlayFabUtilities_getErrorText_Params
 {
-	int                                                code;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Code;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 

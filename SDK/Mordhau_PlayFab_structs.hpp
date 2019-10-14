@@ -267,7 +267,8 @@ enum class EAzureRegion : uint8_t
 	pfenum_WestUs                  = 14,
 	pfenum_ChinaEast2              = 15,
 	pfenum_ChinaNorth2             = 16,
-	pfenum_MAX                     = 17
+	pfenum_SouthAfricaNorth        = 17,
+	pfenum_MAX                     = 18
 };
 
 
@@ -2469,11 +2470,26 @@ struct FAdminAbortTaskInstanceRequest : public FPlayFabRequestCommon
 	struct FString                                     TaskInstanceId;                                           // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
+// ScriptStruct PlayFab.AuthenticationValidateEntityTokenRequest
+// 0x0010 (0x0018 - 0x0008)
+struct FAuthenticationValidateEntityTokenRequest : public FPlayFabRequestCommon
+{
+	struct FString                                     EntityToken;                                              // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct PlayFab.AuthenticationGetEntityTokenRequest
 // 0x0008 (0x0010 - 0x0008)
 struct FAuthenticationGetEntityTokenRequest : public FPlayFabRequestCommon
 {
 	class UPlayFabJsonObject*                          Entity;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct PlayFab.AuthenticationValidateEntityTokenResponse
+// 0x0010 (0x0018 - 0x0008)
+struct FAuthenticationValidateEntityTokenResponse : public FPlayFabResultCommon
+{
+	class UPlayFabJsonObject*                          Entity;                                                   // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayFabJsonObject*                          Lineage;                                                  // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct PlayFab.AuthenticationGetEntityTokenResponse
@@ -5478,7 +5494,7 @@ struct FMatchmakerUserInfoResponse : public FPlayFabResultCommon
 // 0x0048 (0x0050 - 0x0008)
 struct FMatchmakerStartGameResponse : public FPlayFabResultCommon
 {
-	struct FString                                     GameID;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     GameId;                                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FString                                     ServerIPV4Address;                                        // 0x0018(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FString                                     ServerIPV6Address;                                        // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	int                                                ServerPort;                                               // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -5946,21 +5962,22 @@ struct FMultiplayerGetMultiplayerServerDetailsResponse : public FPlayFabResultCo
 };
 
 // ScriptStruct PlayFab.MultiplayerGetMatchmakingTicketResult
-// 0x0088 (0x0090 - 0x0008)
+// 0x0098 (0x00A0 - 0x0008)
 struct FMultiplayerGetMatchmakingTicketResult : public FPlayFabResultCommon
 {
 	ECancellationReason                                CancellationReason;                                       // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-	struct FString                                     Created;                                                  // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UPlayFabJsonObject*                          Creator;                                                  // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                GiveUpAfterSeconds;                                       // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	struct FString                                     MatchID;                                                  // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPlayFabJsonObject*>                  Members;                                                  // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPlayFabJsonObject*>                  MembersToMatchWith;                                       // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     QueueName;                                                // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Status;                                                   // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     TicketId;                                                 // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     CancellationReasonString;                                 // 0x0010(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     Created;                                                  // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UPlayFabJsonObject*                          Creator;                                                  // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                GiveUpAfterSeconds;                                       // 0x0038(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	struct FString                                     MatchID;                                                  // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPlayFabJsonObject*>                  Members;                                                  // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPlayFabJsonObject*>                  MembersToMatchWith;                                       // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     QueueName;                                                // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     Status;                                                   // 0x0080(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     TicketId;                                                 // 0x0090(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct PlayFab.MultiplayerGetMatchResult
@@ -6148,25 +6165,23 @@ struct FMultiplayerCreateBuildWithManagedContainerRequest : public FPlayFabReque
 };
 
 // ScriptStruct PlayFab.MultiplayerCreateBuildWithCustomContainerRequest
-// 0x00A8 (0x00B0 - 0x0008)
+// 0x0088 (0x0090 - 0x0008)
 struct FMultiplayerCreateBuildWithCustomContainerRequest : public FPlayFabRequestCommon
 {
 	struct FString                                     BuildName;                                                // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	EContainerFlavor                                   ContainerFlavor;                                          // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 	class UPlayFabJsonObject*                          ContainerImageReference;                                  // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ContainerRepositoryName;                                  // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ContainerRunCommand;                                      // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     ContainerTag;                                             // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPlayFabJsonObject*>                  GameAssetReferences;                                      // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPlayFabJsonObject*>                  GameCertificateReferences;                                // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UPlayFabJsonObject*                          MetaData;                                                 // 0x0078(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MultiplayerServerCountPerVm;                              // 0x0080(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
-	TArray<class UPlayFabJsonObject*>                  Ports;                                                    // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UPlayFabJsonObject*>                  RegionConfigurations;                                     // 0x0098(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	EAzureVmSize                                       VmSize;                                                   // 0x00A8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x00A9(0x0007) MISSED OFFSET
+	struct FString                                     ContainerRunCommand;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPlayFabJsonObject*>                  GameAssetReferences;                                      // 0x0038(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPlayFabJsonObject*>                  GameCertificateReferences;                                // 0x0048(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UPlayFabJsonObject*                          MetaData;                                                 // 0x0058(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MultiplayerServerCountPerVm;                              // 0x0060(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	TArray<class UPlayFabJsonObject*>                  Ports;                                                    // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UPlayFabJsonObject*>                  RegionConfigurations;                                     // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	EAzureVmSize                                       VmSize;                                                   // 0x0088(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct PlayFab.MultiplayerCancelMatchmakingTicketRequest
@@ -6208,6 +6223,13 @@ struct FProfilesSetProfileLanguageRequest : public FPlayFabRequestCommon
 struct FProfilesSetGlobalPolicyRequest : public FPlayFabRequestCommon
 {
 	TArray<class UPlayFabJsonObject*>                  Permissions;                                              // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
+// ScriptStruct PlayFab.ProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest
+// 0x0010 (0x0018 - 0x0008)
+struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequest : public FPlayFabRequestCommon
+{
+	struct FString                                     MasterPlayerAccountIds;                                   // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct PlayFab.ProfilesGetEntityProfilesRequest
@@ -6256,6 +6278,13 @@ struct FProfilesSetProfileLanguageResponse : public FPlayFabResultCommon
 struct FProfilesSetGlobalPolicyResponse : public FPlayFabResultCommon
 {
 
+};
+
+// ScriptStruct PlayFab.ProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse
+// 0x0008 (0x0010 - 0x0008)
+struct FProfilesGetTitlePlayersFromMasterPlayerAccountIdsResponse : public FPlayFabResultCommon
+{
+	class UPlayFabJsonObject*                          TitlePlayerAccounts;                                      // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct PlayFab.ProfilesGetEntityProfilesResponse

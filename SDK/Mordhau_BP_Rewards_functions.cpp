@@ -125,47 +125,6 @@ struct FText UBP_Rewards_C::Get_EarnedXPText_Text_1()
 }
 
 
-// Function BP_Rewards.BP_Rewards_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBP_Rewards_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.Construct");
-
-	UBP_Rewards_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_Rewards.BP_Rewards_C.ItemsDropped
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           bWasSuccessful                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSteamID                SteamID                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// TArray<struct FItemStack>      ItemStacks                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UBP_Rewards_C::ItemsDropped(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.ItemsDropped");
-
-	UBP_Rewards_C_ItemsDropped_Params params;
-	params.bWasSuccessful = bWasSuccessful;
-	params.SteamID = SteamID;
-	params.ItemStacks = ItemStacks;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_Rewards.BP_Rewards_C.BeginGoldAnimation
 // (BlueprintCallable, BlueprintEvent)
 
@@ -366,6 +325,66 @@ void UBP_Rewards_C::RewardDropTimedOut()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.RewardDropTimedOut");
 
 	UBP_Rewards_C_RewardDropTimedOut_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Rewards.BP_Rewards_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_Rewards_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.Construct");
+
+	UBP_Rewards_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Rewards.BP_Rewards_C.OnRewardsDropped
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           bWasSuccessful                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FString                 PlayerId                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// int                            Gold                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            XP                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Rewards_C::OnRewardsDropped(bool bWasSuccessful, const struct FString& PlayerId, int Gold, int XP)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.OnRewardsDropped");
+
+	UBP_Rewards_C_OnRewardsDropped_Params params;
+	params.bWasSuccessful = bWasSuccessful;
+	params.PlayerId = PlayerId;
+	params.Gold = Gold;
+	params.XP = XP;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Rewards.BP_Rewards_C.Enable
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Rewards_C::Enable()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Rewards.BP_Rewards_C.Enable");
+
+	UBP_Rewards_C_Enable_Params params;
 
 	auto flags = fn->FunctionFlags;
 

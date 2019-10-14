@@ -85,16 +85,16 @@ void ABP_MordhauHUD_C::CreateVoteKickMenu()
 // Parameters:
 // bool                           IsVictory                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   MainText                       (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Subtext                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   SubText                        (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MordhauHUD_C::ShowMatchResult(bool IsVictory, const struct FText& MainText, const struct FText& Subtext)
+void ABP_MordhauHUD_C::ShowMatchResult(bool IsVictory, const struct FText& MainText, const struct FText& SubText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauHUD.BP_MordhauHUD_C.ShowMatchResult");
 
 	ABP_MordhauHUD_C_ShowMatchResult_Params params;
 	params.IsVictory = IsVictory;
 	params.MainText = MainText;
-	params.Subtext = Subtext;
+	params.SubText = SubText;
 
 	auto flags = fn->FunctionFlags;
 
@@ -549,17 +549,19 @@ void ABP_MordhauHUD_C::CreateWatermark()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
-// struct FText                   Subtext                        (BlueprintVisible, BlueprintReadOnly, Parm)
+// struct FText                   SubText                        (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          Duration                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<E_AnnouncementType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MordhauHUD_C::ShowAnnouncement(const struct FText& Text, const struct FText& Subtext, float Duration)
+void ABP_MordhauHUD_C::ShowAnnouncement(const struct FText& Text, const struct FText& SubText, float Duration, TEnumAsByte<E_AnnouncementType> Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauHUD.BP_MordhauHUD_C.ShowAnnouncement");
 
 	ABP_MordhauHUD_C_ShowAnnouncement_Params params;
 	params.Text = Text;
-	params.Subtext = Subtext;
+	params.SubText = SubText;
 	params.Duration = Duration;
+	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
 

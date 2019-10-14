@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Sickle.BP_Sickle_C
-// 0x0000 (0x1A98 - 0x1A98)
+// 0x0000 (0x1AE8 - 0x1AE8)
 class ABP_Sickle_C : public ABP_Axe_C
 {
 public:

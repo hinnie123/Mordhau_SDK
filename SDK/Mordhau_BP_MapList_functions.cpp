@@ -75,15 +75,17 @@ void UBP_MapList_C::OnEntrySelected(class UBP_MapEntryLocalPlay_C* Entry)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 GameModeMapName                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// class UMapMetadata*            MetaData                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UGameModeMetadata*       GameModeMetadata               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UMapMetadata*            MapMetadata                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MapList_C::AddEntry(const struct FString& GameModeMapName, class UMapMetadata* MetaData)
+void UBP_MapList_C::AddEntry(const struct FString& GameModeMapName, class UGameModeMetadata* GameModeMetadata, class UMapMetadata* MapMetadata)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MapList.BP_MapList_C.AddEntry");
 
 	UBP_MapList_C_AddEntry_Params params;
 	params.GameModeMapName = GameModeMapName;
-	params.MetaData = MetaData;
+	params.GameModeMetadata = GameModeMetadata;
+	params.MapMetadata = MapMetadata;
 
 	auto flags = fn->FunctionFlags;
 

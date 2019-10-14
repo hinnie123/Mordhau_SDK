@@ -309,16 +309,14 @@ void UBP_GenericItemEntry_C::PurchaseCancel()
 // (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bWasSuccessful                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSteamID                SteamID                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<struct FItemStack>      ItemStacks                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_GenericItemEntry_C::ItemsUnlocked(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks)
+void UBP_GenericItemEntry_C::ItemsUnlocked(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GenericItemEntry.BP_GenericItemEntry_C.ItemsUnlocked");
 
 	UBP_GenericItemEntry_C_ItemsUnlocked_Params params;
 	params.bWasSuccessful = bWasSuccessful;
-	params.SteamID = SteamID;
 	params.ItemStacks = ItemStacks;
 
 	auto flags = fn->FunctionFlags;

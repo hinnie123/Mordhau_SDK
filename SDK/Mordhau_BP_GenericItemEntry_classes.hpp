@@ -83,7 +83,7 @@ public:
 	void RequestUnlock();
 	void PurchaseConfirm();
 	void PurchaseCancel();
-	void ItemsUnlocked(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks);
+	void ItemsUnlocked(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_BP_GenericItemEntry(int EntryPoint);
 };

@@ -14,6 +14,24 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankMMRText_Text_1
+struct UBP_PlayerMenu_C_Get_CurrentRankMMRText_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankText_ColorAndOpacity_1
+struct UBP_PlayerMenu_C_Get_CurrentRankText_ColorAndOpacity_1_Params
+{
+	struct FSlateColor                                 ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankText_Text_1
+struct UBP_PlayerMenu_C_Get_CurrentRankText_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function BP_PlayerMenu.BP_PlayerMenu_C.Update
 struct UBP_PlayerMenu_C_Update_Params
 {
@@ -38,7 +56,6 @@ struct UBP_PlayerMenu_C_OnHideAnimFinish_Params
 struct UBP_PlayerMenu_C_OnItemsRefreshed_Params
 {
 	bool                                               bWasSuccessful;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 

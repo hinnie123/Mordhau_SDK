@@ -43,7 +43,7 @@ public:
 
 	void Update(const struct FServerSearchResult& Session);
 	void GetServerBrowser(class UBP_ServerBrowser_C** ServerBrowser);
-	void Select(bool IsSelected);
+	void Select(bool isSelected);
 	void Construct();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_386_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_BP_ServerBrowserEntry(int EntryPoint);

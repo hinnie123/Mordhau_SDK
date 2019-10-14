@@ -12135,7 +12135,7 @@ public:
 class UMaterialExpressionCustom : public UMaterialExpression
 {
 public:
-	struct FString                                     code;                                                     // 0x0040(0x0010) (Edit, ZeroConstructor)
+	struct FString                                     Code;                                                     // 0x0040(0x0010) (Edit, ZeroConstructor)
 	TEnumAsByte<ECustomMaterialOutputType>             OutputType;                                               // 0x0050(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 	struct FString                                     Description;                                              // 0x0058(0x0010) (Edit, ZeroConstructor)

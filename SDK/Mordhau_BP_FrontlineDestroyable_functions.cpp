@@ -253,6 +253,23 @@ void ABP_FrontlineDestroyable_C::OnInitialize(class ABP_CapturePoint_C* Point)
 }
 
 
+// Function BP_FrontlineDestroyable.BP_FrontlineDestroyable_C.OnAnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlineDestroyable_C::OnAnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineDestroyable.BP_FrontlineDestroyable_C.OnAnyObjectiveProgressChanged");
+
+	ABP_FrontlineDestroyable_C_OnAnyObjectiveProgressChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlineDestroyable.BP_FrontlineDestroyable_C.ExecuteUbergraph_BP_FrontlineDestroyable
 // ()
 // Parameters:

@@ -49,19 +49,6 @@ struct UBP_Rewards_C_Get_EarnedXPText_Text_1_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function BP_Rewards.BP_Rewards_C.Construct
-struct UBP_Rewards_C_Construct_Params
-{
-};
-
-// Function BP_Rewards.BP_Rewards_C.ItemsDropped
-struct UBP_Rewards_C_ItemsDropped_Params
-{
-	bool                                               bWasSuccessful;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
 // Function BP_Rewards.BP_Rewards_C.BeginGoldAnimation
 struct UBP_Rewards_C_BeginGoldAnimation_Params
 {
@@ -121,6 +108,25 @@ struct UBP_Rewards_C_RequestRewards_Params
 
 // Function BP_Rewards.BP_Rewards_C.RewardDropTimedOut
 struct UBP_Rewards_C_RewardDropTimedOut_Params
+{
+};
+
+// Function BP_Rewards.BP_Rewards_C.Construct
+struct UBP_Rewards_C_Construct_Params
+{
+};
+
+// Function BP_Rewards.BP_Rewards_C.OnRewardsDropped
+struct UBP_Rewards_C_OnRewardsDropped_Params
+{
+	bool                                               bWasSuccessful;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     PlayerId;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	int                                                Gold;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                XP;                                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Rewards.BP_Rewards_C.Enable
+struct UBP_Rewards_C_Enable_Params
 {
 };
 

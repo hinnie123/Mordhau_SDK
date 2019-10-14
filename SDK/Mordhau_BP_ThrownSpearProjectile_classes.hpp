@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ThrownSpearProjectile.BP_ThrownSpearProjectile_C
-// 0x0000 (0x0898 - 0x0898)
+// 0x0000 (0x08A8 - 0x08A8)
 class ABP_ThrownSpearProjectile_C : public ABP_ThrownWeaponProjectile_C
 {
 public:

@@ -314,6 +314,11 @@ struct AAdvancedCharacter_OnHealthChanged_Params
 {
 };
 
+// Function Mordhau.AdvancedCharacter.OnExceededTimeOutOfBounds
+struct AAdvancedCharacter_OnExceededTimeOutOfBounds_Params
+{
+};
+
 // Function Mordhau.AdvancedCharacter.OnDied
 struct AAdvancedCharacter_OnDied_Params
 {
@@ -796,6 +801,11 @@ struct AMordhauVehicle_OnRep_ReplicatedSecondaryTurnValue_Params
 {
 };
 
+// Function Mordhau.MordhauVehicle.OnDriverChanged
+struct AMordhauVehicle_OnDriverChanged_Params
+{
+};
+
 // Function Mordhau.MordhauVehicle.KnockOffDriver
 struct AMordhauVehicle_KnockOffDriver_Params
 {
@@ -1138,6 +1148,18 @@ struct AControlPoint_UpdatePresenceNumbers_Params
 struct AControlPoint_UpdateCaptureProgress_Params
 {
 	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.ControlPoint.SetOwningTeam
+struct AControlPoint_SetOwningTeam_Params
+{
+	unsigned char                                      NewTeam;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.ControlPoint.SetCapturingTeam
+struct AControlPoint_SetCapturingTeam_Params
+{
+	unsigned char                                      NewTeam;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.ControlPoint.SetCaptureProgress
@@ -2255,6 +2277,11 @@ struct AMordhauBeaconClient_ServerReserveSlots_Params
 	TArray<struct FSteamID>                            InSteamIDs;                                               // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 };
 
+// Function Mordhau.MordhauBeaconClient.ServerPing
+struct AMordhauBeaconClient_ServerPing_Params
+{
+};
+
 // Function Mordhau.MordhauBeaconClient.ReserveSlots
 struct AMordhauBeaconClient_ReserveSlots_Params
 {
@@ -2263,17 +2290,23 @@ struct AMordhauBeaconClient_ReserveSlots_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauBeaconClient.Ping
+struct AMordhauBeaconClient_Ping_Params
+{
+	struct FURL                                        ConnectURL;                                               // (Parm, OutParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauBeaconClient.ClientPong
+struct AMordhauBeaconClient_ClientPong_Params
+{
+};
+
 // Function Mordhau.MordhauBeaconClient.ClientNotifyReservationStatus
 struct AMordhauBeaconClient_ClientNotifyReservationStatus_Params
 {
 	int                                                OpenSlots;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	EReservationStatus                                 ReservationStatus;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Mordhau.MordhauBeaconClient.ClientNotifyOpenSlots
-struct AMordhauBeaconClient_ClientNotifyOpenSlots_Params
-{
-	int                                                OpenSlots;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauCameraComponent.UpdateCamera
@@ -3384,12 +3417,14 @@ struct AMordhauCharacter_EmptyHands_Params
 struct AMordhauCharacter_DropSlot_Params
 {
 	unsigned char                                      Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bForce;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauCharacter.DropEquipment
 struct AMordhauCharacter_DropEquipment_Params
 {
 	class AMordhauEquipment*                           ToDrop;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bForce;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauCharacter.DoCameraShakeIfViewTarget
@@ -3601,6 +3636,19 @@ struct UMordhauGameInstance_UpdateParty_Params
 	bool                                               bSendProfile;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauGameInstance.UpdateMatchmakingLobbyTimestamp
+struct UMordhauGameInstance_UpdateMatchmakingLobbyTimestamp_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameInstance.UnmountMod
+struct UMordhauGameInstance_UnmountMod_Params
+{
+	int                                                ModId;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameInstance.Shutdown
 struct UMordhauGameInstance_Shutdown_Params
 {
@@ -3670,15 +3718,42 @@ struct UMordhauGameInstance_SetMatchmakingMemberData_Params
 {
 };
 
+// Function Mordhau.MordhauGameInstance.SetMatchmakingLobbyAllowedPlayers
+struct UMordhauGameInstance_SetMatchmakingLobbyAllowedPlayers_Params
+{
+	TArray<struct FSteamID>                            AllowedPlayers;                                           // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameInstance.SetMatchmakingGameServer
 struct UMordhauGameInstance_SetMatchmakingGameServer_Params
 {
 	struct FServerSearchResult                         SearchResult;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
+// Function Mordhau.MordhauGameInstance.ServerTravel
+struct UMordhauGameInstance_ServerTravel_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     MapName;                                                  // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameInstance.SaveConfig
 struct UMordhauGameInstance_SaveConfig_Params
 {
+};
+
+// Function Mordhau.MordhauGameInstance.MountMods
+struct UMordhauGameInstance_MountMods_Params
+{
+};
+
+// Function Mordhau.MordhauGameInstance.MountMod
+struct UMordhauGameInstance_MountMod_Params
+{
+	int                                                ModId;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauGameInstance.LogMatchmakingState
@@ -3736,9 +3811,46 @@ struct UMordhauGameInstance_IsPartyMember_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauGameInstance.IsModMounted
+struct UMordhauGameInstance_IsModMounted_Params
+{
+	int                                                ModId;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameInstance.IsMatchmakingLobbyValid
+struct UMordhauGameInstance_IsMatchmakingLobbyValid_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameInstance.IsGloballyBanned
+struct UMordhauGameInstance_IsGloballyBanned_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameInstance.Init
 struct UMordhauGameInstance_Init_Params
 {
+};
+
+// Function Mordhau.MordhauGameInstance.GetServerAuthTicket
+struct UMordhauGameInstance_GetServerAuthTicket_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauGameInstance.GetPlayFabAuthTicket
+struct UMordhauGameInstance_GetPlayFabAuthTicket_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauGameInstance.GetPlayersForSlotReservation
+struct UMordhauGameInstance_GetPlayersForSlotReservation_Params
+{
+	TArray<struct FSteamID>                            ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Mordhau.MordhauGameInstance.GetPartyState
@@ -3756,6 +3868,7 @@ struct UMordhauGameInstance_GetPartySize_Params
 // Function Mordhau.MordhauGameInstance.GetPartyMMR
 struct UMordhauGameInstance_GetPartyMMR_Params
 {
+	struct FString                                     GameMode;                                                 // (Parm, ZeroConstructor)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -3850,10 +3963,29 @@ struct UMordhauGameInstance_GetMapInfo_Params
 	struct FMapInfo                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Mordhau.MordhauGameInstance.GetAuthTicket
-struct UMordhauGameInstance_GetAuthTicket_Params
+// Function Mordhau.MordhauGameInstance.GetInstalledMods
+struct UMordhauGameInstance_GetInstalledMods_Params
+{
+	TArray<int>                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauGameInstance.GetGlobalBanDuration
+struct UMordhauGameInstance_GetGlobalBanDuration_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameInstance.GetEncryptedAppTicket
+struct UMordhauGameInstance_GetEncryptedAppTicket_Params
 {
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauGameInstance.CreateMatchmakingTicket
+struct UMordhauGameInstance_CreateMatchmakingTicket_Params
+{
+	struct FString                                     GameMode;                                                 // (Parm, ZeroConstructor)
+	EServerRegion                                      Region;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauGameInstance.CreateMatchmakingLobby
@@ -3861,6 +3993,12 @@ struct UMordhauGameInstance_CreateMatchmakingLobby_Params
 {
 	TArray<struct FString>                             InGameModes;                                              // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	EServerRegion                                      InRegion;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameInstance.CloseMatchmakingLobby
+struct UMordhauGameInstance_CloseMatchmakingLobby_Params
+{
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -3896,6 +4034,12 @@ struct UMordhauGameInstance_ClearPartyGameServer_Params
 {
 };
 
+// Function Mordhau.MordhauGameInstance.ClearMatchmakingLobbyAllowedPlayers
+struct UMordhauGameInstance_ClearMatchmakingLobbyAllowedPlayers_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameInstance.ClearMatchmakingGameServer
 struct UMordhauGameInstance_ClearMatchmakingGameServer_Params
 {
@@ -3913,8 +4057,13 @@ struct UMordhauGameInstance_CanInviteToParty_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauGameInstance.CancelAuthTicket
-struct UMordhauGameInstance_CancelAuthTicket_Params
+// Function Mordhau.MordhauGameInstance.CancelServerAuthTicket
+struct UMordhauGameInstance_CancelServerAuthTicket_Params
+{
+};
+
+// Function Mordhau.MordhauGameInstance.CancelPlayFabAuthTicket
+struct UMordhauGameInstance_CancelPlayFabAuthTicket_Params
 {
 };
 
@@ -4140,6 +4289,13 @@ struct AMordhauGameMode_AddBots_Params
 	int                                                Team;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauGameSession.UnmutePlayer
+struct AMordhauGameSession_UnmutePlayer_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameSession.UnbanPlayer
 struct AMordhauGameSession_UnbanPlayer_Params
 {
@@ -4164,11 +4320,40 @@ struct AMordhauGameSession_RemoveAdmin_Params
 	class APlayerController*                           AdminPlayer;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauGameSession.MutePlayerWithDuration
+struct AMordhauGameSession_MutePlayerWithDuration_Params
+{
+	class APlayerController*                           MutedPlayer;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                MuteDuration;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameSession.MutePlayer
+struct AMordhauGameSession_MutePlayer_Params
+{
+	class APlayerController*                           MutedPlayer;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauGameSession.KickPlayer
 struct AMordhauGameSession_KickPlayer_Params
 {
 	class APlayerController*                           KickedPlayer;                                             // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       KickReason;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameSession.IsPlayerMuted
+struct AMordhauGameSession_IsPlayerMuted_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameSession.IsPlayerBanned
+struct AMordhauGameSession_IsPlayerBanned_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -4296,6 +4481,13 @@ struct AMordhauGameState_GetTeamName_Params
 
 // Function Mordhau.MordhauGameState.GetTeamColor
 struct AMordhauGameState_GetTeamColor_Params
+{
+	int                                                Team;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameState.GetSecondaryTeamColor
+struct AMordhauGameState_GetSecondaryTeamColor_Params
 {
 	int                                                Team;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -4676,6 +4868,12 @@ struct UMordhauGameUserSettings_SetScreenPercentage_Params
 	float                                              NewScreenPercentage;                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauGameUserSettings.SetRankedMatchmakingGameModes
+struct UMordhauGameUserSettings_SetRankedMatchmakingGameModes_Params
+{
+	TArray<struct FString>                             NewGameModes;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function Mordhau.MordhauGameUserSettings.SetRagdollStayTime
 struct UMordhauGameUserSettings_SetRagdollStayTime_Params
 {
@@ -4692,6 +4890,12 @@ struct UMordhauGameUserSettings_SetRagdollFidelity_Params
 struct UMordhauGameUserSettings_SetQuickSpawn_Params
 {
 	int                                                NewQuickSpawn;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameUserSettings.SetProfanityFilter
+struct UMordhauGameUserSettings_SetProfanityFilter_Params
+{
+	int                                                NewProfanityFilter;                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauGameUserSettings.SetNoTeamColorsOnGear
@@ -4728,12 +4932,6 @@ struct UMordhauGameUserSettings_SetMaxRagdolls_Params
 struct UMordhauGameUserSettings_SetMatchmakingRegion_Params
 {
 	EServerRegion                                      NewRegion;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Mordhau.MordhauGameUserSettings.SetMatchmakingGameModes
-struct UMordhauGameUserSettings_SetMatchmakingGameModes_Params
-{
-	TArray<struct FString>                             NewGameModes;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Mordhau.MordhauGameUserSettings.SetMasterVolume
@@ -4836,6 +5034,12 @@ struct UMordhauGameUserSettings_SetCharacterFidelity_Params
 struct UMordhauGameUserSettings_SetCharacterCloth_Params
 {
 	int                                                NewCharacterCloth;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameUserSettings.SetCasualMatchmakingGameModes
+struct UMordhauGameUserSettings_SetCasualMatchmakingGameModes_Params
+{
+	TArray<struct FString>                             NewGameModes;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Mordhau.MordhauGameUserSettings.SetCameraDistance
@@ -5030,6 +5234,12 @@ struct UMordhauGameUserSettings_GetScreenPercentage_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauGameUserSettings.GetRankedMatchmakingGameModes
+struct UMordhauGameUserSettings_GetRankedMatchmakingGameModes_Params
+{
+	TArray<struct FString>                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function Mordhau.MordhauGameUserSettings.GetRagdollStayTimeLimit
 struct UMordhauGameUserSettings_GetRagdollStayTimeLimit_Params
 {
@@ -5050,6 +5260,12 @@ struct UMordhauGameUserSettings_GetRagdollFidelity_Params
 
 // Function Mordhau.MordhauGameUserSettings.GetQuickSpawn
 struct UMordhauGameUserSettings_GetQuickSpawn_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameUserSettings.GetProfanityFilter
+struct UMordhauGameUserSettings_GetProfanityFilter_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -5106,12 +5322,6 @@ struct UMordhauGameUserSettings_GetMaxRagdolls_Params
 struct UMordhauGameUserSettings_GetMatchmakingRegion_Params
 {
 	EServerRegion                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Mordhau.MordhauGameUserSettings.GetMatchmakingGameModes
-struct UMordhauGameUserSettings_GetMatchmakingGameModes_Params
-{
-	TArray<struct FString>                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Mordhau.MordhauGameUserSettings.GetMasterVolume
@@ -5256,6 +5466,12 @@ struct UMordhauGameUserSettings_GetCharacterFidelity_Params
 struct UMordhauGameUserSettings_GetCharacterCloth_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauGameUserSettings.GetCasualMatchmakingGameModes
+struct UMordhauGameUserSettings_GetCasualMatchmakingGameModes_Params
+{
+	TArray<struct FString>                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Mordhau.MordhauGameUserSettings.GetCameraDistanceLimits
@@ -5780,12 +5996,6 @@ struct UMordhauInventory_SetItemQuantity_Params
 	int                                                quantity;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauInventory.SerializeItems
-struct UMordhauInventory_SerializeItems_Params
-{
-	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Mordhau.MordhauInventory.ResetInventory
 struct UMordhauInventory_ResetInventory_Params
 {
@@ -5797,25 +6007,22 @@ struct UMordhauInventory_RequestUnlockRecipes_Params
 {
 };
 
+// Function Mordhau.MordhauInventory.RefreshPlayerItems
+struct UMordhauInventory_RefreshPlayerItems_Params
+{
+	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+};
+
 // Function Mordhau.MordhauInventory.RefreshItems
 struct UMordhauInventory_RefreshItems_Params
 {
 	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauInventory.ParseResponseString
-struct UMordhauInventory_ParseResponseString_Params
+// Function Mordhau.MordhauInventory.ProcessPendingRewards
+struct UMordhauInventory_ProcessPendingRewards_Params
 {
-	struct FString                                     ResponseString;                                           // (Parm, ZeroConstructor)
-	TArray<struct FItemStack>                          ItemStacks;                                               // (Parm, OutParm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Mordhau.MordhauInventory.OnWebAPIItemsDropped
-struct UMordhauInventory_OnWebAPIItemsDropped_Params
-{
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function Mordhau.MordhauInventory.IsSkinAvailable
@@ -5833,13 +6040,6 @@ struct UMordhauInventory_IsInventoryAvailable_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauInventory.HasSupporterPack
-struct UMordhauInventory_HasSupporterPack_Params
-{
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Mordhau.MordhauInventory.HasSkin
 struct UMordhauInventory_HasSkin_Params
 {
@@ -5848,10 +6048,9 @@ struct UMordhauInventory_HasSkin_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauInventory.HasRewards
-struct UMordhauInventory_HasRewards_Params
+// Function Mordhau.MordhauInventory.HasPendingRewards
+struct UMordhauInventory_HasPendingRewards_Params
 {
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -5875,14 +6074,6 @@ struct UMordhauInventory_GetXP_Params
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauInventory.GetUnlockRequirements
-struct UMordhauInventory_GetUnlockRequirements_Params
-{
-	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	int                                                ItemDefID;                                                // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FItemStack>                          Requirements;                                             // (Parm, OutParm, ZeroConstructor)
-};
-
 // Function Mordhau.MordhauInventory.GetUnlockRecipe
 struct UMordhauInventory_GetUnlockRecipe_Params
 {
@@ -5893,6 +6084,12 @@ struct UMordhauInventory_GetUnlockRecipe_Params
 
 // Function Mordhau.MordhauInventory.GetTutorialPackageItemDefID
 struct UMordhauInventory_GetTutorialPackageItemDefID_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauInventory.GetSupporterPackageItemDefID
+struct UMordhauInventory_GetSupporterPackageItemDefID_Params
 {
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -5923,6 +6120,27 @@ struct UMordhauInventory_GetSkinRarity_Params
 {
 	struct FEquipmentSkinEntry                         Skin;                                                     // (ConstParm, Parm, OutParm, ReferenceParm)
 	EItemRarity                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauInventory.GetPlayFabPlayerID
+struct UMordhauInventory_GetPlayFabPlayerID_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauInventory.GetPlayerXP
+struct UMordhauInventory_GetPlayerXP_Params
+{
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauInventory.GetPlayerGold
+struct UMordhauInventory_GetPlayerGold_Params
+{
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauInventory.GetItemStacks
@@ -5977,32 +6195,11 @@ struct UMordhauInventory_FakeItemDrop_Params
 	int                                                quantity;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauInventory.DeserializeItems
-struct UMordhauInventory_DeserializeItems_Params
+// Function Mordhau.MordhauInventory.ClearPlayerItems
+struct UMordhauInventory_ClearPlayerItems_Params
 {
-	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FSerializedItems                            SerializedItems;                                          // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function Mordhau.MordhauInventory.ConsumeItemStack
-struct UMordhauInventory_ConsumeItemStack_Params
-{
-	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FItemStack                                  ItemStack;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function Mordhau.MordhauInventory.ConsolidateItems
-struct UMordhauInventory_ConsolidateItems_Params
-{
-	ECallResult                                        CallResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Mordhau.MordhauInventory.CollectRewards
-struct UMordhauInventory_CollectRewards_Params
-{
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	TArray<struct FItemStack>                          ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauInventory.CanUnlockItems
@@ -6021,10 +6218,26 @@ struct UMordhauInventory_CanUnlockItem_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauInventory.AssignPlayFabPlayerID
+struct UMordhauInventory_AssignPlayFabPlayerID_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauInventory.AreUnlockRecipesAvailable
 struct UMordhauInventory_AreUnlockRecipesAvailable_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauInventory.AddRewards
+struct UMordhauInventory_AddRewards_Params
+{
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	int                                                Gold;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                XP;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauInventory.AddItems
@@ -6081,6 +6294,18 @@ struct AMordhauPlayerController_VoteLevel_Params
 struct AMordhauPlayerController_VoteKick_Params
 {
 	struct FString                                     PlayerNameOrSteamID;                                      // (Parm, ZeroConstructor)
+};
+
+// Function Mordhau.MordhauPlayerController.Unmute
+struct AMordhauPlayerController_Unmute_Params
+{
+	struct FString                                     PlayerNameOrSteamID;                                      // (Parm, ZeroConstructor)
+};
+
+// Function Mordhau.MordhauPlayerController.UnmountPak
+struct AMordhauPlayerController_UnmountPak_Params
+{
+	struct FString                                     PakPath;                                                  // (Parm, ZeroConstructor)
 };
 
 // Function Mordhau.MordhauPlayerController.Unban
@@ -6200,16 +6425,16 @@ struct AMordhauPlayerController_ServerSetSpawnToken_Params
 	int                                                NewToken;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauPlayerController.ServerSetSessionTicket
+struct AMordhauPlayerController_ServerSetSessionTicket_Params
+{
+	struct FString                                     InSessionTicket;                                          // (Parm, ZeroConstructor)
+};
+
 // Function Mordhau.MordhauPlayerController.ServerSetMatchmakingLobbyID
 struct AMordhauPlayerController_ServerSetMatchmakingLobbyID_Params
 {
 	struct FSteamID                                    InMatchmakingLobbyID;                                     // (ConstParm, Parm, ReferenceParm)
-};
-
-// Function Mordhau.MordhauPlayerController.ServerSetInventoryItems
-struct AMordhauPlayerController_ServerSetInventoryItems_Params
-{
-	struct FSerializedItems                            SerializedItems;                                          // (ConstParm, Parm, ReferenceParm)
 };
 
 // Function Mordhau.MordhauPlayerController.ServerSetBadge
@@ -6296,6 +6521,16 @@ struct AMordhauPlayerController_ServerRemoveAdmin_Params
 	uint64_t                                           SteamID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauPlayerController.ServerNotifyItemsUnlocked
+struct AMordhauPlayerController_ServerNotifyItemsUnlocked_Params
+{
+};
+
+// Function Mordhau.MordhauPlayerController.ServerMuteList
+struct AMordhauPlayerController_ServerMuteList_Params
+{
+};
+
 // Function Mordhau.MordhauPlayerController.ServerKickPlayer
 struct AMordhauPlayerController_ServerKickPlayer_Params
 {
@@ -6322,6 +6557,19 @@ struct AMordhauPlayerController_ServerGetMapVoteMaps_Params
 // Function Mordhau.MordhauPlayerController.ServerGetMapVoteCounts
 struct AMordhauPlayerController_ServerGetMapVoteCounts_Params
 {
+};
+
+// Function Mordhau.MordhauPlayerController.ServerChatUnmutePlayer
+struct AMordhauPlayerController_ServerChatUnmutePlayer_Params
+{
+	uint64_t                                           SteamID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauPlayerController.ServerChatMutePlayer
+struct AMordhauPlayerController_ServerChatMutePlayer_Params
+{
+	uint64_t                                           SteamID;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                MuteDuration;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauPlayerController.ServerChangeLevel
@@ -6467,24 +6715,16 @@ struct AMordhauPlayerController_OnIsAnythingRestockableChanged_Params
 struct AMordhauPlayerController_OnInventoryRewardsDropped_Params
 {
 	bool                                               bWasSuccessful;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	int                                                Gold;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                XP;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauPlayerController.OnInventoryItemsUnlocked
 struct AMordhauPlayerController_OnInventoryItemsUnlocked_Params
 {
 	bool                                               bWasSuccessful;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
 	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function Mordhau.MordhauPlayerController.OnInventoryItemsSerialized
-struct AMordhauPlayerController_OnInventoryItemsSerialized_Params
-{
-	bool                                               bWasSuccessful;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FSerializedItems                            SerializedItems;                                          // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function Mordhau.MordhauPlayerController.OnHighlightStart
@@ -6523,6 +6763,24 @@ struct AMordhauPlayerController_OnActionFailed_Params
 	struct FName                                       Reason;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauPlayerController.MuteList
+struct AMordhauPlayerController_MuteList_Params
+{
+};
+
+// Function Mordhau.MordhauPlayerController.Mute
+struct AMordhauPlayerController_Mute_Params
+{
+	struct FString                                     PlayerNameOrSteamID;                                      // (Parm, ZeroConstructor)
+	int                                                MuteDuration;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauPlayerController.MountPak
+struct AMordhauPlayerController_MountPak_Params
+{
+	struct FString                                     PakPath;                                                  // (Parm, ZeroConstructor)
+};
+
 // Function Mordhau.MordhauPlayerController.LookUp
 struct AMordhauPlayerController_LookUp_Params
 {
@@ -6534,6 +6792,12 @@ struct AMordhauPlayerController_Kick_Params
 {
 	struct FString                                     PlayerNameOrSteamID;                                      // (Parm, ZeroConstructor)
 	struct FString                                     KickReason;                                               // (Parm, ZeroConstructor)
+};
+
+// Function Mordhau.MordhauPlayerController.IsSessionTicketAvailable
+struct AMordhauPlayerController_IsSessionTicketAvailable_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauPlayerController.IsInventoryAvailable
@@ -6629,6 +6893,12 @@ struct AMordhauPlayerController_DisplayMessage_Params
 	float                                              MsgLifeTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauPlayerController.ComputePlayerRank
+struct AMordhauPlayerController_ComputePlayerRank_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauPlayerController.ClientWasKicked_Implementation
 struct AMordhauPlayerController_ClientWasKicked_Implementation_Params
 {
@@ -6660,13 +6930,13 @@ struct AMordhauPlayerController_ClientSetControlAndPawnRotation_Params
 	struct FRotator                                    NewRotation;                                              // (Parm, IsPlainOldData)
 };
 
-// Function Mordhau.MordhauPlayerController.ClientRequestMatchmakingLobbyID
-struct AMordhauPlayerController_ClientRequestMatchmakingLobbyID_Params
+// Function Mordhau.MordhauPlayerController.ClientRequestSessionTicket
+struct AMordhauPlayerController_ClientRequestSessionTicket_Params
 {
 };
 
-// Function Mordhau.MordhauPlayerController.ClientRequestInventoryItems
-struct AMordhauPlayerController_ClientRequestInventoryItems_Params
+// Function Mordhau.MordhauPlayerController.ClientRequestMatchmakingLobbyID
+struct AMordhauPlayerController_ClientRequestMatchmakingLobbyID_Params
 {
 };
 
@@ -6702,7 +6972,9 @@ struct AMordhauPlayerController_ClientReceiveScore_Params
 // Function Mordhau.MordhauPlayerController.ClientReceiveRewards
 struct AMordhauPlayerController_ClientReceiveRewards_Params
 {
-	TArray<struct FItemStack>                          Rewards;                                                  // (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+	struct FString                                     PlayerId;                                                 // (Parm, ZeroConstructor)
+	int                                                Gold;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                XP;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauPlayerController.ClientReceiveMessage
@@ -6838,6 +7110,12 @@ struct AMordhauPlayerController_AskForSpawn_Params
 {
 };
 
+// Function Mordhau.MordhauPlayerController.AreStatsAvailable
+struct AMordhauPlayerController_AreStatsAvailable_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauPlayerController.AdminLogin
 struct AMordhauPlayerController_AdminLogin_Params
 {
@@ -6931,6 +7209,7 @@ struct AMordhauPlayerState_BanPlayer_Params
 {
 	int                                                BanDuration;                                              // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     BanReason;                                                // (Parm, ZeroConstructor)
+	bool                                               bIsGlobalBan;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauPlayerState.AddScore
@@ -7216,6 +7495,13 @@ struct UFindMordhauServerSessions_GetServerList_Params
 	EServerList                                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.FindMordhauServerSessions.GetServerID
+struct UFindMordhauServerSessions_GetServerID_Params
+{
+	struct FServerSearchResult                         Result;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function Mordhau.FindMordhauServerSessions.GetRegion
 struct UFindMordhauServerSessions_GetRegion_Params
 {
@@ -7242,13 +7528,6 @@ struct UFindMordhauServerSessions_GetMapName_Params
 {
 	struct FServerSearchResult                         Result;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Mordhau.FindMordhauServerSessions.GetLobbyID
-struct UFindMordhauServerSessions_GetLobbyID_Params
-{
-	struct FServerSearchResult                         Result;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FSteamID                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
 // Function Mordhau.FindMordhauServerSessions.GetGameMode
@@ -7402,6 +7681,14 @@ struct UDestroyMatchmakingSession_DestroyMatchmakingSession_Params
 	class UDestroyMatchmakingSession*                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.PingMordhauServerSession.PingMordhauServerSession
+struct UPingMordhauServerSession_PingMordhauServerSession_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FServerSearchResult                         SearchResult;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UPingMordhauServerSession*                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.ReserveMordhauServerSessionSlots.ReserveMordhauServerSessionSlots
 struct UReserveMordhauServerSessionSlots_ReserveMordhauServerSessionSlots_Params
 {
@@ -7409,6 +7696,13 @@ struct UReserveMordhauServerSessionSlots_ReserveMordhauServerSessionSlots_Params
 	struct FServerSearchResult                         SearchResult;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
 	TArray<struct FSteamID>                            PartyMembers;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	class UReserveMordhauServerSessionSlots*           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.GetMordhauServerSessionMods.GetMordhauServerSessionMods
+struct UGetMordhauServerSessionMods_GetMordhauServerSessionMods_Params
+{
+	struct FServerSearchResult                         SearchResult;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UGetMordhauServerSessionMods*                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauSingleton.SpawnEquipment
@@ -7862,6 +8156,20 @@ struct UMordhauStats_GetFloatStat_Params
 	struct FStatFloat                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
+// Function Mordhau.MordhauStats.ClearUserStats
+struct UMordhauStats_ClearUserStats_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauStats.AreStatsAvailable
+struct UMordhauStats_AreStatsAvailable_Params
+{
+	struct FSteamID                                    SteamID;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.VSmoothDamp
 struct UMordhauUtilityLibrary_VSmoothDamp_Params
 {
@@ -7884,6 +8192,13 @@ struct UMordhauUtilityLibrary_ValidateCharacterProfile_Params
 struct UMordhauUtilityLibrary_UnpossessCharacterAndHandleSpectating_Params
 {
 	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauUtilityLibrary.UnmountPak
+struct UMordhauUtilityLibrary_UnmountPak_Params
+{
+	struct FString                                     PakPath;                                                  // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauUtilityLibrary.TryExecuteHeavydutyOperation
@@ -8107,6 +8422,12 @@ struct UMordhauUtilityLibrary_ResetServerPredictionData_Params
 	class UCharacterMovementComponent*                 CMC;                                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauUtilityLibrary.ResetController
+struct UMordhauUtilityLibrary_ResetController_Params
+{
+	class AController*                                 Controller;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.ResetClientPredictionData
 struct UMordhauUtilityLibrary_ResetClientPredictionData_Params
 {
@@ -8164,6 +8485,13 @@ struct UMordhauUtilityLibrary_NotEqual_SteamID_Params
 {
 	struct FSteamID                                    A;                                                        // (ConstParm, Parm, OutParm, ReferenceParm)
 	struct FSteamID                                    B;                                                        // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauUtilityLibrary.MountPak
+struct UMordhauUtilityLibrary_MountPak_Params
+{
+	struct FString                                     PakPath;                                                  // (Parm, ZeroConstructor)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -8665,6 +8993,24 @@ struct UMordhauUtilityLibrary_GetRandomArmsWearable_Params
 	class UArmsWearable*                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauUtilityLibrary.GetPlayFabServerID
+struct UMordhauUtilityLibrary_GetPlayFabServerID_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauUtilityLibrary.GetPlayFabPlayerID
+struct UMordhauUtilityLibrary_GetPlayFabPlayerID_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Mordhau.MordhauUtilityLibrary.GetPlayFabAPI
+struct UMordhauUtilityLibrary_GetPlayFabAPI_Params
+{
+	class UPlayFabAPI*                                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.GetPing
 struct UMordhauUtilityLibrary_GetPing_Params
 {
@@ -8884,6 +9230,13 @@ struct UMordhauUtilityLibrary_GetDefaultActor_Params
 	class AActor*                                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauUtilityLibrary.GetDateTimeFromUnixTimestamp
+struct UMordhauUtilityLibrary_GetDateTimeFromUnixTimestamp_Params
+{
+	int                                                Timestamp;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.GetCustomConfigVar_Vector2D
 struct UMordhauUtilityLibrary_GetCustomConfigVar_Vector2D_Params
 {
@@ -9012,6 +9365,13 @@ struct UMordhauUtilityLibrary_GetCentroid_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauUtilityLibrary.GetCanEverAffectNavigation
+struct UMordhauUtilityLibrary_GetCanEverAffectNavigation_Params
+{
+	class USceneComponent*                             SceneComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.GetBuildVersion
 struct UMordhauUtilityLibrary_GetBuildVersion_Params
 {
@@ -9032,6 +9392,14 @@ struct UMordhauUtilityLibrary_GetBoundingBoxOfBoneInfluence_Params
 	TArray<struct FName>                               Bones;                                                    // (Parm, ZeroConstructor)
 	float                                              WeightThreshold;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FBox                                        ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauUtilityLibrary.GetBannedEquipmentNames
+struct UMordhauUtilityLibrary_GetBannedEquipmentNames_Params
+{
+	struct FCharacterProfile                           Profile;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	class AGameStateBase*                              GameState;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Mordhau.MordhauUtilityLibrary.GetAttachParentActor
@@ -9164,6 +9532,15 @@ struct UMordhauUtilityLibrary_FindBetween_Params
 	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauUtilityLibrary.FilterForMatchmaking
+struct UMordhauUtilityLibrary_FilterForMatchmaking_Params
+{
+	TArray<struct FLobbySearchResult>                  Array;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	int                                                MMR;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                MaxDiff;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FLobbySearchResult>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.Equal_SteamID
 struct UMordhauUtilityLibrary_Equal_SteamID_Params
 {
@@ -9188,6 +9565,14 @@ struct UMordhauUtilityLibrary_DrawText_Params
 	bool                                               bCentreY;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bOutlined;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FLinearColor                                OutlineColor;                                             // (Parm, IsPlainOldData)
+};
+
+// Function Mordhau.MordhauUtilityLibrary.DoesProfileContainBannedEquipment
+struct UMordhauUtilityLibrary_DoesProfileContainBannedEquipment_Params
+{
+	struct FCharacterProfile                           Profile;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	class AGameStateBase*                              GameState;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.MordhauUtilityLibrary.ConsumeBudget
@@ -9273,6 +9658,15 @@ struct UMordhauUtilityLibrary_CalculateAngle2D_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Mordhau.MordhauUtilityLibrary.AwardDuelMMR
+struct UMordhauUtilityLibrary_AwardDuelMMR_Params
+{
+	struct FSteamID                                    Winner;                                                   // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FSteamID                                    Loser;                                                    // (ConstParm, Parm, OutParm, ReferenceParm)
+	int                                                NewWinnerMMR;                                             // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	int                                                NewLoserMMR;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Mordhau.MordhauUtilityLibrary.AreProfilesEqual
 struct UMordhauUtilityLibrary_AreProfilesEqual_Params
 {
@@ -9334,6 +9728,18 @@ struct UOneDimensionalMovementComponent_SetMovementLine_Params
 // Function Mordhau.ParticleSystemActor.SparseTick
 struct AParticleSystemActor_SparseTick_Params
 {
+};
+
+// Function Mordhau.PlayFabAPI.LoginWithSteam
+struct UPlayFabAPI_LoginWithSteam_Params
+{
+	struct FString                                     AuthTicket;                                               // (Parm, ZeroConstructor)
+};
+
+// Function Mordhau.PlayFabAPI.IsPlayerLoggedIn
+struct UPlayFabAPI_IsPlayerLoggedIn_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Mordhau.PushableActor.SetProgress

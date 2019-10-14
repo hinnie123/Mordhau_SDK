@@ -12,6 +12,69 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankMMRText_Text_1
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_PlayerMenu_C::Get_CurrentRankMMRText_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankMMRText_Text_1");
+
+	UBP_PlayerMenu_C_Get_CurrentRankMMRText_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankText_ColorAndOpacity_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateColor UBP_PlayerMenu_C::Get_CurrentRankText_ColorAndOpacity_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankText_ColorAndOpacity_1");
+
+	UBP_PlayerMenu_C_Get_CurrentRankText_ColorAndOpacity_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankText_Text_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_PlayerMenu_C::Get_CurrentRankText_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerMenu.BP_PlayerMenu_C.Get_CurrentRankText_Text_1");
+
+	UBP_PlayerMenu_C_Get_CurrentRankText_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_PlayerMenu.BP_PlayerMenu_C.Update
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -84,16 +147,14 @@ void UBP_PlayerMenu_C::OnHideAnimFinish()
 // (HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bWasSuccessful                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// struct FSteamID                SteamID                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TArray<struct FItemStack>      ItemStacks                     (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_PlayerMenu_C::OnItemsRefreshed(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks)
+void UBP_PlayerMenu_C::OnItemsRefreshed(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerMenu.BP_PlayerMenu_C.OnItemsRefreshed");
 
 	UBP_PlayerMenu_C_OnItemsRefreshed_Params params;
 	params.bWasSuccessful = bWasSuccessful;
-	params.SteamID = SteamID;
 	params.ItemStacks = ItemStacks;
 
 	auto flags = fn->FunctionFlags;
@@ -139,7 +200,7 @@ void UBP_PlayerMenu_C::OnShown()
 
 
 // Function BP_PlayerMenu.BP_PlayerMenu_C.ExecuteUbergraph_BP_PlayerMenu
-// (HasDefaults)
+// ()
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

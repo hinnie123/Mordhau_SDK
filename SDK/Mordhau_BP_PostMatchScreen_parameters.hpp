@@ -49,6 +49,21 @@ struct UBP_PostMatchScreen_C_Construct_Params
 {
 };
 
+// Function BP_PostMatchScreen.BP_PostMatchScreen_C.ShowScoreboard
+struct UBP_PostMatchScreen_C_ShowScoreboard_Params
+{
+};
+
+// Function BP_PostMatchScreen.BP_PostMatchScreen_C.HideScoreboard
+struct UBP_PostMatchScreen_C_HideScoreboard_Params
+{
+};
+
+// Function BP_PostMatchScreen.BP_PostMatchScreen_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature
+struct UBP_PostMatchScreen_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_1_OnButtonPressedEvent__DelegateSignature_Params
+{
+};
+
 // Function BP_PostMatchScreen.BP_PostMatchScreen_C.ExecuteUbergraph_BP_PostMatchScreen
 struct UBP_PostMatchScreen_C_ExecuteUbergraph_BP_PostMatchScreen_Params
 {

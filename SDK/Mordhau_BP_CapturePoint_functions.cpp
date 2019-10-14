@@ -12,6 +12,40 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CapturePoint.BP_CapturePoint_C.ShowPushDefenderAnnouncement
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CapturePoint_C::ShowPushDefenderAnnouncement()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_CapturePoint.BP_CapturePoint_C.ShowPushDefenderAnnouncement");
+
+	ABP_CapturePoint_C_ShowPushDefenderAnnouncement_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_CapturePoint.BP_CapturePoint_C.ShowPushAttackerAnnouncement
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CapturePoint_C::ShowPushAttackerAnnouncement()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_CapturePoint.BP_CapturePoint_C.ShowPushAttackerAnnouncement");
+
+	ABP_CapturePoint_C_ShowPushAttackerAnnouncement_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_CapturePoint.BP_CapturePoint_C.ObjectivesChanged
 // (Public, BlueprintCallable, BlueprintEvent)
 

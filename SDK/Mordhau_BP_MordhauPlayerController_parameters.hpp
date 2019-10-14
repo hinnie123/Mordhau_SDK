@@ -14,6 +14,14 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamKill
+struct ABP_MordhauPlayerController_C_HandleTeamKill_Params
+{
+	class AMordhauPlayerState*                         KilledBy;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Agent;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Damage;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.OnRep_ReplicatedAmmoBoxCooldown
 struct ABP_MordhauPlayerController_C_OnRep_ReplicatedAmmoBoxCooldown_Params
 {
@@ -302,6 +310,22 @@ struct ABP_MordhauPlayerController_C_ServerRequestCancelVoteKick_Params
 struct ABP_MordhauPlayerController_C_ServerVoteKickVote_Params
 {
 	bool                                               VotedYes;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamSelect
+struct ABP_MordhauPlayerController_C_HandleTeamSelect_Params
+{
+};
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ForgivePlayer
+struct ABP_MordhauPlayerController_C_ForgivePlayer_Params
+{
+};
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ReceiveOfferToForgive
+struct ABP_MordhauPlayerController_C_ReceiveOfferToForgive_Params
+{
+	class AMordhauPlayerState*                         Candidate;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ExecuteUbergraph_BP_MordhauPlayerController

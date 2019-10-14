@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BP_HomeScreen.BP_HomeScreen_C
-// 0x0178 (0x0380 - 0x0208)
+// 0x0180 (0x0388 - 0x0208)
 class UBP_HomeScreen_C : public UBP_MenuContentWidget_C
 {
 public:
@@ -48,6 +48,7 @@ public:
 	bool                                               ProfileChanged;                                           // 0x0370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0371(0x0007) MISSED OFFSET
 	class UBP_ChoiceDialog_C*                          GoldCompensationDialog;                                   // 0x0378(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBP_MainMenu_C*                              MainMenu;                                                 // 0x0380(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -62,13 +63,12 @@ public:
 	void BndEvt__ChangelogsButton_K2Node_ComponentBoundEvent_118_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__ControlsButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__QuickstartGuideButton_K2Node_ComponentBoundEvent_50_OnButtonClickedEvent__DelegateSignature();
-	void OnShown();
 	void BndEvt__Button_33_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__leaveButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_64_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__HideNewsButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
 	void Construct();
-	void OnItemsRefreshed(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks);
+	void OnItemsRefreshed(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks);
 	void OnPartyUpdated(TArray<struct FSteamID> PartyMembers);
 	void UpdatePartyList();
 	void ToggleNews();

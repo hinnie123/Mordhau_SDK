@@ -12,6 +12,50 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MapEntry.BP_MapEntry_C.SetVoteCount
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   VoteCount                      (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_MapEntry_C::SetVoteCount(const struct FText& VoteCount)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MapEntry.BP_MapEntry_C.SetVoteCount");
+
+	UBP_MapEntry_C_SetVoteCount_Params params;
+	params.VoteCount = VoteCount;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MapEntry.BP_MapEntry_C.Update
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FString                 GameModeMapName                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+// class UGameModeMetadata*       GameModeMetadata               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// class UMapMetadata*            MapMetadata                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_MapEntry_C::Update(const struct FString& GameModeMapName, class UGameModeMetadata* GameModeMetadata, class UMapMetadata* MapMetadata)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MapEntry.BP_MapEntry_C.Update");
+
+	UBP_MapEntry_C_Update_Params params;
+	params.GameModeMapName = GameModeMapName;
+	params.GameModeMetadata = GameModeMetadata;
+	params.MapMetadata = MapMetadata;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MapEntry.BP_MapEntry_C.SetGameModeName
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

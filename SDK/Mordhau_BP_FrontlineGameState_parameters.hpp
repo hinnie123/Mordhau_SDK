@@ -46,6 +46,11 @@ struct ABP_FrontlineGameState_C_LocalPlayerChangedTeam_Params
 {
 };
 
+// Function BP_FrontlineGameState.BP_FrontlineGameState_C.TriggerWinDelayed
+struct ABP_FrontlineGameState_C_TriggerWinDelayed_Params
+{
+};
+
 // Function BP_FrontlineGameState.BP_FrontlineGameState_C.ExecuteUbergraph_BP_FrontlineGameState
 struct ABP_FrontlineGameState_C_ExecuteUbergraph_BP_FrontlineGameState_Params
 {

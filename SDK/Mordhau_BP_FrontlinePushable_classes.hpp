@@ -13,15 +13,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontlinePushable.BP_FrontlinePushable_C
-// 0x0024 (0x0528 - 0x0504)
+// 0x0028 (0x053C - 0x0514)
 class ABP_FrontlinePushable_C : public ABP_SplinePushableActor_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0504(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0508(0x0008) (Transient, DuplicateTransient)
-	class UDecalComponent*                             AreaDecal;                                                // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class ABP_CapturePoint_C*                          CapturePoint;                                             // 0x0520(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0514(0x0004) MISSED OFFSET
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0518(0x0008) (Transient, DuplicateTransient)
+	class UDecalComponent*                             AreaDecal;                                                // 0x0520(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ABP_CapturePoint_C*                          CapturePoint;                                             // 0x0530(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	float                                              ObjectiveWeight;                                          // 0x0538(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -42,6 +43,7 @@ public:
 	void OnEnemyGainedPrerequisites();
 	void OnUpdateUIWidgets();
 	void PushableArrivedAtDestination();
+	void OnAnyObjectiveProgressChanged();
 	void ExecuteUbergraph_BP_FrontlinePushable(int EntryPoint);
 };
 

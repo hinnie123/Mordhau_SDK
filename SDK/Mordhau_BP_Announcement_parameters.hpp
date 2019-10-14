@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Announcement.BP_Announcement_C.GetVisibility_1
+struct UBP_Announcement_C_GetVisibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_Announcement.BP_Announcement_C.ShowAnnouncement
+struct UBP_Announcement_C_ShowAnnouncement_Params
+{
+};
+
 // Function BP_Announcement.BP_Announcement_C.GetAnnouncementBoxVisibility
 struct UBP_Announcement_C_GetAnnouncementBoxVisibility_Params
 {
@@ -36,12 +47,18 @@ struct UBP_Announcement_C_TimerEvent_Params
 struct UBP_Announcement_C_Show_Params
 {
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       Subtext;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       SubText;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<E_AnnouncementType>                    Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Announcement.BP_Announcement_C.Construct
 struct UBP_Announcement_C_Construct_Params
+{
+};
+
+// Function BP_Announcement.BP_Announcement_C.OnExitAnimFinish
+struct UBP_Announcement_C_OnExitAnimFinish_Params
 {
 };
 

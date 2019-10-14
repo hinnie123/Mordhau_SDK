@@ -84,7 +84,7 @@ public:
 	void BndEvt__Pattern_K2Node_ComponentBoundEvent_0_OnValueChanged__DelegateSignature(int Value);
 	void BndEvt__PickWearableButton_K2Node_ComponentBoundEvent_606_OnButtonClickedEvent__DelegateSignature();
 	void Construct();
-	void OnItemsUnlocked(bool bWasSuccessful, const struct FSteamID& SteamID, TArray<struct FItemStack> ItemStacks);
+	void OnItemsUnlocked(bool bWasSuccessful, TArray<struct FItemStack> ItemStacks);
 	void ExecuteUbergraph_BP_WearableSlotCustomization(int EntryPoint);
 };
 

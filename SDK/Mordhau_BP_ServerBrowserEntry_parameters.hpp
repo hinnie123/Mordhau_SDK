@@ -29,7 +29,7 @@ struct UBP_ServerBrowserEntry_C_GetServerBrowser_Params
 // Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Select
 struct UBP_ServerBrowserEntry_C_Select_Params
 {
-	bool                                               IsSelected;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               isSelected;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Construct

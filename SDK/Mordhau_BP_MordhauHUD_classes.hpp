@@ -69,7 +69,7 @@ public:
 	void HideVoteKickMenu();
 	void ShowVoteKickMenu();
 	void CreateVoteKickMenu();
-	void ShowMatchResult(bool IsVictory, const struct FText& MainText, const struct FText& Subtext);
+	void ShowMatchResult(bool IsVictory, const struct FText& MainText, const struct FText& SubText);
 	void ShowPostMatchScreen();
 	void CreatePostMatchScreen();
 	void ShowKilledBy(class AMordhauPlayerState* Killer);
@@ -95,7 +95,7 @@ public:
 	void ProcessQueuedDialogs();
 	void EnqueueDialog(class UMordhauDialog* Dialog);
 	void CreateWatermark();
-	void ShowAnnouncement(const struct FText& Text, const struct FText& Subtext, float Duration);
+	void ShowAnnouncement(const struct FText& Text, const struct FText& SubText, float Duration, TEnumAsByte<E_AnnouncementType> Type);
 	void CreateAnnouncement();
 	void ShowEmoteMenu();
 	void CreateEmoteMenu();

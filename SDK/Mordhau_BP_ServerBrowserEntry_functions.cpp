@@ -57,14 +57,14 @@ void UBP_ServerBrowserEntry_C::GetServerBrowser(class UBP_ServerBrowser_C** Serv
 // Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Select
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                           IsSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           isSelected                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_ServerBrowserEntry_C::Select(bool IsSelected)
+void UBP_ServerBrowserEntry_C::Select(bool isSelected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowserEntry.BP_ServerBrowserEntry_C.Select");
 
 	UBP_ServerBrowserEntry_C_Select_Params params;
-	params.IsSelected = IsSelected;
+	params.isSelected = isSelected;
 
 	auto flags = fn->FunctionFlags;
 

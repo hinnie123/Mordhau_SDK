@@ -12,27 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_DeliverySpawnWidgetFloater.BP_DeliverySpawnWidgetFloater_C.GetVisibility_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-ESlateVisibility UBP_DeliverySpawnWidgetFloater_C::GetVisibility_1()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverySpawnWidgetFloater.BP_DeliverySpawnWidgetFloater_C.GetVisibility_1");
-
-	UBP_DeliverySpawnWidgetFloater_C_GetVisibility_1_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
 // Function BP_DeliverySpawnWidgetFloater.BP_DeliverySpawnWidgetFloater_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:

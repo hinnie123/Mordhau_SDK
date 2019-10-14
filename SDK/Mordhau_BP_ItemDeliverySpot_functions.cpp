@@ -34,6 +34,57 @@ void ABP_ItemDeliverySpot_C::GetObjectiveProgress(float* Progress)
 }
 
 
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.UpdateFlipProgressBarState
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ItemDeliverySpot_C::UpdateFlipProgressBarState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.UpdateFlipProgressBarState");
+
+	ABP_ItemDeliverySpot_C_UpdateFlipProgressBarState_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.UpdateFloater
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ItemDeliverySpot_C::UpdateFloater()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.UpdateFloater");
+
+	ABP_ItemDeliverySpot_C_UpdateFloater_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.AnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ItemDeliverySpot_C::AnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.AnyObjectiveProgressChanged");
+
+	ABP_ItemDeliverySpot_C_AnyObjectiveProgressChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.IsCapturePointDone
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -163,12 +214,15 @@ void ABP_ItemDeliverySpot_C::Initialize(class ABP_CapturePoint_C* CapturePoint)
 
 // Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.Disable
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           SlowDisable                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ItemDeliverySpot_C::Disable()
+void ABP_ItemDeliverySpot_C::Disable(bool SlowDisable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.Disable");
 
 	ABP_ItemDeliverySpot_C_Disable_Params params;
+	params.SlowDisable = SlowDisable;
 
 	auto flags = fn->FunctionFlags;
 
@@ -355,6 +409,23 @@ void ABP_ItemDeliverySpot_C::ProgressVisualStage()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.ProgressVisualStage");
 
 	ABP_ItemDeliverySpot_C_ProgressVisualStage_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.OnAnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ItemDeliverySpot_C::OnAnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.OnAnyObjectiveProgressChanged");
+
+	ABP_ItemDeliverySpot_C_OnAnyObjectiveProgressChanged_Params params;
 
 	auto flags = fn->FunctionFlags;
 

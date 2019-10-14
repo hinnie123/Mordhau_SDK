@@ -14,6 +14,19 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MainMenu.BP_MainMenu_C.Get_ModsButton_Visibility_1
+struct UBP_MainMenu_C_Get_ModsButton_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.IsMenuContentWidgetVisible
+struct UBP_MainMenu_C_IsMenuContentWidgetVisible_Params
+{
+	class UBP_MenuContentWidget_C*                     Widget;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               bIsVisible;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Right
 struct UBP_MainMenu_C_Request_Main_Navigation_Right_Params
 {
@@ -43,18 +56,19 @@ struct UBP_MainMenu_C_AskHUDToHideUs_Params
 {
 };
 
-// Function BP_MainMenu.BP_MainMenu_C.HideQuickJoinDialog
-struct UBP_MainMenu_C_HideQuickJoinDialog_Params
+// Function BP_MainMenu.BP_MainMenu_C.HideErrorDialog
+struct UBP_MainMenu_C_HideErrorDialog_Params
 {
 };
 
-// Function BP_MainMenu.BP_MainMenu_C.ShowQuickJoinDialog
-struct UBP_MainMenu_C_ShowQuickJoinDialog_Params
+// Function BP_MainMenu.BP_MainMenu_C.ShowErrorDialog
+struct UBP_MainMenu_C_ShowErrorDialog_Params
 {
+	struct FText                                       ErrorMessage;                                             // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function BP_MainMenu.BP_MainMenu_C.CreateQuickJoinDialog
-struct UBP_MainMenu_C_CreateQuickJoinDialog_Params
+// Function BP_MainMenu.BP_MainMenu_C.CreateErrorDialog
+struct UBP_MainMenu_C_CreateErrorDialog_Params
 {
 };
 
@@ -140,38 +154,6 @@ struct UBP_MainMenu_C_Hide_Params
 {
 };
 
-// Function BP_MainMenu.BP_MainMenu_C.OnFailure_374B66EC4085986CEE5E52B4E6840193
-struct UBP_MainMenu_C_OnFailure_374B66EC4085986CEE5E52B4E6840193_Params
-{
-	TArray<struct FServerSearchResult>                 Results;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_374B66EC4085986CEE5E52B4E6840193
-struct UBP_MainMenu_C_OnSuccess_374B66EC4085986CEE5E52B4E6840193_Params
-{
-	TArray<struct FServerSearchResult>                 Results;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.OnFailure_B1DA11084BE01BCE48C8FBAB6D55A992
-struct UBP_MainMenu_C_OnFailure_B1DA11084BE01BCE48C8FBAB6D55A992_Params
-{
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_B1DA11084BE01BCE48C8FBAB6D55A992
-struct UBP_MainMenu_C_OnSuccess_B1DA11084BE01BCE48C8FBAB6D55A992_Params
-{
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.OnFailure_D1B5C5904AD6F30CA08466876916931A
-struct UBP_MainMenu_C_OnFailure_D1B5C5904AD6F30CA08466876916931A_Params
-{
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_D1B5C5904AD6F30CA08466876916931A
-struct UBP_MainMenu_C_OnSuccess_D1B5C5904AD6F30CA08466876916931A_Params
-{
-};
-
 // Function BP_MainMenu.BP_MainMenu_C.OnFailure_03195FFE4CF4F9BC52C6D0A8D1D5E5E7
 struct UBP_MainMenu_C_OnFailure_03195FFE4CF4F9BC52C6D0A8D1D5E5E7_Params
 {
@@ -180,6 +162,18 @@ struct UBP_MainMenu_C_OnFailure_03195FFE4CF4F9BC52C6D0A8D1D5E5E7_Params
 // Function BP_MainMenu.BP_MainMenu_C.OnSuccess_03195FFE4CF4F9BC52C6D0A8D1D5E5E7
 struct UBP_MainMenu_C_OnSuccess_03195FFE4CF4F9BC52C6D0A8D1D5E5E7_Params
 {
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.OnFailure_16F3D9074C456082C39E6E8B8C445A77
+struct UBP_MainMenu_C_OnFailure_16F3D9074C456082C39E6E8B8C445A77_Params
+{
+	struct FModioResponse                              response;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_16F3D9074C456082C39E6E8B8C445A77
+struct UBP_MainMenu_C_OnSuccess_16F3D9074C456082C39E6E8B8C445A77_Params
+{
+	struct FModioResponse                              response;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_MainMenu.BP_MainMenu_C.OnShow
@@ -245,16 +239,6 @@ struct UBP_MainMenu_C_BndEvt__HomeButton_K2Node_ComponentBoundEvent_425_OnClick_
 
 // Function BP_MainMenu.BP_MainMenu_C.BndEvt__LocalGameButton_K2Node_ComponentBoundEvent_124_OnClick__DelegateSignature
 struct UBP_MainMenu_C_BndEvt__LocalGameButton_K2Node_ComponentBoundEvent_124_OnClick__DelegateSignature_Params
-{
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.BndEvt__QuickJoinButton_K2Node_ComponentBoundEvent_81_OnClick__DelegateSignature
-struct UBP_MainMenu_C_BndEvt__QuickJoinButton_K2Node_ComponentBoundEvent_81_OnClick__DelegateSignature_Params
-{
-};
-
-// Function BP_MainMenu.BP_MainMenu_C.QuickJoin
-struct UBP_MainMenu_C_QuickJoin_Params
 {
 };
 
@@ -327,6 +311,16 @@ struct UBP_MainMenu_C_GoToMatchMaking_Params
 
 // Function BP_MainMenu.BP_MainMenu_C.BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature
 struct UBP_MainMenu_C_BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature_Params
+{
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.BndEvt__ModsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature
+struct UBP_MainMenu_C_BndEvt__ModsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature_Params
+{
+};
+
+// Function BP_MainMenu.BP_MainMenu_C.ShowNotConnectedErrorDialog
+struct UBP_MainMenu_C_ShowNotConnectedErrorDialog_Params
 {
 };
 

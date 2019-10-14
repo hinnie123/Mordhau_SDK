@@ -35,7 +35,7 @@ public:
 	void GetSelectedEntry(class UBP_MapEntryLocalPlay_C** SelectedEntry);
 	void SelectFirstEntry();
 	void OnEntrySelected(class UBP_MapEntryLocalPlay_C* Entry);
-	void AddEntry(const struct FString& GameModeMapName, class UMapMetadata* MetaData);
+	void AddEntry(const struct FString& GameModeMapName, class UGameModeMetadata* GameModeMetadata, class UMapMetadata* MapMetadata);
 	void ClearEntries();
 };
 

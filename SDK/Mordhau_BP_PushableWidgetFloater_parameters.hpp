@@ -20,16 +20,16 @@ struct UBP_PushableWidgetFloater_C_UpdateProgress_Params
 	float                                              NewProgress;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Construct
-struct UBP_PushableWidgetFloater_C_Construct_Params
-{
-};
-
 // Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Tick
 struct UBP_PushableWidgetFloater_C_Tick_Params
 {
 	struct FGeometry*                                  MyGeometry;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 	float*                                             InDeltaTime;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Construct
+struct UBP_PushableWidgetFloater_C_Construct_Params
+{
 };
 
 // Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.ExecuteUbergraph_BP_PushableWidgetFloater

@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ChatBox.BP_ChatBox_C.GetVisibility_2
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_ChatBox_C::GetVisibility_2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.GetVisibility_2");
+
+	UBP_ChatBox_C_GetVisibility_2_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_ChatBox.BP_ChatBox_C.Repopulate Muted Player List
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -130,16 +151,16 @@ void UBP_ChatBox_C::Get_Keys_From_Value(TMap<class UBP_ChatBoxEntry_C*, struct F
 }
 
 
-// Function BP_ChatBox.BP_ChatBox_C.UnMutePlayer
+// Function BP_ChatBox.BP_ChatBox_C.UnmutePlayer
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBP_ChatBox_C::UnMutePlayer(const struct FString& SteamID)
+void UBP_ChatBox_C::UnmutePlayer(const struct FString& SteamID)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.UnMutePlayer");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.UnmutePlayer");
 
-	UBP_ChatBox_C_UnMutePlayer_Params params;
+	UBP_ChatBox_C_UnmutePlayer_Params params;
 	params.SteamID = SteamID;
 
 	auto flags = fn->FunctionFlags;
@@ -527,26 +548,6 @@ void UBP_ChatBox_C::Construct()
 }
 
 
-// Function BP_ChatBox.BP_ChatBox_C.BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
-// (HasOutParms, BlueprintEvent)
-// Parameters:
-// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_ChatBox_C::BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature");
-
-	UBP_ChatBox_C_BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Params params;
-	params.Text = Text;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_ChatBox.BP_ChatBox_C.GoToViewMode
 // (BlueprintCallable, BlueprintEvent)
 
@@ -572,6 +573,46 @@ void UBP_ChatBox_C::GoToViewModeCallback()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.GoToViewModeCallback");
 
 	UBP_ChatBox_C_GoToViewModeCallback_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
+// (HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBP_ChatBox_C::BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature");
+
+	UBP_ChatBox_C_BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Params params;
+	params.Text = Text;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ChatBox.BP_ChatBox_C.BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature
+// (BlueprintEvent)
+// Parameters:
+// bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ChatBox_C::BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ChatBox.BP_ChatBox_C.BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature");
+
+	UBP_ChatBox_C_BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature_Params params;
+	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
 

@@ -118,6 +118,11 @@ struct ABP_FrontlineInteractable_C_OnHeldInteractionStart_Params
 	class AMordhauCharacter**                          Character;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_FrontlineInteractable.BP_FrontlineInteractable_C.OnAnyObjectiveProgressChanged
+struct ABP_FrontlineInteractable_C_OnAnyObjectiveProgressChanged_Params
+{
+};
+
 // Function BP_FrontlineInteractable.BP_FrontlineInteractable_C.ExecuteUbergraph_BP_FrontlineInteractable
 struct ABP_FrontlineInteractable_C_ExecuteUbergraph_BP_FrontlineInteractable_Params
 {

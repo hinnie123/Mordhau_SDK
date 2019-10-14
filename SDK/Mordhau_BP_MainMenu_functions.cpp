@@ -12,6 +12,51 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MainMenu.BP_MainMenu_C.Get_ModsButton_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_MainMenu_C::Get_ModsButton_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.Get_ModsButton_Visibility_1");
+
+	UBP_MainMenu_C_Get_ModsButton_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.IsMenuContentWidgetVisible
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_MenuContentWidget_C* Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           bIsVisible                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_MainMenu_C::IsMenuContentWidgetVisible(class UBP_MenuContentWidget_C* Widget, bool* bIsVisible)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.IsMenuContentWidgetVisible");
+
+	UBP_MainMenu_C_IsMenuContentWidgetVisible_Params params;
+	params.Widget = Widget;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bIsVisible != nullptr)
+		*bIsVisible = params.bIsVisible;
+}
+
+
 // Function BP_MainMenu.BP_MainMenu_C.Request Main Navigation Right
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -109,14 +154,14 @@ void UBP_MainMenu_C::AskHUDToHideUs()
 }
 
 
-// Function BP_MainMenu.BP_MainMenu_C.HideQuickJoinDialog
+// Function BP_MainMenu.BP_MainMenu_C.HideErrorDialog
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_MainMenu_C::HideQuickJoinDialog()
+void UBP_MainMenu_C::HideErrorDialog()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.HideQuickJoinDialog");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.HideErrorDialog");
 
-	UBP_MainMenu_C_HideQuickJoinDialog_Params params;
+	UBP_MainMenu_C_HideErrorDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -126,14 +171,17 @@ void UBP_MainMenu_C::HideQuickJoinDialog()
 }
 
 
-// Function BP_MainMenu.BP_MainMenu_C.ShowQuickJoinDialog
+// Function BP_MainMenu.BP_MainMenu_C.ShowErrorDialog
 // (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   ErrorMessage                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_MainMenu_C::ShowQuickJoinDialog()
+void UBP_MainMenu_C::ShowErrorDialog(const struct FText& ErrorMessage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.ShowQuickJoinDialog");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.ShowErrorDialog");
 
-	UBP_MainMenu_C_ShowQuickJoinDialog_Params params;
+	UBP_MainMenu_C_ShowErrorDialog_Params params;
+	params.ErrorMessage = ErrorMessage;
 
 	auto flags = fn->FunctionFlags;
 
@@ -143,14 +191,14 @@ void UBP_MainMenu_C::ShowQuickJoinDialog()
 }
 
 
-// Function BP_MainMenu.BP_MainMenu_C.CreateQuickJoinDialog
+// Function BP_MainMenu.BP_MainMenu_C.CreateErrorDialog
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void UBP_MainMenu_C::CreateQuickJoinDialog()
+void UBP_MainMenu_C::CreateErrorDialog()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.CreateQuickJoinDialog");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.CreateErrorDialog");
 
-	UBP_MainMenu_C_CreateQuickJoinDialog_Params params;
+	UBP_MainMenu_C_CreateErrorDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -437,114 +485,6 @@ void UBP_MainMenu_C::Hide()
 }
 
 
-// Function BP_MainMenu.BP_MainMenu_C.OnFailure_374B66EC4085986CEE5E52B4E6840193
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FServerSearchResult> Results                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UBP_MainMenu_C::OnFailure_374B66EC4085986CEE5E52B4E6840193(TArray<struct FServerSearchResult> Results)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnFailure_374B66EC4085986CEE5E52B4E6840193");
-
-	UBP_MainMenu_C_OnFailure_374B66EC4085986CEE5E52B4E6840193_Params params;
-	params.Results = Results;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_374B66EC4085986CEE5E52B4E6840193
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FServerSearchResult> Results                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UBP_MainMenu_C::OnSuccess_374B66EC4085986CEE5E52B4E6840193(TArray<struct FServerSearchResult> Results)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnSuccess_374B66EC4085986CEE5E52B4E6840193");
-
-	UBP_MainMenu_C_OnSuccess_374B66EC4085986CEE5E52B4E6840193_Params params;
-	params.Results = Results;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.OnFailure_B1DA11084BE01BCE48C8FBAB6D55A992
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MainMenu_C::OnFailure_B1DA11084BE01BCE48C8FBAB6D55A992()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnFailure_B1DA11084BE01BCE48C8FBAB6D55A992");
-
-	UBP_MainMenu_C_OnFailure_B1DA11084BE01BCE48C8FBAB6D55A992_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_B1DA11084BE01BCE48C8FBAB6D55A992
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MainMenu_C::OnSuccess_B1DA11084BE01BCE48C8FBAB6D55A992()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnSuccess_B1DA11084BE01BCE48C8FBAB6D55A992");
-
-	UBP_MainMenu_C_OnSuccess_B1DA11084BE01BCE48C8FBAB6D55A992_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.OnFailure_D1B5C5904AD6F30CA08466876916931A
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MainMenu_C::OnFailure_D1B5C5904AD6F30CA08466876916931A()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnFailure_D1B5C5904AD6F30CA08466876916931A");
-
-	UBP_MainMenu_C_OnFailure_D1B5C5904AD6F30CA08466876916931A_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_D1B5C5904AD6F30CA08466876916931A
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MainMenu_C::OnSuccess_D1B5C5904AD6F30CA08466876916931A()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnSuccess_D1B5C5904AD6F30CA08466876916931A");
-
-	UBP_MainMenu_C_OnSuccess_D1B5C5904AD6F30CA08466876916931A_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_MainMenu.BP_MainMenu_C.OnFailure_03195FFE4CF4F9BC52C6D0A8D1D5E5E7
 // (BlueprintCallable, BlueprintEvent)
 
@@ -570,6 +510,46 @@ void UBP_MainMenu_C::OnSuccess_03195FFE4CF4F9BC52C6D0A8D1D5E5E7()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnSuccess_03195FFE4CF4F9BC52C6D0A8D1D5E5E7");
 
 	UBP_MainMenu_C_OnSuccess_03195FFE4CF4F9BC52C6D0A8D1D5E5E7_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.OnFailure_16F3D9074C456082C39E6E8B8C445A77
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FModioResponse          response                       (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_MainMenu_C::OnFailure_16F3D9074C456082C39E6E8B8C445A77(const struct FModioResponse& response)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnFailure_16F3D9074C456082C39E6E8B8C445A77");
+
+	UBP_MainMenu_C_OnFailure_16F3D9074C456082C39E6E8B8C445A77_Params params;
+	params.response = response;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.OnSuccess_16F3D9074C456082C39E6E8B8C445A77
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FModioResponse          response                       (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void UBP_MainMenu_C::OnSuccess_16F3D9074C456082C39E6E8B8C445A77(const struct FModioResponse& response)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.OnSuccess_16F3D9074C456082C39E6E8B8C445A77");
+
+	UBP_MainMenu_C_OnSuccess_16F3D9074C456082C39E6E8B8C445A77_Params params;
+	params.response = response;
 
 	auto flags = fn->FunctionFlags;
 
@@ -794,40 +774,6 @@ void UBP_MainMenu_C::BndEvt__LocalGameButton_K2Node_ComponentBoundEvent_124_OnCl
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.BndEvt__LocalGameButton_K2Node_ComponentBoundEvent_124_OnClick__DelegateSignature");
 
 	UBP_MainMenu_C_BndEvt__LocalGameButton_K2Node_ComponentBoundEvent_124_OnClick__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.BndEvt__QuickJoinButton_K2Node_ComponentBoundEvent_81_OnClick__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_MainMenu_C::BndEvt__QuickJoinButton_K2Node_ComponentBoundEvent_81_OnClick__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.BndEvt__QuickJoinButton_K2Node_ComponentBoundEvent_81_OnClick__DelegateSignature");
-
-	UBP_MainMenu_C_BndEvt__QuickJoinButton_K2Node_ComponentBoundEvent_81_OnClick__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MainMenu.BP_MainMenu_C.QuickJoin
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MainMenu_C::QuickJoin()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.QuickJoin");
-
-	UBP_MainMenu_C_QuickJoin_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1071,6 +1017,40 @@ void UBP_MainMenu_C::BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature");
 
 	UBP_MainMenu_C_BndEvt__TrainingButton_K2Node_ComponentBoundEvent_9_OnClick__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.BndEvt__ModsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_MainMenu_C::BndEvt__ModsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.BndEvt__ModsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature");
+
+	UBP_MainMenu_C_BndEvt__ModsButton_K2Node_ComponentBoundEvent_10_OnClick__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MainMenu.BP_MainMenu_C.ShowNotConnectedErrorDialog
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MainMenu_C::ShowNotConnectedErrorDialog()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MainMenu.BP_MainMenu_C.ShowNotConnectedErrorDialog");
+
+	UBP_MainMenu_C_ShowNotConnectedErrorDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
 

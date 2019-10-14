@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CouchedAttackMotion.BP_CouchedAttackMotion_C
-// 0x0000 (0x01D8 - 0x01D8)
+// 0x0000 (0x01E0 - 0x01E0)
 class UBP_CouchedAttackMotion_C : public UCouchedAttackMotion
 {
 public:

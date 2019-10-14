@@ -14,16 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.GetVisibility_1
-struct UBP_DeliverySpotWidgetFloater_C_GetVisibility_1_Params
+// Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.SetProgressBarStyle
+struct UBP_DeliverySpotWidgetFloater_C_SetProgressBarStyle_Params
 {
-	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.UpdateProgress
 struct UBP_DeliverySpotWidgetFloater_C_UpdateProgress_Params
 {
 	float                                              NewProgress;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Animate;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.Tick

@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AmmoBox.BP_AmmoBox_C
-// 0x0010 (0x04D8 - 0x04C8)
+// 0x0010 (0x04E8 - 0x04D8)
 class ABP_AmmoBox_C : public ABP_LocalInteractableChest_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04C8(0x0008) (Transient, DuplicateTransient)
-	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04D8(0x0008) (Transient, DuplicateTransient)
+	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x04E0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

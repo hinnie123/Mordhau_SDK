@@ -120,6 +120,23 @@ void ABP_FrontlineGameState_C::LocalPlayerChangedTeam()
 }
 
 
+// Function BP_FrontlineGameState.BP_FrontlineGameState_C.TriggerWinDelayed
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlineGameState_C::TriggerWinDelayed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineGameState.BP_FrontlineGameState_C.TriggerWinDelayed");
+
+	ABP_FrontlineGameState_C_TriggerWinDelayed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlineGameState.BP_FrontlineGameState_C.ExecuteUbergraph_BP_FrontlineGameState
 // ()
 // Parameters:

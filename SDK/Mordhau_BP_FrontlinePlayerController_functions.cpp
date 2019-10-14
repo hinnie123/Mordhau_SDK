@@ -29,6 +29,26 @@ void ABP_FrontlinePlayerController_C::UserConstructionScript()
 }
 
 
+// Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.InpActEvt_Show Team Select_K2Node_InputActionEvent_1
+// (BlueprintEvent)
+// Parameters:
+// struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
+
+void ABP_FrontlinePlayerController_C::InpActEvt_Show_Team_Select_K2Node_InputActionEvent_1(const struct FKey& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.InpActEvt_Show Team Select_K2Node_InputActionEvent_1");
+
+	ABP_FrontlinePlayerController_C_InpActEvt_Show_Team_Select_K2Node_InputActionEvent_1_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.OnAfterPossess
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -49,8 +69,42 @@ void ABP_FrontlinePlayerController_C::OnAfterPossess(class APawn** APawn)
 }
 
 
+// Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.NotifyOfferedParticipation
+// (Net, NetReliable, NetClient, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlinePlayerController_C::NotifyOfferedParticipation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.NotifyOfferedParticipation");
+
+	ABP_FrontlinePlayerController_C_NotifyOfferedParticipation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.DeclineParticipation
+// (Net, NetReliable, NetServer, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlinePlayerController_C::DeclineParticipation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.DeclineParticipation");
+
+	ABP_FrontlinePlayerController_C_DeclineParticipation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlinePlayerController.BP_FrontlinePlayerController_C.ExecuteUbergraph_BP_FrontlinePlayerController
-// ()
+// (HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

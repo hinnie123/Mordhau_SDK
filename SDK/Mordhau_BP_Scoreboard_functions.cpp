@@ -385,7 +385,7 @@ void UBP_Scoreboard_C::Show()
 
 
 // Function BP_Scoreboard.BP_Scoreboard_C.Refresh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_Scoreboard_C::Refresh()
 {

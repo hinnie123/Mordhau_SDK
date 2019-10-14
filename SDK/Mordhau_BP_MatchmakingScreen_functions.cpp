@@ -12,6 +12,134 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CurrentRankMMRText_Text_1
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_MatchmakingScreen_C::Get_CurrentRankMMRText_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CurrentRankMMRText_Text_1");
+
+	UBP_MatchmakingScreen_C_Get_CurrentRankMMRText_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CurrentRankText_ColorAndOpacity_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FSlateColor UBP_MatchmakingScreen_C::Get_CurrentRankText_ColorAndOpacity_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CurrentRankText_ColorAndOpacity_1");
+
+	UBP_MatchmakingScreen_C_Get_CurrentRankText_ColorAndOpacity_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CurrentRankText_Text_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_MatchmakingScreen_C::Get_CurrentRankText_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CurrentRankText_Text_1");
+
+	UBP_MatchmakingScreen_C_Get_CurrentRankText_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.SetMatchmakingGameModes
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FString>         Input                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::SetMatchmakingGameModes(TArray<struct FString>* Input)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.SetMatchmakingGameModes");
+
+	UBP_MatchmakingScreen_C_SetMatchmakingGameModes_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Input != nullptr)
+		*Input = params.Input;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.GetMatchmakingGameModes
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<struct FString>         Return_Value                   (Parm, OutParm, ZeroConstructor)
+
+void UBP_MatchmakingScreen_C::GetMatchmakingGameModes(TArray<struct FString>* Return_Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.GetMatchmakingGameModes");
+
+	UBP_MatchmakingScreen_C_GetMatchmakingGameModes_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Return_Value != nullptr)
+		*Return_Value = params.Return_Value;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CasualTab_bIsEnabled_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBP_MatchmakingScreen_C::Get_CasualTab_bIsEnabled_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Get_CasualTab_bIsEnabled_1");
+
+	UBP_MatchmakingScreen_C_Get_CasualTab_bIsEnabled_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.IsLobbyBlacklisted
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -187,7 +315,7 @@ void UBP_MatchmakingScreen_C::HasPlayerSearchAuthority(bool* HasAuthority)
 
 
 // Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.IsServerValidForLobby
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FServerSearchResult     SearchResult                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FSteamID                LobbyId                        (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -258,14 +386,14 @@ void UBP_MatchmakingScreen_C::CanPlayerSearch(bool* bCanSearch)
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_5219C1A144240B4C4D9516969EF8AFE6
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::OnFailure_4A04F7DD47F85B488D7272BBFC905448()
+void UBP_MatchmakingScreen_C::OnFailure_5219C1A144240B4C4D9516969EF8AFE6()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_5219C1A144240B4C4D9516969EF8AFE6");
 
-	UBP_MatchmakingScreen_C_OnFailure_4A04F7DD47F85B488D7272BBFC905448_Params params;
+	UBP_MatchmakingScreen_C_OnFailure_5219C1A144240B4C4D9516969EF8AFE6_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -275,14 +403,14 @@ void UBP_MatchmakingScreen_C::OnFailure_4A04F7DD47F85B488D7272BBFC905448()
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_5219C1A144240B4C4D9516969EF8AFE6
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::OnSuccess_4A04F7DD47F85B488D7272BBFC905448()
+void UBP_MatchmakingScreen_C::OnSuccess_5219C1A144240B4C4D9516969EF8AFE6()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_5219C1A144240B4C4D9516969EF8AFE6");
 
-	UBP_MatchmakingScreen_C_OnSuccess_4A04F7DD47F85B488D7272BBFC905448_Params params;
+	UBP_MatchmakingScreen_C_OnSuccess_5219C1A144240B4C4D9516969EF8AFE6_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -292,14 +420,14 @@ void UBP_MatchmakingScreen_C::OnSuccess_4A04F7DD47F85B488D7272BBFC905448()
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E()
+void UBP_MatchmakingScreen_C::OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3");
 
-	UBP_MatchmakingScreen_C_OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E_Params params;
+	UBP_MatchmakingScreen_C_OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -309,48 +437,14 @@ void UBP_MatchmakingScreen_C::OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E()
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E()
+void UBP_MatchmakingScreen_C::OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3");
 
-	UBP_MatchmakingScreen_C_OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4");
-
-	UBP_MatchmakingScreen_C_OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4");
-
-	UBP_MatchmakingScreen_C_OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4_Params params;
+	UBP_MatchmakingScreen_C_OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -394,14 +488,14 @@ void UBP_MatchmakingScreen_C::OnSuccess_C3D009A2448FDD3AF4DBAAA793208209()
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3()
+void UBP_MatchmakingScreen_C::OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4");
 
-	UBP_MatchmakingScreen_C_OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3_Params params;
+	UBP_MatchmakingScreen_C_OnFailure_CF3BF4B34350ABBA5B709CAB90B242B4_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -411,14 +505,196 @@ void UBP_MatchmakingScreen_C::OnFailure_CF3BF4B34350ABBA5B709CAB8DD08EF3()
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3()
+void UBP_MatchmakingScreen_C::OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4");
 
-	UBP_MatchmakingScreen_C_OnSuccess_CF3BF4B34350ABBA5B709CAB8DD08EF3_Params params;
+	UBP_MatchmakingScreen_C_OnSuccess_CF3BF4B34350ABBA5B709CAB90B242B4_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E");
+
+	UBP_MatchmakingScreen_C_OnFailure_C3D009A2448FDD3AF4DBAAA78E424E4E_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E");
+
+	UBP_MatchmakingScreen_C_OnSuccess_C3D009A2448FDD3AF4DBAAA78E424E4E_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_183A0328473B20ED0AAA0C9F5B8DCA57
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FServerSearchResult> Results                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::OnFailure_183A0328473B20ED0AAA0C9F5B8DCA57(TArray<struct FServerSearchResult> Results)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_183A0328473B20ED0AAA0C9F5B8DCA57");
+
+	UBP_MatchmakingScreen_C_OnFailure_183A0328473B20ED0AAA0C9F5B8DCA57_Params params;
+	params.Results = Results;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_183A0328473B20ED0AAA0C9F5B8DCA57
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FServerSearchResult> Results                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::OnSuccess_183A0328473B20ED0AAA0C9F5B8DCA57(TArray<struct FServerSearchResult> Results)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_183A0328473B20ED0AAA0C9F5B8DCA57");
+
+	UBP_MatchmakingScreen_C_OnSuccess_183A0328473B20ED0AAA0C9F5B8DCA57_Params params;
+	params.Results = Results;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_001AECF4410F30DE4CB7928257A42023
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_001AECF4410F30DE4CB7928257A42023()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_001AECF4410F30DE4CB7928257A42023");
+
+	UBP_MatchmakingScreen_C_OnFailure_001AECF4410F30DE4CB7928257A42023_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_001AECF4410F30DE4CB7928257A42023
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_001AECF4410F30DE4CB7928257A42023()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_001AECF4410F30DE4CB7928257A42023");
+
+	UBP_MatchmakingScreen_C_OnSuccess_001AECF4410F30DE4CB7928257A42023_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_92F8AFB047349681EC3D84AEDCCAF39C
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FServerSearchResult     Result                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::OnFailure_92F8AFB047349681EC3D84AEDCCAF39C(const struct FServerSearchResult& Result)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_92F8AFB047349681EC3D84AEDCCAF39C");
+
+	UBP_MatchmakingScreen_C_OnFailure_92F8AFB047349681EC3D84AEDCCAF39C_Params params;
+	params.Result = Result;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_92F8AFB047349681EC3D84AEDCCAF39C
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FServerSearchResult     Result                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::OnSuccess_92F8AFB047349681EC3D84AEDCCAF39C(const struct FServerSearchResult& Result)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_92F8AFB047349681EC3D84AEDCCAF39C");
+
+	UBP_MatchmakingScreen_C_OnSuccess_92F8AFB047349681EC3D84AEDCCAF39C_Params params;
+	params.Result = Result;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_4A04F7DD47F85B488D7272BBFC905448()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_4A04F7DD47F85B488D7272BBFC905448");
+
+	UBP_MatchmakingScreen_C_OnFailure_4A04F7DD47F85B488D7272BBFC905448_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_4A04F7DD47F85B488D7272BBFC905448()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_4A04F7DD47F85B488D7272BBFC905448");
+
+	UBP_MatchmakingScreen_C_OnSuccess_4A04F7DD47F85B488D7272BBFC905448_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -593,14 +869,326 @@ void UBP_MatchmakingScreen_C::OnSuccess_07D688D243F2FD3D918664AF5494E771()
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_F7EDF144456F81F8DC282793736D2392
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::UpdatePartyValues()
+void UBP_MatchmakingScreen_C::OnFailure_F7EDF144456F81F8DC282793736D2392()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_F7EDF144456F81F8DC282793736D2392");
 
-	UBP_MatchmakingScreen_C_UpdatePartyValues_Params params;
+	UBP_MatchmakingScreen_C_OnFailure_F7EDF144456F81F8DC282793736D2392_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_F7EDF144456F81F8DC282793736D2392
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_F7EDF144456F81F8DC282793736D2392()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_F7EDF144456F81F8DC282793736D2392");
+
+	UBP_MatchmakingScreen_C_OnSuccess_F7EDF144456F81F8DC282793736D2392_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_D428F41A4B3A761D986543A992C0DDFC
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_D428F41A4B3A761D986543A992C0DDFC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_D428F41A4B3A761D986543A992C0DDFC");
+
+	UBP_MatchmakingScreen_C_OnFailure_D428F41A4B3A761D986543A992C0DDFC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_D428F41A4B3A761D986543A992C0DDFC
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_D428F41A4B3A761D986543A992C0DDFC()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_D428F41A4B3A761D986543A992C0DDFC");
+
+	UBP_MatchmakingScreen_C_OnSuccess_D428F41A4B3A761D986543A992C0DDFC_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_35E6694F4C39238BC2FAE4B9E22CCA8B
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FLobbySearchResult> Results                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::OnFailure_35E6694F4C39238BC2FAE4B9E22CCA8B(TArray<struct FLobbySearchResult> Results)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_35E6694F4C39238BC2FAE4B9E22CCA8B");
+
+	UBP_MatchmakingScreen_C_OnFailure_35E6694F4C39238BC2FAE4B9E22CCA8B_Params params;
+	params.Results = Results;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_35E6694F4C39238BC2FAE4B9E22CCA8B
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FLobbySearchResult> Results                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_MatchmakingScreen_C::OnSuccess_35E6694F4C39238BC2FAE4B9E22CCA8B(TArray<struct FLobbySearchResult> Results)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_35E6694F4C39238BC2FAE4B9E22CCA8B");
+
+	UBP_MatchmakingScreen_C_OnSuccess_35E6694F4C39238BC2FAE4B9E22CCA8B_Params params;
+	params.Results = Results;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_8FD543D642D088A55649C69635DD3B45
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_8FD543D642D088A55649C69635DD3B45()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_8FD543D642D088A55649C69635DD3B45");
+
+	UBP_MatchmakingScreen_C_OnFailure_8FD543D642D088A55649C69635DD3B45_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_8FD543D642D088A55649C69635DD3B45
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_8FD543D642D088A55649C69635DD3B45()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_8FD543D642D088A55649C69635DD3B45");
+
+	UBP_MatchmakingScreen_C_OnSuccess_8FD543D642D088A55649C69635DD3B45_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_9F48DDC7411FE9CC9B9100BF7E576B5D
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_9F48DDC7411FE9CC9B9100BF7E576B5D()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_9F48DDC7411FE9CC9B9100BF7E576B5D");
+
+	UBP_MatchmakingScreen_C_OnFailure_9F48DDC7411FE9CC9B9100BF7E576B5D_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_9F48DDC7411FE9CC9B9100BF7E576B5D
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_9F48DDC7411FE9CC9B9100BF7E576B5D()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_9F48DDC7411FE9CC9B9100BF7E576B5D");
+
+	UBP_MatchmakingScreen_C_OnSuccess_9F48DDC7411FE9CC9B9100BF7E576B5D_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_3A8881084972C05913F558B81B7162B6
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnFailure_3A8881084972C05913F558B81B7162B6()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnFailure_3A8881084972C05913F558B81B7162B6");
+
+	UBP_MatchmakingScreen_C_OnFailure_3A8881084972C05913F558B81B7162B6_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_3A8881084972C05913F558B81B7162B6
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnSuccess_3A8881084972C05913F558B81B7162B6()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnSuccess_3A8881084972C05913F558B81B7162B6");
+
+	UBP_MatchmakingScreen_C_OnSuccess_3A8881084972C05913F558B81B7162B6_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
+
+	UBP_MatchmakingScreen_C_BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdateWidgets
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::UpdateWidgets()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdateWidgets");
+
+	UBP_MatchmakingScreen_C_UpdateWidgets_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Construct");
+
+	UBP_MatchmakingScreen_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearch
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::StartSearch()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearch");
+
+	UBP_MatchmakingScreen_C_StartSearch_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.CancelSearch
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::CancelSearch()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.CancelSearch");
+
+	UBP_MatchmakingScreen_C_CancelSearch_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearchTimer
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::StartSearchTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearchTimer");
+
+	UBP_MatchmakingScreen_C_StartSearchTimer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.FindMatchmakingSessions
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::FindMatchmakingSessions()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.FindMatchmakingSessions");
+
+	UBP_MatchmakingScreen_C_FindMatchmakingSessions_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -632,116 +1220,14 @@ void UBP_MatchmakingScreen_C::BndEvt__RegionComboBox_K2Node_ComponentBoundEvent_
 }
 
 
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.FindMatchmakingSessions
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_MatchmakingScreen_C::FindMatchmakingSessions()
+void UBP_MatchmakingScreen_C::UpdatePartyValues()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.FindMatchmakingSessions");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdatePartyValues");
 
-	UBP_MatchmakingScreen_C_FindMatchmakingSessions_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearchTimer
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::StartSearchTimer()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearchTimer");
-
-	UBP_MatchmakingScreen_C_StartSearchTimer_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.CancelSearch
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::CancelSearch()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.CancelSearch");
-
-	UBP_MatchmakingScreen_C_CancelSearch_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearch
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::StartSearch()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.StartSearch");
-
-	UBP_MatchmakingScreen_C_StartSearch_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.Construct");
-
-	UBP_MatchmakingScreen_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdateWidgets
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::UpdateWidgets()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.UpdateWidgets");
-
-	UBP_MatchmakingScreen_C_UpdateWidgets_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
-
-void UBP_MatchmakingScreen_C::BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
-
-	UBP_MatchmakingScreen_C_BndEvt__SearchButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
+	UBP_MatchmakingScreen_C_UpdatePartyValues_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -782,6 +1268,74 @@ void UBP_MatchmakingScreen_C::OnPartyUpdated(TArray<struct FSteamID> PartyMember
 
 	UBP_MatchmakingScreen_C_OnPartyUpdated_Params params;
 	params.PartyMembers = PartyMembers;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.SwitchToRankedTab
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::SwitchToRankedTab()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.SwitchToRankedTab");
+
+	UBP_MatchmakingScreen_C_SwitchToRankedTab_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__CasualTab_K2Node_ComponentBoundEvent_2_ButtonSelected__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::BndEvt__CasualTab_K2Node_ComponentBoundEvent_2_ButtonSelected__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__CasualTab_K2Node_ComponentBoundEvent_2_ButtonSelected__DelegateSignature");
+
+	UBP_MatchmakingScreen_C_BndEvt__CasualTab_K2Node_ComponentBoundEvent_2_ButtonSelected__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__RankedTab_K2Node_ComponentBoundEvent_3_ButtonSelected__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::BndEvt__RankedTab_K2Node_ComponentBoundEvent_3_ButtonSelected__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.BndEvt__RankedTab_K2Node_ComponentBoundEvent_3_ButtonSelected__DelegateSignature");
+
+	UBP_MatchmakingScreen_C_BndEvt__RankedTab_K2Node_ComponentBoundEvent_3_ButtonSelected__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnOkClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_MatchmakingScreen_C::OnOkClicked()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MatchmakingScreen.BP_MatchmakingScreen_C.OnOkClicked");
+
+	UBP_MatchmakingScreen_C_OnOkClicked_Params params;
 
 	auto flags = fn->FunctionFlags;
 

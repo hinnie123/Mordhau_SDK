@@ -42,6 +42,18 @@ struct UBP_ServerBrowser_C_OnSuccess_0D81799A475BE46000BC0A8D4385A93C_Params
 {
 };
 
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnFailure_929D8817412E2618A9CB9FAC09AE12F1
+struct UBP_ServerBrowser_C_OnFailure_929D8817412E2618A9CB9FAC09AE12F1_Params
+{
+	TArray<int>                                        Mods;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnSuccess_929D8817412E2618A9CB9FAC09AE12F1
+struct UBP_ServerBrowser_C_OnSuccess_929D8817412E2618A9CB9FAC09AE12F1_Params
+{
+	TArray<int>                                        Mods;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
 // Function BP_ServerBrowser.BP_ServerBrowser_C.Construct
 struct UBP_ServerBrowser_C_Construct_Params
 {
@@ -171,6 +183,37 @@ struct UBP_ServerBrowser_C_BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnE
 {
 	struct FText                                       Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TEnumAsByte<ETextCommit>                           CommitMethod;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ShowModDownloadDialog
+struct UBP_ServerBrowser_C_ShowModDownloadDialog_Params
+{
+	TArray<int>                                        ModsRequired;                                             // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadCanceled
+struct UBP_ServerBrowser_C_ModDownloadCanceled_Params
+{
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadFailed
+struct UBP_ServerBrowser_C_ModDownloadFailed_Params
+{
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadCompleted
+struct UBP_ServerBrowser_C_ModDownloadCompleted_Params
+{
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnOkClicked
+struct UBP_ServerBrowser_C_OnOkClicked_Params
+{
+};
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnOkClicked2
+struct UBP_ServerBrowser_C_OnOkClicked2_Params
+{
 };
 
 // Function BP_ServerBrowser.BP_ServerBrowser_C.ExecuteUbergraph_BP_ServerBrowser

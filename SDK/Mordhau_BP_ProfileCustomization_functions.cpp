@@ -12,6 +12,48 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_TimerOverlay_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_ProfileCustomization_C::Get_TimerOverlay_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_TimerOverlay_Visibility_1");
+
+	UBP_ProfileCustomization_C_Get_TimerOverlay_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_TimerText_Text_1
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FText UBP_ProfileCustomization_C::Get_TimerText_Text_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_TimerText_Text_1");
+
+	UBP_ProfileCustomization_C_Get_TimerText_Text_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_AddNewProfileButton_Visibility_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

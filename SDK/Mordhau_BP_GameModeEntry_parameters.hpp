@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_GameModeEntry.BP_GameModeEntry_C.GetVisibility_1
+struct UBP_GameModeEntry_C_GetVisibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_GameModeEntry.BP_GameModeEntry_C.Deselect
 struct UBP_GameModeEntry_C_Deselect_Params
 {
@@ -52,6 +58,12 @@ struct UBP_GameModeEntry_C_BndEvt__InfoButton_K2Node_ComponentBoundEvent_2_OnBut
 // Function BP_GameModeEntry.BP_GameModeEntry_C.BndEvt__InfoButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature
 struct UBP_GameModeEntry_C_BndEvt__InfoButton_K2Node_ComponentBoundEvent_3_OnButtonHoverEvent__DelegateSignature_Params
 {
+};
+
+// Function BP_GameModeEntry.BP_GameModeEntry_C.PreConstruct
+struct UBP_GameModeEntry_C_PreConstruct_Params
+{
+	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_GameModeEntry.BP_GameModeEntry_C.ExecuteUbergraph_BP_GameModeEntry

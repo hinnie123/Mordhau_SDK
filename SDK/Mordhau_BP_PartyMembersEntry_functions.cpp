@@ -16,21 +16,25 @@ namespace SDK
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FSteamID                SteamID                        (BlueprintVisible, BlueprintReadOnly, Parm)
-// int                            Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Casual_Rank                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Banner                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            Rank_MMR                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           showCompRank                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsPartyLeader                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ShowKickButton                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ShowPromoteButton              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ShowJoinButton                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_PartyMembersEntry_C::Update(const struct FSteamID& SteamID, int Rank, int Banner, bool IsPartyLeader, bool ShowKickButton, bool ShowPromoteButton, bool ShowJoinButton)
+void UBP_PartyMembersEntry_C::Update(const struct FSteamID& SteamID, int Casual_Rank, int Banner, int Rank_MMR, bool showCompRank, bool IsPartyLeader, bool ShowKickButton, bool ShowPromoteButton, bool ShowJoinButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PartyMembersEntry.BP_PartyMembersEntry_C.Update");
 
 	UBP_PartyMembersEntry_C_Update_Params params;
 	params.SteamID = SteamID;
-	params.Rank = Rank;
+	params.Casual_Rank = Casual_Rank;
 	params.Banner = Banner;
+	params.Rank_MMR = Rank_MMR;
+	params.showCompRank = showCompRank;
 	params.IsPartyLeader = IsPartyLeader;
 	params.ShowKickButton = ShowKickButton;
 	params.ShowPromoteButton = ShowPromoteButton;

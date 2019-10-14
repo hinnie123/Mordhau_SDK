@@ -86,6 +86,11 @@ struct ABP_FrontlineDestroyable_C_OnInitialize_Params
 	class ABP_CapturePoint_C*                          Point;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_FrontlineDestroyable.BP_FrontlineDestroyable_C.OnAnyObjectiveProgressChanged
+struct ABP_FrontlineDestroyable_C_OnAnyObjectiveProgressChanged_Params
+{
+};
+
 // Function BP_FrontlineDestroyable.BP_FrontlineDestroyable_C.ExecuteUbergraph_BP_FrontlineDestroyable
 struct ABP_FrontlineDestroyable_C_ExecuteUbergraph_BP_FrontlineDestroyable_Params
 {

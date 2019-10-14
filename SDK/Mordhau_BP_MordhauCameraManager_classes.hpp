@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauCameraManager.BP_MordhauCameraManager_C
-// 0x0008 (0x2BB8 - 0x2BB0)
+// 0x0008 (0x2BD8 - 0x2BD0)
 class ABP_MordhauCameraManager_C : public AMordhauCameraManager
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x2BB0(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x2BD0(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

@@ -50,6 +50,7 @@ public:
 	}
 
 
+	struct FText Get_ButtonEntry_ToolTipText_1();
 	ESlateVisibility GetVisibility_1();
 	struct FSlateColor Get_NameText_ColorAndOpacity_1();
 	ESlateVisibility Get_MenuToggleButtonOverlay_Visibility_1();

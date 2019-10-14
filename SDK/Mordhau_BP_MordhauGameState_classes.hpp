@@ -13,26 +13,27 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauGameState.BP_MordhauGameState_C
-// 0x00A1 (0x06B1 - 0x0610)
+// 0x00A2 (0x0712 - 0x0670)
 class ABP_MordhauGameState_C : public AMordhauGameState
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0610(0x0008) (Transient, DuplicateTransient)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0618(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FSTRUCT_MatchEndInfo                        MatchEndInfo;                                             // 0x0620(0x0018) (Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	struct FSTRUCT_VoteKickInfo                        VoteKickInfo;                                             // 0x0638(0x0018) (Edit, BlueprintVisible, Net, DisableEditOnInstance)
-	bool                                               MatchEndInfoReplicated;                                   // 0x0650(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               UsesSpawnSelectScreen;                                    // 0x0651(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               NoAmmoBoxes;                                              // 0x0652(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               NoPreplacedEquipment;                                     // 0x0653(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               HideTargetNamesIfAlive;                                   // 0x0654(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               OnlyLivingPlayersInScoreboard;                            // 0x0655(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               NoScoreInScoreboard;                                      // 0x0656(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsVoteOngoing;                                            // 0x0657(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                VoteYesVotes;                                             // 0x0658(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                VoteNoVotes;                                              // 0x065C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0660(0x0050) UNKNOWN PROPERTY: SetProperty BP_MordhauGameState.BP_MordhauGameState_C.Voters
-	bool                                               AllowsVoteKick;                                           // 0x06B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0670(0x0008) (Transient, DuplicateTransient)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0678(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FSTRUCT_MatchEndInfo                        MatchEndInfo;                                             // 0x0680(0x0018) (Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	struct FSTRUCT_VoteKickInfo                        VoteKickInfo;                                             // 0x0698(0x0018) (Edit, BlueprintVisible, Net, DisableEditOnInstance)
+	bool                                               MatchEndInfoReplicated;                                   // 0x06B0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UsesSpawnSelectScreen;                                    // 0x06B1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               NoAmmoBoxes;                                              // 0x06B2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               NoPreplacedEquipment;                                     // 0x06B3(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               HideTargetNamesIfAlive;                                   // 0x06B4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               OnlyLivingPlayersInScoreboard;                            // 0x06B5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               NoScoreInScoreboard;                                      // 0x06B6(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsVoteOngoing;                                            // 0x06B7(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                VoteYesVotes;                                             // 0x06B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                VoteNoVotes;                                              // 0x06BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x06C0(0x0050) UNKNOWN PROPERTY: SetProperty BP_MordhauGameState.BP_MordhauGameState_C.Voters
+	bool                                               AllowsVoteKick;                                           // 0x0710(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UsesCompetitiveRank;                                      // 0x0711(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

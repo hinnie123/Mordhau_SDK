@@ -12,6 +12,43 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.UpdateValues
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AMordhauPlayerState*     Mordhau_PlayerState            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ScoreboardEntry_C::UpdateValues(class AMordhauPlayerState* Mordhau_PlayerState)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.UpdateValues");
+
+	UBP_ScoreboardEntry_C_UpdateValues_Params params;
+	params.Mordhau_PlayerState = Mordhau_PlayerState;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.WasUpdated
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_ScoreboardEntry_C::WasUpdated()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.WasUpdated");
+
+	UBP_ScoreboardEntry_C_WasUpdated_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.GetVisibility_3
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -156,6 +193,43 @@ struct FLinearColor UBP_ScoreboardEntry_C::GetBackgroundColorAndOpacity()
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_ScoreboardEntry_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.Construct");
+
+	UBP_ScoreboardEntry_C_Construct_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.ExecuteUbergraph_BP_ScoreboardEntry
+// ()
+// Parameters:
+// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_ScoreboardEntry_C::ExecuteUbergraph_BP_ScoreboardEntry(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.ExecuteUbergraph_BP_ScoreboardEntry");
+
+	UBP_ScoreboardEntry_C_ExecuteUbergraph_BP_ScoreboardEntry_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 

@@ -14,6 +14,20 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MapEntry.BP_MapEntry_C.SetVoteCount
+struct UBP_MapEntry_C_SetVoteCount_Params
+{
+	struct FText                                       VoteCount;                                                // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_MapEntry.BP_MapEntry_C.Update
+struct UBP_MapEntry_C_Update_Params
+{
+	struct FString                                     GameModeMapName;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
+	class UGameModeMetadata*                           GameModeMetadata;                                         // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UMapMetadata*                                MapMetadata;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MapEntry.BP_MapEntry_C.SetGameModeName
 struct UBP_MapEntry_C_SetGameModeName_Params
 {

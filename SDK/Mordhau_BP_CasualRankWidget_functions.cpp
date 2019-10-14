@@ -116,7 +116,7 @@ float UBP_CasualRankWidget_C::Get_XPProgressBar_Percent_1()
 
 
 // Function BP_CasualRankWidget.BP_CasualRankWidget_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 
 void UBP_CasualRankWidget_C::Update()
 {

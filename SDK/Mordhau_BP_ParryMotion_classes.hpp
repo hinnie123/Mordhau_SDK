@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ParryMotion.BP_ParryMotion_C
-// 0x0000 (0x0190 - 0x0190)
+// 0x0000 (0x01A0 - 0x01A0)
 class UBP_ParryMotion_C : public UParryMotion
 {
 public:

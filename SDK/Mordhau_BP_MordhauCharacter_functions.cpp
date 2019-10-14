@@ -12,6 +12,50 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauCharacter.BP_MordhauCharacter_C.GetOutOfBoundsSubtext
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   SubText                        (Parm, OutParm)
+
+void ABP_MordhauCharacter_C::GetOutOfBoundsSubtext(struct FText* SubText)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauCharacter.BP_MordhauCharacter_C.GetOutOfBoundsSubtext");
+
+	ABP_MordhauCharacter_C_GetOutOfBoundsSubtext_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (SubText != nullptr)
+		*SubText = params.SubText;
+}
+
+
+// Function BP_MordhauCharacter.BP_MordhauCharacter_C.GetOutOfBoundsText
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FText                   Header                         (Parm, OutParm)
+
+void ABP_MordhauCharacter_C::GetOutOfBoundsText(struct FText* Header)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauCharacter.BP_MordhauCharacter_C.GetOutOfBoundsText");
+
+	ABP_MordhauCharacter_C_GetOutOfBoundsText_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Header != nullptr)
+		*Header = params.Header;
+}
+
+
 // Function BP_MordhauCharacter.BP_MordhauCharacter_C.AddRagdollImpulse
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:

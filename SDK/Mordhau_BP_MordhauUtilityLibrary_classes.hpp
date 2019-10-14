@@ -25,6 +25,7 @@ public:
 	}
 
 
+	void STATIC_Get1v1MMRFromStats(class UObject* __WorldContext, int* MMR);
 	void STATIC_CreateContextPopup(TMap<struct FString, struct FText> Option_Map, class UObject* __WorldContext, class UBP_ContextPopupWrapper_C** Context_Popup_Wrapper);
 	void STATIC_GetGoldAndRankUnlockRequirement(class UObject* __WorldContext, TArray<int>* ItemDefIDs, int* Gold, int* Rank);
 	void STATIC_GetUnlockTooltipText(class UObject* __WorldContext, TArray<int>* ItemDefIDs, struct FText* ToolTipText);

@@ -33,6 +33,8 @@ public:
 	}
 
 
+	ESlateVisibility Get_TeamTip_Visibility_1();
+	ESlateVisibility Get_LoadoutTip_Visibility_1();
 	struct FText Get_TeamTip_Text_1();
 	struct FText Get_LoadoutTip_Text_1();
 	void Show();

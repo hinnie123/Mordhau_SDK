@@ -20,6 +20,21 @@ struct ABP_ItemDeliverySpot_C_GetObjectiveProgress_Params
 	float                                              Progress;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.UpdateFlipProgressBarState
+struct ABP_ItemDeliverySpot_C_UpdateFlipProgressBarState_Params
+{
+};
+
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.UpdateFloater
+struct ABP_ItemDeliverySpot_C_UpdateFloater_Params
+{
+};
+
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.AnyObjectiveProgressChanged
+struct ABP_ItemDeliverySpot_C_AnyObjectiveProgressChanged_Params
+{
+};
+
 // Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.IsCapturePointDone
 struct ABP_ItemDeliverySpot_C_IsCapturePointDone_Params
 {
@@ -60,6 +75,7 @@ struct ABP_ItemDeliverySpot_C_Initialize_Params
 // Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.Disable
 struct ABP_ItemDeliverySpot_C_Disable_Params
 {
+	bool                                               SlowDisable;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.Activate
@@ -116,6 +132,11 @@ struct ABP_ItemDeliverySpot_C_OnDeliverablesChanged_Params
 
 // Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.ProgressVisualStage
 struct ABP_ItemDeliverySpot_C_ProgressVisualStage_Params
+{
+};
+
+// Function BP_ItemDeliverySpot.BP_ItemDeliverySpot_C.OnAnyObjectiveProgressChanged
+struct ABP_ItemDeliverySpot_C_OnAnyObjectiveProgressChanged_Params
 {
 };
 

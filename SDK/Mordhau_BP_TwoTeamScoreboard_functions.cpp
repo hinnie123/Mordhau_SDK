@@ -12,6 +12,48 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.Get_LevelText_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_TwoTeamScoreboard_C::Get_LevelText_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.Get_LevelText_Visibility_1");
+
+	UBP_TwoTeamScoreboard_C_Get_LevelText_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.Get_TextBlock_7_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_TwoTeamScoreboard_C::Get_TextBlock_7_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.Get_TextBlock_7_Visibility_1");
+
+	UBP_TwoTeamScoreboard_C_Get_TextBlock_7_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.GetText_2
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -47,11 +47,6 @@ struct UBP_HomeScreen_C_BndEvt__QuickstartGuideButton_K2Node_ComponentBoundEvent
 {
 };
 
-// Function BP_HomeScreen.BP_HomeScreen_C.OnShown
-struct UBP_HomeScreen_C_OnShown_Params
-{
-};
-
 // Function BP_HomeScreen.BP_HomeScreen_C.BndEvt__Button_33_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
 struct UBP_HomeScreen_C_BndEvt__Button_33_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params
 {
@@ -81,7 +76,6 @@ struct UBP_HomeScreen_C_Construct_Params
 struct UBP_HomeScreen_C_OnItemsRefreshed_Params
 {
 	bool                                               bWasSuccessful;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	struct FSteamID                                    SteamID;                                                  // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 	TArray<struct FItemStack>                          ItemStacks;                                               // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 

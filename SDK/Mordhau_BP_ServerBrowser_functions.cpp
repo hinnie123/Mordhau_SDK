@@ -107,6 +107,46 @@ void UBP_ServerBrowser_C::OnSuccess_0D81799A475BE46000BC0A8D4385A93C()
 }
 
 
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnFailure_929D8817412E2618A9CB9FAC09AE12F1
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<int>                    Mods                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_ServerBrowser_C::OnFailure_929D8817412E2618A9CB9FAC09AE12F1(TArray<int> Mods)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.OnFailure_929D8817412E2618A9CB9FAC09AE12F1");
+
+	UBP_ServerBrowser_C_OnFailure_929D8817412E2618A9CB9FAC09AE12F1_Params params;
+	params.Mods = Mods;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnSuccess_929D8817412E2618A9CB9FAC09AE12F1
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<int>                    Mods                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_ServerBrowser_C::OnSuccess_929D8817412E2618A9CB9FAC09AE12F1(TArray<int> Mods)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.OnSuccess_929D8817412E2618A9CB9FAC09AE12F1");
+
+	UBP_ServerBrowser_C_OnSuccess_929D8817412E2618A9CB9FAC09AE12F1_Params params;
+	params.Mods = Mods;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_ServerBrowser.BP_ServerBrowser_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
@@ -536,6 +576,111 @@ void UBP_ServerBrowser_C::BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEd
 	UBP_ServerBrowser_C_BndEvt__MaxPingEntry_K2Node_ComponentBoundEvent_4_OnEditableTextBoxCommittedEvent__DelegateSignature_Params params;
 	params.Text = Text;
 	params.CommitMethod = CommitMethod;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ShowModDownloadDialog
+// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<int>                    ModsRequired                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBP_ServerBrowser_C::ShowModDownloadDialog(TArray<int> ModsRequired)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.ShowModDownloadDialog");
+
+	UBP_ServerBrowser_C_ShowModDownloadDialog_Params params;
+	params.ModsRequired = ModsRequired;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadCanceled
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_ServerBrowser_C::ModDownloadCanceled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadCanceled");
+
+	UBP_ServerBrowser_C_ModDownloadCanceled_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadFailed
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_ServerBrowser_C::ModDownloadFailed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadFailed");
+
+	UBP_ServerBrowser_C_ModDownloadFailed_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadCompleted
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_ServerBrowser_C::ModDownloadCompleted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.ModDownloadCompleted");
+
+	UBP_ServerBrowser_C_ModDownloadCompleted_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnOkClicked
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_ServerBrowser_C::OnOkClicked()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.OnOkClicked");
+
+	UBP_ServerBrowser_C_OnOkClicked_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_ServerBrowser.BP_ServerBrowser_C.OnOkClicked2
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_ServerBrowser_C::OnOkClicked2()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_ServerBrowser.BP_ServerBrowser_C.OnOkClicked2");
+
+	UBP_ServerBrowser_C_OnOkClicked2_Params params;
 
 	auto flags = fn->FunctionFlags;
 

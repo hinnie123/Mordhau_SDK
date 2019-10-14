@@ -13,12 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HordeCharacter.BP_HordeCharacter_C
-// 0x0009 (0x1C19 - 0x1C10)
+// 0x0009 (0x1C31 - 0x1C28)
 class ABP_HordeCharacter_C : public ABP_BattleRoyaleCharacter_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C10(0x0008) (Transient, DuplicateTransient)
-	bool                                               AlreadyGaveDefaults;                                      // 0x1C18(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C28(0x0008) (Transient, DuplicateTransient)
+	bool                                               AlreadyGaveDefaults;                                      // 0x1C30(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

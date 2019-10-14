@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_FrontlineObjective.BP_FrontlineObjective_C.OnAnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_FrontlineObjective_C::OnAnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineObjective.BP_FrontlineObjective_C.OnAnyObjectiveProgressChanged");
+
+	UBP_FrontlineObjective_C_OnAnyObjectiveProgressChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlineObjective.BP_FrontlineObjective_C.OnInitialize
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

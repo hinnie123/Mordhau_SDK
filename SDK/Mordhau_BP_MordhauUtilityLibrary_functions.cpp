@@ -12,6 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.Get1v1MMRFromStats
+// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            MMR                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_MordhauUtilityLibrary_C::STATIC_Get1v1MMRFromStats(class UObject* __WorldContext, int* MMR)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.Get1v1MMRFromStats");
+
+	UBP_MordhauUtilityLibrary_C_Get1v1MMRFromStats_Params params;
+	params.__WorldContext = __WorldContext;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (MMR != nullptr)
+		*MMR = params.MMR;
+}
+
+
 // Function BP_MordhauUtilityLibrary.BP_MordhauUtilityLibrary_C.CreateContextPopup
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:

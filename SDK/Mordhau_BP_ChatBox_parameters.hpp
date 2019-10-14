@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ChatBox.BP_ChatBox_C.GetVisibility_2
+struct UBP_ChatBox_C_GetVisibility_2_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_ChatBox.BP_ChatBox_C.Repopulate Muted Player List
 struct UBP_ChatBox_C_Repopulate_Muted_Player_List_Params
 {
@@ -50,8 +56,8 @@ struct UBP_ChatBox_C_Get_Keys_From_Value_Params
 	TArray<class UBP_ChatBoxEntry_C*>                  Keys;                                                     // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function BP_ChatBox.BP_ChatBox_C.UnMutePlayer
-struct UBP_ChatBox_C_UnMutePlayer_Params
+// Function BP_ChatBox.BP_ChatBox_C.UnmutePlayer
+struct UBP_ChatBox_C_UnmutePlayer_Params
 {
 	struct FString                                     SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 };
@@ -171,12 +177,6 @@ struct UBP_ChatBox_C_Construct_Params
 {
 };
 
-// Function BP_ChatBox.BP_ChatBox_C.BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
-struct UBP_ChatBox_C_BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Params
-{
-	struct FText                                       Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-
 // Function BP_ChatBox.BP_ChatBox_C.GoToViewMode
 struct UBP_ChatBox_C_GoToViewMode_Params
 {
@@ -185,6 +185,18 @@ struct UBP_ChatBox_C_GoToViewMode_Params
 // Function BP_ChatBox.BP_ChatBox_C.GoToViewModeCallback
 struct UBP_ChatBox_C_GoToViewModeCallback_Params
 {
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature
+struct UBP_ChatBox_C_BndEvt__TextArea_K2Node_ComponentBoundEvent_594_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Params
+{
+	struct FText                                       Text;                                                     // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+};
+
+// Function BP_ChatBox.BP_ChatBox_C.BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature
+struct UBP_ChatBox_C_BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_1_OnCheckBoxComponentStateChanged__DelegateSignature_Params
+{
+	bool                                               bIsChecked;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_ChatBox.BP_ChatBox_C.OnMouseLeave

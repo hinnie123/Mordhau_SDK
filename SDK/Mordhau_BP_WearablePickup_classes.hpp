@@ -13,18 +13,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WearablePickup.BP_WearablePickup_C
-// 0x0088 (0x04F8 - 0x0470)
+// 0x0088 (0x0508 - 0x0480)
 class ABP_WearablePickup_C : public ASkeletalMeshMordhauActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0470(0x0008) (Transient, DuplicateTransient)
-	TMap<EWearableSlot, struct FWearableCustomization> Wearables;                                                // 0x0478(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	int                                                Tier;                                                     // 0x04C8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04CC(0x0004) MISSED OFFSET
-	class USoundCue*                                   EquipSound;                                               // 0x04D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	EMainWearableSlot                                  MainSlot;                                                 // 0x04D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x04D9(0x0007) MISSED OFFSET
-	struct FText                                       Name;                                                     // 0x04E0(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0480(0x0008) (Transient, DuplicateTransient)
+	TMap<EWearableSlot, struct FWearableCustomization> Wearables;                                                // 0x0488(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	int                                                Tier;                                                     // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
+	class USoundCue*                                   EquipSound;                                               // 0x04E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	EMainWearableSlot                                  MainSlot;                                                 // 0x04E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x04E9(0x0007) MISSED OFFSET
+	struct FText                                       Name;                                                     // 0x04F0(0x0018) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

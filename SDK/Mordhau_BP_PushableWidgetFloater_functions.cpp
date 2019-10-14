@@ -32,23 +32,6 @@ void UBP_PushableWidgetFloater_C::UpdateProgress(float NewProgress)
 }
 
 
-// Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UBP_PushableWidgetFloater_C::Construct()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Construct");
-
-	UBP_PushableWidgetFloater_C_Construct_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Tick
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
@@ -62,6 +45,23 @@ void UBP_PushableWidgetFloater_C::Tick(struct FGeometry* MyGeometry, float* InDe
 	UBP_PushableWidgetFloater_C_Tick_Params params;
 	params.MyGeometry = MyGeometry;
 	params.InDeltaTime = InDeltaTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UBP_PushableWidgetFloater_C::Construct()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PushableWidgetFloater.BP_PushableWidgetFloater_C.Construct");
+
+	UBP_PushableWidgetFloater_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
 

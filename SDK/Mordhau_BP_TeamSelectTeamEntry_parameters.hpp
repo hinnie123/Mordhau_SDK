@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_TeamSelectTeamEntry.BP_TeamSelectTeamEntry_C.Get_Role_Text_1
+struct UBP_TeamSelectTeamEntry_C_Get_Role_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function BP_TeamSelectTeamEntry.BP_TeamSelectTeamEntry_C.Get_TeamButton_bIsEnabled_1
 struct UBP_TeamSelectTeamEntry_C_Get_TeamButton_bIsEnabled_1_Params
 {

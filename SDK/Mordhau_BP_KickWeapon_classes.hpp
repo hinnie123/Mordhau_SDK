@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_KickWeapon.BP_KickWeapon_C
-// 0x0000 (0x1AA0 - 0x1AA0)
+// 0x0000 (0x1AF0 - 0x1AF0)
 class ABP_KickWeapon_C : public AKickWeapon
 {
 public:

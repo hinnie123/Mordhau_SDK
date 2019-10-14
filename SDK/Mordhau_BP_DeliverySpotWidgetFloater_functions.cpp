@@ -12,24 +12,20 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.GetVisibility_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.SetProgressBarStyle
+// (Public, BlueprintCallable, BlueprintEvent)
 
-ESlateVisibility UBP_DeliverySpotWidgetFloater_C::GetVisibility_1()
+void UBP_DeliverySpotWidgetFloater_C::SetProgressBarStyle()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.GetVisibility_1");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.SetProgressBarStyle");
 
-	UBP_DeliverySpotWidgetFloater_C_GetVisibility_1_Params params;
+	UBP_DeliverySpotWidgetFloater_C_SetProgressBarStyle_Params params;
 
 	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
@@ -37,13 +33,15 @@ ESlateVisibility UBP_DeliverySpotWidgetFloater_C::GetVisibility_1()
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NewProgress                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Animate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_DeliverySpotWidgetFloater_C::UpdateProgress(float NewProgress)
+void UBP_DeliverySpotWidgetFloater_C::UpdateProgress(float NewProgress, bool Animate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverySpotWidgetFloater.BP_DeliverySpotWidgetFloater_C.UpdateProgress");
 
 	UBP_DeliverySpotWidgetFloater_C_UpdateProgress_Params params;
 	params.NewProgress = NewProgress;
+	params.Animate = Animate;
 
 	auto flags = fn->FunctionFlags;
 

@@ -13,11 +13,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TurdHordeBotProjectile.BP_TurdHordeBotProjectile_C
-// 0x0008 (0x0898 - 0x0890)
+// 0x0008 (0x08A8 - 0x08A0)
 class ABP_TurdHordeBotProjectile_C : public ABP_TurdProjectile_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0890(0x0008) (Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08A0(0x0008) (Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

@@ -78,6 +78,11 @@ struct ABP_FrontlinePushable_C_PushableArrivedAtDestination_Params
 {
 };
 
+// Function BP_FrontlinePushable.BP_FrontlinePushable_C.OnAnyObjectiveProgressChanged
+struct ABP_FrontlinePushable_C_OnAnyObjectiveProgressChanged_Params
+{
+};
+
 // Function BP_FrontlinePushable.BP_FrontlinePushable_C.ExecuteUbergraph_BP_FrontlinePushable
 struct ABP_FrontlinePushable_C_ExecuteUbergraph_BP_FrontlinePushable_Params
 {

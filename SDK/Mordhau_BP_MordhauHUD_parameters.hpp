@@ -39,7 +39,7 @@ struct ABP_MordhauHUD_C_ShowMatchResult_Params
 {
 	bool                                               IsVictory;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	struct FText                                       MainText;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       Subtext;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       SubText;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
 // Function BP_MordhauHUD.BP_MordhauHUD_C.ShowPostMatchScreen
@@ -175,8 +175,9 @@ struct ABP_MordhauHUD_C_CreateWatermark_Params
 struct ABP_MordhauHUD_C_ShowAnnouncement_Params
 {
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
-	struct FText                                       Subtext;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FText                                       SubText;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 	float                                              Duration;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<E_AnnouncementType>                    Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MordhauHUD.BP_MordhauHUD_C.CreateAnnouncement

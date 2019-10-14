@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_TimerOverlay_Visibility_1
+struct UBP_ProfileCustomization_C_Get_TimerOverlay_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_TimerText_Text_1
+struct UBP_ProfileCustomization_C_Get_TimerText_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
 // Function BP_ProfileCustomization.BP_ProfileCustomization_C.Get_AddNewProfileButton_Visibility_1
 struct UBP_ProfileCustomization_C_Get_AddNewProfileButton_Visibility_1_Params
 {

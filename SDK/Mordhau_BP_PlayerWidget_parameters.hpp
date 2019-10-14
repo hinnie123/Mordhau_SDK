@@ -18,8 +18,11 @@ namespace SDK
 struct UBP_PlayerWidget_C_Update_Params
 {
 	struct FSteamID                                    SteamID_;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
-	int                                                Rank;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FText                                       Player_Name;                                              // (BlueprintVisible, BlueprintReadOnly, Parm)
+	int                                                Casual_Rank;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                Banner;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Rank_MMR;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               showCompRank;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

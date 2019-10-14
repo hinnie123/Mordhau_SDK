@@ -364,6 +364,23 @@ void ABP_FrontlineInteractable_C::OnHeldInteractionStart(class AMordhauCharacter
 }
 
 
+// Function BP_FrontlineInteractable.BP_FrontlineInteractable_C.OnAnyObjectiveProgressChanged
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_FrontlineInteractable_C::OnAnyObjectiveProgressChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineInteractable.BP_FrontlineInteractable_C.OnAnyObjectiveProgressChanged");
+
+	ABP_FrontlineInteractable_C_OnAnyObjectiveProgressChanged_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlineInteractable.BP_FrontlineInteractable_C.ExecuteUbergraph_BP_FrontlineInteractable
 // ()
 // Parameters:

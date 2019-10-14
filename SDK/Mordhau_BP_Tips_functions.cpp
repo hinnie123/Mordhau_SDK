@@ -12,6 +12,48 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Tips.BP_Tips_C.Get_TeamTip_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_Tips_C::Get_TeamTip_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tips.BP_Tips_C.Get_TeamTip_Visibility_1");
+
+	UBP_Tips_C_Get_TeamTip_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Tips.BP_Tips_C.Get_LoadoutTip_Visibility_1
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ESlateVisibility UBP_Tips_C::Get_LoadoutTip_Visibility_1()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Tips.BP_Tips_C.Get_LoadoutTip_Visibility_1");
+
+	UBP_Tips_C_Get_LoadoutTip_Visibility_1_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_Tips.BP_Tips_C.Get_TeamTip_Text_1
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -14,6 +14,18 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.Get_LevelText_Visibility_1
+struct UBP_TwoTeamScoreboard_C_Get_LevelText_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.Get_TextBlock_7_Visibility_1
+struct UBP_TwoTeamScoreboard_C_Get_TextBlock_7_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_TwoTeamScoreboard.BP_TwoTeamScoreboard_C.GetText_2
 struct UBP_TwoTeamScoreboard_C_GetText_2_Params
 {

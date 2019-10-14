@@ -25,6 +25,7 @@ public:
 	}
 
 
+	void OnAnyObjectiveProgressChanged();
 	void OnInitialize(class ABP_CapturePoint_C* Point);
 	void OnUpdateUIWidgets();
 	void OnEnemyLostPrerequisites();

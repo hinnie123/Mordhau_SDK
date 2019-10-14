@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_CapturePoint.BP_CapturePoint_C.ShowPushDefenderAnnouncement
+struct ABP_CapturePoint_C_ShowPushDefenderAnnouncement_Params
+{
+};
+
+// Function BP_CapturePoint.BP_CapturePoint_C.ShowPushAttackerAnnouncement
+struct ABP_CapturePoint_C_ShowPushAttackerAnnouncement_Params
+{
+};
+
 // Function BP_CapturePoint.BP_CapturePoint_C.ObjectivesChanged
 struct ABP_CapturePoint_C_ObjectivesChanged_Params
 {

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tier1TorsoPickup.BP_Tier1TorsoPickup_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0510 - 0x0510)
 class ABP_Tier1TorsoPickup_C : public ABP_TorsoPickup_C
 {
 public:

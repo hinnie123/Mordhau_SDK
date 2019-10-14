@@ -20,6 +20,18 @@ struct UBP_SteamAvatar_C_Update_Params
 	struct FSteamID                                    SteamID;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
+// Function BP_SteamAvatar.BP_SteamAvatar_C.PreConstruct
+struct UBP_SteamAvatar_C_PreConstruct_Params
+{
+	bool*                                              IsDesignTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_SteamAvatar.BP_SteamAvatar_C.ExecuteUbergraph_BP_SteamAvatar
+struct UBP_SteamAvatar_C_ExecuteUbergraph_BP_SteamAvatar_Params
+{
+	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

@@ -16,13 +16,15 @@ namespace SDK
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AController*             Controller                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           RestartPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MordhauGameMode_C::UnpossessAndDestroyPawn(class AController* Controller)
+void ABP_MordhauGameMode_C::UnpossessAndDestroyPawn(class AController* Controller, bool RestartPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameMode.BP_MordhauGameMode_C.UnpossessAndDestroyPawn");
 
 	ABP_MordhauGameMode_C_UnpossessAndDestroyPawn_Params params;
 	params.Controller = Controller;
+	params.RestartPlayer = RestartPlayer;
 
 	auto flags = fn->FunctionFlags;
 

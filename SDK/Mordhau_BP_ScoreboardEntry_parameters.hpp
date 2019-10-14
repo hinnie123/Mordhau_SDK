@@ -14,6 +14,17 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.UpdateValues
+struct UBP_ScoreboardEntry_C_UpdateValues_Params
+{
+	class AMordhauPlayerState*                         Mordhau_PlayerState;                                      // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.WasUpdated
+struct UBP_ScoreboardEntry_C_WasUpdated_Params
+{
+};
+
 // Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.GetVisibility_3
 struct UBP_ScoreboardEntry_C_GetVisibility_3_Params
 {
@@ -54,6 +65,17 @@ struct UBP_ScoreboardEntry_C_GetNameColorAndOpacity_Params
 struct UBP_ScoreboardEntry_C_GetBackgroundColorAndOpacity_Params
 {
 	struct FLinearColor                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.Construct
+struct UBP_ScoreboardEntry_C_Construct_Params
+{
+};
+
+// Function BP_ScoreboardEntry.BP_ScoreboardEntry_C.ExecuteUbergraph_BP_ScoreboardEntry
+struct UBP_ScoreboardEntry_C_ExecuteUbergraph_BP_ScoreboardEntry_Params
+{
+	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 }

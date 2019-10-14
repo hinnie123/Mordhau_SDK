@@ -37,7 +37,7 @@ public:
 	}
 
 
-	void Update(const struct FSteamID& SteamID, int Rank, int Banner, bool IsPartyLeader, bool ShowKickButton, bool ShowPromoteButton, bool ShowJoinButton);
+	void Update(const struct FSteamID& SteamID, int Casual_Rank, int Banner, int Rank_MMR, bool showCompRank, bool IsPartyLeader, bool ShowKickButton, bool ShowPromoteButton, bool ShowJoinButton);
 	void OnFailure_10991A754B7F75B1C3A772A4D170C5CE(const struct FServerSearchResult& Result);
 	void OnSuccess_10991A754B7F75B1C3A772A4D170C5CE(const struct FServerSearchResult& Result);
 	void BndEvt__KickButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();

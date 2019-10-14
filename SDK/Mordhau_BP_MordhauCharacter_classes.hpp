@@ -13,14 +13,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MordhauCharacter.BP_MordhauCharacter_C
-// 0x0020 (0x1BF0 - 0x1BD0)
+// 0x0024 (0x1C04 - 0x1BE0)
 class ABP_MordhauCharacter_C : public AMordhauCharacter
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1BD0(0x0008) (Transient, DuplicateTransient)
-	class UThudderComponent*                           Thudder;                                                  // 0x1BD8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBP_CharacterCameraComponent_C*              Camera;                                                   // 0x1BE0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UBoxComponent*                               BlockColliderBP;                                          // 0x1BE8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1BE0(0x0008) (Transient, DuplicateTransient)
+	class UThudderComponent*                           Thudder;                                                  // 0x1BE8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBP_CharacterCameraComponent_C*              Camera;                                                   // 0x1BF0(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBoxComponent*                               BlockColliderBP;                                          // 0x1BF8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                ToolboxPreventionAreaCounter;                             // 0x1C00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,6 +30,8 @@ public:
 	}
 
 
+	void GetOutOfBoundsSubtext(struct FText* SubText);
+	void GetOutOfBoundsText(struct FText* Header);
 	void AddRagdollImpulse(const struct FVector& Impulse, const struct FVector& Location, const struct FName& bone);
 	bool TryClimbing();
 	void CalculateLedgeOffsetAndNormal(class UClimbingMotion** ClimbingMotion, struct FVector* OutOffset, struct FVector* OutNormal);
