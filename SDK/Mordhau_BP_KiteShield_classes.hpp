@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_KiteShield.BP_KiteShield_C
-// 0x0000 (0x1AE8 - 0x1AE8)
+// 0x0000 (0x1B58 - 0x1B58)
 class ABP_KiteShield_C : public ABP_MordhauShield_C
 {
 public:

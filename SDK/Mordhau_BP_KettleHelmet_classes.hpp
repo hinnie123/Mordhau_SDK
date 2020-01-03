@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_KettleHelmet.BP_KettleHelmet_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_KettleHelmet_C : public UBP_Tier2HeadWearable_C
 {
 public:

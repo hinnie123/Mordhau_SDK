@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FleshWoundPerk.BP_FleshWoundPerk_C
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_FleshWoundPerk_C : public UBP_Perk_C
 {
 public:

@@ -12,6 +12,40 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Catapult.BP_Catapult_C.ClearFireEffects
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Catapult_C::ClearFireEffects()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Catapult.BP_Catapult_C.ClearFireEffects");
+
+	ABP_Catapult_C_ClearFireEffects_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Catapult.BP_Catapult_C.OnRep_Fire
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_Catapult_C::OnRep_Fire()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Catapult.BP_Catapult_C.OnRep_Fire");
+
+	ABP_Catapult_C_OnRep_Fire_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_Catapult.BP_Catapult_C.PostProcessCameraPOV
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -450,6 +484,23 @@ void ABP_Catapult_C::OnStoppedDriving(class AMordhauCharacter** Character)
 
 	ABP_Catapult_C_OnStoppedDriving_Params params;
 	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_Catapult.BP_Catapult_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_Catapult_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Catapult.BP_Catapult_C.ReceiveDestroyed");
+
+	ABP_Catapult_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
 

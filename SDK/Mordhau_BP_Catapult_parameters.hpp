@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_Catapult.BP_Catapult_C.ClearFireEffects
+struct ABP_Catapult_C_ClearFireEffects_Params
+{
+};
+
+// Function BP_Catapult.BP_Catapult_C.OnRep_Fire
+struct ABP_Catapult_C_OnRep_Fire_Params
+{
+};
+
 // Function BP_Catapult.BP_Catapult_C.PostProcessCameraPOV
 struct ABP_Catapult_C_PostProcessCameraPOV_Params
 {
@@ -150,6 +160,11 @@ struct ABP_Catapult_C_OnStartedDriving_Params
 struct ABP_Catapult_C_OnStoppedDriving_Params
 {
 	class AMordhauCharacter**                          Character;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_Catapult.BP_Catapult_C.ReceiveDestroyed
+struct ABP_Catapult_C_ReceiveDestroyed_Params
+{
 };
 
 // Function BP_Catapult.BP_Catapult_C.ExecuteUbergraph_BP_Catapult

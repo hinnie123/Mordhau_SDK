@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_conicfacemask_painted.BP_conicfacemask_painted_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_conicfacemask_painted_C : public UBP_Tier3HeadWearable_C
 {
 public:

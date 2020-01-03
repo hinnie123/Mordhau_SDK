@@ -12,6 +12,40 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_DeployableBallista.BP_DeployableBallista_C.ClearFireEffects
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_DeployableBallista_C::ClearFireEffects()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeployableBallista.BP_DeployableBallista_C.ClearFireEffects");
+
+	ABP_DeployableBallista_C_ClearFireEffects_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DeployableBallista.BP_DeployableBallista_C.OnRep_Fire
+// (HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_DeployableBallista_C::OnRep_Fire()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeployableBallista.BP_DeployableBallista_C.OnRep_Fire");
+
+	ABP_DeployableBallista_C_OnRep_Fire_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_DeployableBallista.BP_DeployableBallista_C.OnRep_Ammo
 // (HasDefaults, BlueprintCallable, BlueprintEvent)
 
@@ -405,6 +439,23 @@ void ABP_DeployableBallista_C::ReplenishAmmo()
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DeployableBallista.BP_DeployableBallista_C.ReplenishAmmo");
 
 	ABP_DeployableBallista_C_ReplenishAmmo_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DeployableBallista.BP_DeployableBallista_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_DeployableBallista_C::ReceiveDestroyed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeployableBallista.BP_DeployableBallista_C.ReceiveDestroyed");
+
+	ABP_DeployableBallista_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
 

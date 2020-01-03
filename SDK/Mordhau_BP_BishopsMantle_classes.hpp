@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BishopsMantle.BP_BishopsMantle_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_BishopsMantle_C : public UBP_Tier1HeadWearable_C
 {
 public:

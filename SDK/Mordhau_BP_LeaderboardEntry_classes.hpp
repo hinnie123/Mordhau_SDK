@@ -37,6 +37,7 @@ public:
 	}
 
 
+	void RefreshAvatar();
 	struct FSlateColor Get_MMRText_ColorAndOpacity_1();
 	struct FText GetToolTipText_1();
 	void Update(const struct FString& Name, int RankPos, int MMR, const struct FSteamID& SteamID);

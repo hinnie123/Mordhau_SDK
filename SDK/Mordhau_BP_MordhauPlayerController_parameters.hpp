@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.OnBuilt
+struct ABP_MordhauPlayerController_C_OnBuilt_Params
+{
+	class AActor*                                      Structure;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamKill
 struct ABP_MordhauPlayerController_C_HandleTeamKill_Params
 {
@@ -326,6 +332,11 @@ struct ABP_MordhauPlayerController_C_ForgivePlayer_Params
 struct ABP_MordhauPlayerController_C_ReceiveOfferToForgive_Params
 {
 	class AMordhauPlayerState*                         Candidate;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.DoBattlecry
+struct ABP_MordhauPlayerController_C_DoBattlecry_Params
+{
 };
 
 // Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.ExecuteUbergraph_BP_MordhauPlayerController

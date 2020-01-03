@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TargeShield.BP_TargeShield_C
-// 0x0000 (0x1AE8 - 0x1AE8)
+// 0x0000 (0x1B58 - 0x1B58)
 class ABP_TargeShield_C : public ABP_MordhauShield_C
 {
 public:

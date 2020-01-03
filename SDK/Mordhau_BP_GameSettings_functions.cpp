@@ -12,6 +12,40 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_GameSettings.BP_GameSettings_C.ApplyShowServerInScoreboard
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::ApplyShowServerInScoreboard()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.ApplyShowServerInScoreboard");
+
+	UBP_GameSettings_C_ApplyShowServerInScoreboard_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.UpdateShowServerInScoreboardCheckbox
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_GameSettings_C::UpdateShowServerInScoreboardCheckbox()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.UpdateShowServerInScoreboardCheckbox");
+
+	UBP_GameSettings_C_UpdateShowServerInScoreboardCheckbox_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_GameSettings.BP_GameSettings_C.UpdateThirdPersonDeathCameraCheckbox
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -1554,6 +1588,23 @@ void UBP_GameSettings_C::BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_Component
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature");
 
 	UBP_GameSettings_C_BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__ShowServerOnScoreboard_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature
+// (BlueprintEvent)
+
+void UBP_GameSettings_C::BndEvt__ShowServerOnScoreboard_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_GameSettings.BP_GameSettings_C.BndEvt__ShowServerOnScoreboard_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature");
+
+	UBP_GameSettings_C_BndEvt__ShowServerOnScoreboard_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
 

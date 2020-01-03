@@ -13,12 +13,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HordeHUD.BP_HordeHUD_C
-// 0x0010 (0x0578 - 0x0568)
+// 0x0018 (0x0580 - 0x0568)
 class ABP_HordeHUD_C : public ABP_MordhauHUD_C
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0568(0x0008) (Transient, DuplicateTransient)
 	class UBP_HordeHUDWidget_C*                        HordeHUDWidget;                                           // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBP_SkillTree_C*                             SkillTree;                                                // 0x0578(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,6 +28,8 @@ public:
 	}
 
 
+	void ShowSkillTree();
+	void CreateSkillTree();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void UseMinimalHUD();

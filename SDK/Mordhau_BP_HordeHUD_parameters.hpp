@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_HordeHUD.BP_HordeHUD_C.ShowSkillTree
+struct ABP_HordeHUD_C_ShowSkillTree_Params
+{
+};
+
+// Function BP_HordeHUD.BP_HordeHUD_C.CreateSkillTree
+struct ABP_HordeHUD_C_CreateSkillTree_Params
+{
+};
+
 // Function BP_HordeHUD.BP_HordeHUD_C.UserConstructionScript
 struct ABP_HordeHUD_C_UserConstructionScript_Params
 {

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Disapprove.BP_Disapprove_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x0108 - 0x0108)
 class UBP_Disapprove_C : public UEmoteMotion
 {
 public:

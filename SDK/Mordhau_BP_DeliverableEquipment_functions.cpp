@@ -12,6 +12,86 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.CanInteract
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class AMordhauCharacter**      Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_DeliverableEquipment_C::CanInteract(class AMordhauCharacter** Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.CanInteract");
+
+	ABP_DeliverableEquipment_C_CanInteract_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.CanHeldInteract
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class AMordhauCharacter**      Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_DeliverableEquipment_C::CanHeldInteract(class AMordhauCharacter** Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.CanHeldInteract");
+
+	ABP_DeliverableEquipment_C_CanHeldInteract_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.Break
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_DeliverableEquipment_C::Break()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.Break");
+
+	ABP_DeliverableEquipment_C_Break_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnRep_Broke
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_DeliverableEquipment_C::OnRep_Broke()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnRep_Broke");
+
+	ABP_DeliverableEquipment_C_OnRep_Broke_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.Consume
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -99,6 +179,43 @@ void ABP_DeliverableEquipment_C::OnPickedUp(class AMordhauCharacter** Character)
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnPickedUp");
 
 	ABP_DeliverableEquipment_C_OnPickedUp_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnBroken
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_DeliverableEquipment_C::OnBroken()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnBroken");
+
+	ABP_DeliverableEquipment_C_OnBroken_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnHeldInteractionStart
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AMordhauCharacter**      Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_DeliverableEquipment_C::OnHeldInteractionStart(class AMordhauCharacter** Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_DeliverableEquipment.BP_DeliverableEquipment_C.OnHeldInteractionStart");
+
+	ABP_DeliverableEquipment_C_OnHeldInteractionStart_Params params;
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;

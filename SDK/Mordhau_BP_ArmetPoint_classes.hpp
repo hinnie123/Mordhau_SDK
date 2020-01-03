@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ArmetPoint.BP_ArmetPoint_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_ArmetPoint_C : public UBP_Tier3HeadWearable_C
 {
 public:

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ClimbingMotion.BP_ClimbingMotion_C
-// 0x0000 (0x0108 - 0x0108)
+// 0x0000 (0x0110 - 0x0110)
 class UBP_ClimbingMotion_C : public UClimbingMotion
 {
 public:

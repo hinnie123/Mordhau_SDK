@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VeteransBarbutePlumeUp.BP_VeteransBarbutePlumeUp_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_VeteransBarbutePlumeUp_C : public UBP_Tier2HeadWearable_C
 {
 public:

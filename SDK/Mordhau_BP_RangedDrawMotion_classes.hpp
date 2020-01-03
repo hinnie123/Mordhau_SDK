@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RangedDrawMotion.BP_RangedDrawMotion_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0148 - 0x0148)
 class UBP_RangedDrawMotion_C : public URangedDrawMotion
 {
 public:

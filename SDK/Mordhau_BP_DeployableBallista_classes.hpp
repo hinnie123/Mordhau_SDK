@@ -13,35 +13,42 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DeployableBallista.BP_DeployableBallista_C
-// 0x0078 (0x0D88 - 0x0D10)
+// 0x00D0 (0x0E10 - 0x0D40)
 class ABP_DeployableBallista_C : public ABP_MordhauVehicle_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0D10(0x0008) (Transient, DuplicateTransient)
-	class UCapsuleComponent*                           NavObstacle;                                              // 0x0D18(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class ULODSkeletalMeshComponent*                   Bolt;                                                     // 0x0D20(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      State;                                                    // 0x0D28(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0D29(0x0003) MISSED OFFSET
-	struct FVector                                     FireLocation;                                             // 0x0D2C(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	struct FRotator                                    FireRotation;                                             // 0x0D38(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
-	float                                              PreviousActorYaw;                                         // 0x0D44(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RotationVelocity;                                         // 0x0D48(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0D4C(0x0004) MISSED OFFSET
-	class UAudioComponent*                             LoadingSound;                                             // 0x0D50(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UAudioComponent*                             LastTurnSound;                                            // 0x0D58(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              RotationVelocitySmoothed;                                 // 0x0D60(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PreviousPitch;                                            // 0x0D64(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PitchVelocitySmoothed;                                    // 0x0D68(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ReloadTime;                                               // 0x0D6C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FireRecoveryTime;                                         // 0x0D70(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               InitialRegeneration;                                      // 0x0D74(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      Ammo;                                                     // 0x0D75(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x2];                                       // 0x0D76(0x0002) MISSED OFFSET
-	float                                              AmmoReplenishInterval;                                    // 0x0D78(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ReplenishingAmmo;                                         // 0x0D7C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      MaxAmmo;                                                  // 0x0D7D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x2];                                       // 0x0D7E(0x0002) MISSED OFFSET
-	class UClass*                                      ProjectileClass;                                          // 0x0D80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0D40(0x0008) (Transient, DuplicateTransient)
+	class UCapsuleComponent*                           NavObstacle;                                              // 0x0D48(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ULODSkeletalMeshComponent*                   Bolt;                                                     // 0x0D50(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      State;                                                    // 0x0D58(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0D59(0x0003) MISSED OFFSET
+	struct FVector                                     FireLocation;                                             // 0x0D5C(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	struct FRotator                                    FireRotation;                                             // 0x0D68(0x000C) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreviousActorYaw;                                         // 0x0D74(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RotationVelocity;                                         // 0x0D78(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0D7C(0x0004) MISSED OFFSET
+	class UAudioComponent*                             LoadingSound;                                             // 0x0D80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UAudioComponent*                             LastTurnSound;                                            // 0x0D88(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              RotationVelocitySmoothed;                                 // 0x0D90(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreviousPitch;                                            // 0x0D94(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PitchVelocitySmoothed;                                    // 0x0D98(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ReloadTime;                                               // 0x0D9C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FireRecoveryTime;                                         // 0x0DA0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               InitialRegeneration;                                      // 0x0DA4(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      Ammo;                                                     // 0x0DA5(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x2];                                       // 0x0DA6(0x0002) MISSED OFFSET
+	float                                              AmmoReplenishInterval;                                    // 0x0DA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ReplenishingAmmo;                                         // 0x0DAC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      MaxAmmo;                                                  // 0x0DAD(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x2];                                       // 0x0DAE(0x0002) MISSED OFFSET
+	class UClass*                                      ProjectileClass;                                          // 0x0DB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               Fire;                                                     // 0x0DB8(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0DB9(0x0007) MISSED OFFSET
+	class UParticleSystemComponent*                    FireEffectParticleComponent;                              // 0x0DC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UAudioComponent*                             FireEffectAudioComponent;                                 // 0x0DC8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UClass*                                      FireProjectileClass;                                      // 0x0DD0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x8];                                       // 0x0DD8(0x0008) MISSED OFFSET
+	struct FTransform                                  FireProjectileTransform;                                  // 0x0DE0(0x0030) (Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -50,6 +57,8 @@ public:
 	}
 
 
+	void ClearFireEffects();
+	void OnRep_Fire();
 	void OnRep_Ammo();
 	void OnRep_InitialRegeneration();
 	bool CanDrive(class AMordhauCharacter** Character);
@@ -69,6 +78,7 @@ public:
 	void InpAxisEvt_Turn_Right_K2Node_InputAxisEvent_5(float AxisValue);
 	void ReceiveAnyDamage(float* Damage, class UDamageType** DamageType, class AController** InstigatedBy, class AActor** DamageCauser);
 	void ReplenishAmmo();
+	void ReceiveDestroyed();
 	void ExecuteUbergraph_BP_DeployableBallista(int EntryPoint);
 };
 

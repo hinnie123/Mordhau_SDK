@@ -13,39 +13,37 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontlineKillObjective.BP_FrontlineKillObjective_C
-// 0x013C (0x1D40 - 0x1C04)
+// 0x0134 (0x1DB4 - 0x1C80)
 class ABP_FrontlineKillObjective_C : public ABP_MordhauCharacter_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x1C04(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C08(0x0008) (Transient, DuplicateTransient)
-	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x1C10(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FCharacterProfile                           ProfileToAssign;                                          // 0x1C18(0x00A0) (Edit, BlueprintVisible)
-	float                                              OriginalReceivedDamageModifier;                           // 0x1CB8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x1CBC(0x0004) MISSED OFFSET
-	class ABP_CapturePoint_C*                          Point;                                                    // 0x1CC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              EquipmentToSpawn;                                         // 0x1CC8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	int                                                CurrentPatrolIdx;                                         // 0x1CD8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x1CDC(0x0004) MISSED OFFSET
-	TArray<class ABP_FrontlinePatrolPoint_C*>          PatrolPoints;                                             // 0x1CE0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
-	class UClass*                                      BehaviorProfile;                                          // 0x1CF0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ScorePerDamageMultiplier;                                 // 0x1CF8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               AwardedKillPoints;                                        // 0x1CFC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x3];                                       // 0x1CFD(0x0003) MISSED OFFSET
-	int                                                ScorePerKill;                                             // 0x1D00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x4];                                       // 0x1D04(0x0004) MISSED OFFSET
-	class ABP_FrontlinePatrolPoint_C*                  HomePoint;                                                // 0x1D08(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	float                                              EngagementDistance2DFromHomePoint;                        // 0x1D10(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               OfferPlayersToPossess;                                    // 0x1D14(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x1D15(0x0003) MISSED OFFSET
-	float                                              CurrentCandidateTimeLeft;                                 // 0x1D18(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x1D1C(0x0004) MISSED OFFSET
-	TArray<class ABP_FrontlinePlayerController_C*>     CandidatesForPossess;                                     // 0x1D20(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
-	float                                              CandidateTimeToDecline;                                   // 0x1D30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ObjectiveWasCompleted;                                    // 0x1D34(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x1D35(0x0003) MISSED OFFSET
-	int                                                ContainmentVolumeCounter;                                 // 0x1D38(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ObjectiveWeight;                                          // 0x1D3C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C80(0x0008) (Transient, DuplicateTransient)
+	class UMordhauWidgetComponent*                     MordhauWidget;                                            // 0x1C88(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FCharacterProfile                           ProfileToAssign;                                          // 0x1C90(0x00A0) (Edit, BlueprintVisible)
+	float                                              OriginalReceivedDamageModifier;                           // 0x1D30(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x1D34(0x0004) MISSED OFFSET
+	class ABP_CapturePoint_C*                          Point;                                                    // 0x1D38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UClass*>                              EquipmentToSpawn;                                         // 0x1D40(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                CurrentPatrolIdx;                                         // 0x1D50(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x1D54(0x0004) MISSED OFFSET
+	TArray<class ABP_FrontlinePatrolPoint_C*>          PatrolPoints;                                             // 0x1D58(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
+	class UClass*                                      BehaviorProfile;                                          // 0x1D68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ScorePerDamageMultiplier;                                 // 0x1D70(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               AwardedKillPoints;                                        // 0x1D74(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x1D75(0x0003) MISSED OFFSET
+	int                                                ScorePerKill;                                             // 0x1D78(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x1D7C(0x0004) MISSED OFFSET
+	class ABP_FrontlinePatrolPoint_C*                  HomePoint;                                                // 0x1D80(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	float                                              EngagementDistance2DFromHomePoint;                        // 0x1D88(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               OfferPlayersToPossess;                                    // 0x1D8C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x1D8D(0x0003) MISSED OFFSET
+	float                                              CurrentCandidateTimeLeft;                                 // 0x1D90(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x1D94(0x0004) MISSED OFFSET
+	TArray<class ABP_FrontlinePlayerController_C*>     CandidatesForPossess;                                     // 0x1D98(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	float                                              CandidateTimeToDecline;                                   // 0x1DA8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ObjectiveWasCompleted;                                    // 0x1DAC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x1DAD(0x0003) MISSED OFFSET
+	int                                                ContainmentVolumeCounter;                                 // 0x1DB0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -73,6 +71,7 @@ public:
 	void OnHealthChanged();
 	void BPLODTick(float* DeltaTime);
 	void OnAnyObjectiveProgressChanged();
+	void MoveBlockedBySlow(struct FHitResult* Impact);
 	void ExecuteUbergraph_BP_FrontlineKillObjective(int EntryPoint);
 };
 

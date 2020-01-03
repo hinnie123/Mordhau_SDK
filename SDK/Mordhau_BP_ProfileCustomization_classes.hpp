@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BP_ProfileCustomization.BP_ProfileCustomization_C
-// 0x0AF8 (0x0D00 - 0x0208)
+// 0x0AFC (0x0D04 - 0x0208)
 class UBP_ProfileCustomization_C : public UBP_MenuContentWidget_C
 {
 public:
@@ -189,6 +189,7 @@ public:
 	bool                                               IsEditingDefaultCustomization;                            // 0x0CF9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x2];                                       // 0x0CFA(0x0002) MISSED OFFSET
 	float                                              LoadoutSelectionTimer;                                    // 0x0CFC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              SaveDeltaTimeCounter;                                     // 0x0D00(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tier2HeadWearable.BP_Tier2HeadWearable_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_Tier2HeadWearable_C : public UBP_HeadWearable_C
 {
 public:

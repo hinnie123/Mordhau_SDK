@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Warhammer.BP_Warhammer_C
-// 0x0000 (0x1AE8 - 0x1AE8)
+// 0x0000 (0x1B48 - 0x1B48)
 class ABP_Warhammer_C : public ABP_OneHandedSword_C
 {
 public:

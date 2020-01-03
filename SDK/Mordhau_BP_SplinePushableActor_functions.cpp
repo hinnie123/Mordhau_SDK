@@ -12,6 +12,32 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_SplinePushableActor.BP_SplinePushableActor_C.GetTransformAlongSplineOffset
+// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          OffsetA                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OffsetB                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// struct FTransform              Output                         (Parm, OutParm, IsPlainOldData)
+
+void ABP_SplinePushableActor_C::GetTransformAlongSplineOffset(float OffsetA, float OffsetB, struct FTransform* Output)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_SplinePushableActor.BP_SplinePushableActor_C.GetTransformAlongSplineOffset");
+
+	ABP_SplinePushableActor_C_GetTransformAlongSplineOffset_Params params;
+	params.OffsetA = OffsetA;
+	params.OffsetB = OffsetB;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Output != nullptr)
+		*Output = params.Output;
+}
+
+
 // Function BP_SplinePushableActor.BP_SplinePushableActor_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

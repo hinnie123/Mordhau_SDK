@@ -13,15 +13,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BattleRoyaleCharacter.BP_BattleRoyaleCharacter_C
-// 0x0024 (0x1C28 - 0x1C04)
+// 0x0021 (0x1CA1 - 0x1C80)
 class ABP_BattleRoyaleCharacter_C : public ABP_MordhauCharacter_C
 {
 public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x1C04(0x0004) MISSED OFFSET
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C08(0x0008) (Transient, DuplicateTransient)
-	class UClass*                                      HeadArmor;                                                // 0x1C10(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ChestArmor;                                               // 0x1C18(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      LegArmor;                                                 // 0x1C20(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1C80(0x0008) (Transient, DuplicateTransient)
+	class UClass*                                      HeadArmor;                                                // 0x1C88(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      ChestArmor;                                               // 0x1C90(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      LegArmor;                                                 // 0x1C98(0x0008) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DropArmorOnDeath;                                         // 0x1CA0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

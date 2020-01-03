@@ -12,6 +12,40 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_HordeHUD.BP_HordeHUD_C.ShowSkillTree
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_HordeHUD_C::ShowSkillTree()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_HordeHUD.BP_HordeHUD_C.ShowSkillTree");
+
+	ABP_HordeHUD_C_ShowSkillTree_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_HordeHUD.BP_HordeHUD_C.CreateSkillTree
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_HordeHUD_C::CreateSkillTree()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_HordeHUD.BP_HordeHUD_C.CreateSkillTree");
+
+	ABP_HordeHUD_C_CreateSkillTree_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_HordeHUD.BP_HordeHUD_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

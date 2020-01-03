@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DisarmedMotion.BP_DisarmedMotion_C
-// 0x0000 (0x0098 - 0x0098)
+// 0x0000 (0x00A0 - 0x00A0)
 class UBP_DisarmedMotion_C : public UDisarmedMotion
 {
 public:

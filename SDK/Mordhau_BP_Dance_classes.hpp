@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Dance.BP_Dance_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x0108 - 0x0108)
 class UBP_Dance_C : public UEmoteMotion
 {
 public:

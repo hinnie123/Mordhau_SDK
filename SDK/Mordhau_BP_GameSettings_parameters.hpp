@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_GameSettings.BP_GameSettings_C.ApplyShowServerInScoreboard
+struct UBP_GameSettings_C_ApplyShowServerInScoreboard_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.UpdateShowServerInScoreboardCheckbox
+struct UBP_GameSettings_C_UpdateShowServerInScoreboardCheckbox_Params
+{
+};
+
 // Function BP_GameSettings.BP_GameSettings_C.UpdateThirdPersonDeathCameraCheckbox
 struct UBP_GameSettings_C_UpdateThirdPersonDeathCameraCheckbox_Params
 {
@@ -467,6 +477,11 @@ struct UBP_GameSettings_C_BndEvt__KilledByCheckbox_K2Node_ComponentBoundEvent_1_
 
 // Function BP_GameSettings.BP_GameSettings_C.BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature
 struct UBP_GameSettings_C_BndEvt__ThirdPersonDeathCameraCheckbox_K2Node_ComponentBoundEvent_2_OnHovered__DelegateSignature_Params
+{
+};
+
+// Function BP_GameSettings.BP_GameSettings_C.BndEvt__ShowServerOnScoreboard_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature
+struct UBP_GameSettings_C_BndEvt__ShowServerOnScoreboard_K2Node_ComponentBoundEvent_3_OnHovered__DelegateSignature_Params
 {
 };
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FlinchMotion.BP_FlinchMotion_C
-// 0x0000 (0x00A0 - 0x00A0)
+// 0x0000 (0x00B8 - 0x00B8)
 class UBP_FlinchMotion_C : public UFlinchMotion
 {
 public:

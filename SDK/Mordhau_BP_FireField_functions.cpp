@@ -12,6 +12,28 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_FireField.BP_FireField_C.GetAgent
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class AActor*                  Agent                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void ABP_FireField_C::GetAgent(class AActor** Agent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FireField.BP_FireField_C.GetAgent");
+
+	ABP_FireField_C_GetAgent_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (Agent != nullptr)
+		*Agent = params.Agent;
+}
+
+
 // Function BP_FireField.BP_FireField_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

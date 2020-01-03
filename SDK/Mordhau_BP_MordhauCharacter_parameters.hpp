@@ -72,12 +72,6 @@ struct ABP_MordhauCharacter_C_ReceiveBeginPlay_Params
 {
 };
 
-// Function BP_MordhauCharacter.BP_MordhauCharacter_C.BPLODTick
-struct ABP_MordhauCharacter_C_BPLODTick_Params
-{
-	float*                                             DeltaTime;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function BP_MordhauCharacter.BP_MordhauCharacter_C.OnDied
 struct ABP_MordhauCharacter_C_OnDied_Params
 {
@@ -138,6 +132,11 @@ struct ABP_MordhauCharacter_C_ApplyRagdollForce_Params
 struct ABP_MordhauCharacter_C_ServerSetClimbLocation_Params
 {
 	struct FVector_NetQuantize                         NewParam;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm)
+};
+
+// Function BP_MordhauCharacter.BP_MordhauCharacter_C.DebugPossess
+struct ABP_MordhauCharacter_C_DebugPossess_Params
+{
 };
 
 // Function BP_MordhauCharacter.BP_MordhauCharacter_C.ExecuteUbergraph_BP_MordhauCharacter

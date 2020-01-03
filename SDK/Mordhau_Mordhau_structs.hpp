@@ -169,7 +169,8 @@ enum class EMotionType : uint8_t
 	LeaveVehicle                   = 25,
 	RagdollFalling                 = 26,
 	Climbing                       = 27,
-	EMotionType_MAX                = 28
+	Ability                        = 28,
+	EMotionType_MAX                = 29
 };
 
 
@@ -314,7 +315,8 @@ enum class EBlockType : uint8_t
 {
 	Regular                        = 0,
 	AltRegular                     = 1,
-	EBlockType_MAX                 = 2
+	ShieldWall                     = 2,
+	EBlockType_MAX                 = 3
 };
 
 
@@ -683,51 +685,54 @@ struct FWoundInfo
 };
 
 // ScriptStruct Mordhau.AttackInfo
-// 0x0118
+// 0x0120
 struct FAttackInfo
 {
 	bool                                               bCanCombo;                                                // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bNoFlinch;                                                // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
-	float                                              Windup;                                                   // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ComboWindupIncrease;                                      // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Release;                                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FeintLockOut;                                             // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                FeintCost;                                                // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ChamberFeintCost;                                         // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                ChamberCost;                                              // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                MorphCost;                                                // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   TurnCaps;                                                 // 0x0024(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	class UCurveFloat*                                 TurnCapCurve;                                             // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 HitEffectIKWeightCurve;                                   // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HitEffectSpeedUpExponent;                                 // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StaminaDrain;                                             // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              ExtraStaminaDrainVsHeldBlock;                             // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-	TArray<float>                                      Damage;                                                   // 0x0050(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<float>                                      HeadBonus;                                                // 0x0060(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<float>                                      LegBonus;                                                 // 0x0070(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              WoodDamage;                                               // 0x0080(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              StoneDamage;                                              // 0x0084(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bStopOnHit;                                               // 0x0088(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDrainAllStamOnBlock;                                     // 0x0089(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bRagdollOnBlock;                                          // 0x008A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x1];                                       // 0x008B(0x0001) MISSED OFFSET
-	float                                              ChipDamagePercentageOnBlock;                              // 0x008C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bRagdollOnHit;                                            // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDismountsHorseRider;                                     // 0x0091(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bDismountsLadderUser;                                     // 0x0092(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1];                                       // 0x0093(0x0001) MISSED OFFSET
-	float                                              MissStaminaCost;                                          // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HitStaminaReward;                                         // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              MissRecovery;                                             // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              HitKockbackFactor;                                        // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              FollowAttackDirectionFactor;                              // 0x00A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FWoundInfo>                          WoundInfoArray;                                           // 0x00A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	class UClass*                                      HitShake;                                                 // 0x00B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      HitStopShake;                                             // 0x00C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x50];                                      // 0x00C8(0x0050) UNKNOWN PROPERTY: SetProperty Mordhau.AttackInfo.IgnoreBones
+	bool                                               bForcesRearingFromFront;                                  // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bNoFlinch;                                                // 0x0002(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0003(0x0001) MISSED OFFSET
+	float                                              FlinchSpeedModifier;                                      // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FlinchDurationModifier;                                   // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Windup;                                                   // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ComboWindupIncrease;                                      // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Release;                                                  // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FeintLockOut;                                             // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                FeintCost;                                                // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                ChamberFeintCost;                                         // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                ChamberCost;                                              // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MorphCost;                                                // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   TurnCaps;                                                 // 0x002C(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	class UCurveFloat*                                 TurnCapCurve;                                             // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCurveFloat*                                 HitEffectIKWeightCurve;                                   // 0x0040(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HitEffectSpeedUpExponent;                                 // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              StaminaDrain;                                             // 0x004C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              ExtraStaminaDrainVsHeldBlock;                             // 0x0050(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
+	TArray<float>                                      Damage;                                                   // 0x0058(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<float>                                      HeadBonus;                                                // 0x0068(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<float>                                      LegBonus;                                                 // 0x0078(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              WoodDamage;                                               // 0x0088(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              StoneDamage;                                              // 0x008C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bStopOnHit;                                               // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bDrainAllStamOnBlock;                                     // 0x0091(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bRagdollOnBlock;                                          // 0x0092(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x1];                                       // 0x0093(0x0001) MISSED OFFSET
+	float                                              ChipDamagePercentageOnBlock;                              // 0x0094(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bRagdollOnHit;                                            // 0x0098(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bDismountsHorseRider;                                     // 0x0099(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bDismountsLadderUser;                                     // 0x009A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x1];                                       // 0x009B(0x0001) MISSED OFFSET
+	float                                              MissStaminaCost;                                          // 0x009C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HitStaminaReward;                                         // 0x00A0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              MissRecovery;                                             // 0x00A4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              HitKockbackFactor;                                        // 0x00A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              FollowAttackDirectionFactor;                              // 0x00AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FWoundInfo>                          WoundInfoArray;                                           // 0x00B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	class UClass*                                      HitShake;                                                 // 0x00C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      HitStopShake;                                             // 0x00C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x50];                                      // 0x00D0(0x0050) UNKNOWN PROPERTY: SetProperty Mordhau.AttackInfo.IgnoreBones
 };
 
 // ScriptStruct Mordhau.SpineSpaceAdditive
@@ -845,7 +850,7 @@ struct FVehicleTransitionInfo
 };
 
 // ScriptStruct Mordhau.FootGroundingLimb
-// 0x01E8
+// 0x01F0
 struct FFootGroundingLimb
 {
 	struct FName                                       TraceEndBone;                                             // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -855,12 +860,12 @@ struct FFootGroundingLimb
 	struct FVector2D                                   UpValueLimits;                                            // 0x001C(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 	struct FHitResult                                  TraceResult;                                              // 0x0028(0x0088) (BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x108];                                     // 0x00B0(0x0108) MISSED OFFSET
-	float                                              RootSpaceImpactZ;                                         // 0x01B8(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    RotationOffset;                                           // 0x01BC(0x000C) (BlueprintVisible, IsPlainOldData)
-	struct FVector                                     InternalTranslationOffset;                                // 0x01C8(0x000C) (IsPlainOldData)
-	struct FVector                                     TranslationOffset;                                        // 0x01D4(0x000C) (BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x01E0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x114];                                     // 0x00B0(0x0114) MISSED OFFSET
+	float                                              RootSpaceImpactZ;                                         // 0x01C4(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FRotator                                    RotationOffset;                                           // 0x01C8(0x000C) (BlueprintVisible, IsPlainOldData)
+	struct FVector                                     InternalTranslationOffset;                                // 0x01D4(0x000C) (IsPlainOldData)
+	struct FVector                                     TranslationOffset;                                        // 0x01E0(0x000C) (BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x01EC(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Mordhau.RepArrayShortWithVersion
@@ -1293,6 +1298,17 @@ struct FSoundMixInfo
 	TArray<class USoundClass*>                         SoundClasses;                                             // 0x0008(0x0010) (ZeroConstructor)
 };
 
+// ScriptStruct Mordhau.LeaderboardEntry
+// 0x0030
+struct FLeaderboardEntry
+{
+	struct FString                                     PlayerId;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	int                                                Position;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	int                                                MMR;                                                      // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FSteamID                                    SteamID;                                                  // 0x0018(0x0008) (Edit, BlueprintVisible)
+	struct FString                                     Name;                                                     // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct Mordhau.MordhauDamageEvent
 // 0x0018 (0x00C0 - 0x00A8)
 struct FMordhauDamageEvent : public FPointDamageEvent
@@ -1434,6 +1450,19 @@ struct FAnimNode_SpeedWarping : public FAnimNode_SkeletalControlBase
 	struct FVector2D                                   HipsOffsetClamp;                                          // 0x01F8(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
 	float                                              HipsZOffset;                                              // 0x0200(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              DeltaTime;                                                // 0x0204(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Mordhau.AnimNode_SpineSpreader
+// 0x0080 (0x0198 - 0x0118)
+struct FAnimNode_SpineSpreader : public FAnimNode_SkeletalControlBase
+{
+	float                                              SpreadPercentage;                                         // 0x0118(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+	struct FBoneReference                              Spine1;                                                   // 0x0120(0x0018) (Edit, BlueprintVisible)
+	struct FBoneReference                              RightShoulder;                                            // 0x0138(0x0018) (Edit, BlueprintVisible)
+	struct FBoneReference                              RightArm;                                                 // 0x0150(0x0018) (Edit, BlueprintVisible)
+	struct FBoneReference                              RightForearm;                                             // 0x0168(0x0018) (Edit, BlueprintVisible)
+	struct FBoneReference                              RightHand;                                                // 0x0180(0x0018) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct Mordhau.AnimNode_TwoBoneIKOffset
@@ -1642,13 +1671,12 @@ struct FReward
 };
 
 // ScriptStruct Mordhau.PlayFabGlobalData
-// 0x00D0
+// 0x00B0
 struct FPlayFabGlobalData
 {
 	TArray<uint64_t>                                   Admins;                                                   // 0x0000(0x0010) (ZeroConstructor)
 	TMap<uint64_t, int64_t>                            BannedPlayers;                                            // 0x0010(0x0050) (ZeroConstructor)
 	TMap<uint64_t, int64_t>                            MutedPlayers;                                             // 0x0060(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00B0(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Mordhau.PlayFabServerInfo

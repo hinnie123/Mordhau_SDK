@@ -14,6 +14,12 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_FireField.BP_FireField_C.GetAgent
+struct ABP_FireField_C_GetAgent_Params
+{
+	class AActor*                                      Agent;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BP_FireField.BP_FireField_C.UserConstructionScript
 struct ABP_FireField_C_UserConstructionScript_Params
 {

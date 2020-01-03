@@ -14,6 +14,14 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_SplinePushableActor.BP_SplinePushableActor_C.GetTransformAlongSplineOffset
+struct ABP_SplinePushableActor_C_GetTransformAlongSplineOffset_Params
+{
+	float                                              OffsetA;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              OffsetB;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  Output;                                                   // (Parm, OutParm, IsPlainOldData)
+};
+
 // Function BP_SplinePushableActor.BP_SplinePushableActor_C.UserConstructionScript
 struct ABP_SplinePushableActor_C_UserConstructionScript_Params
 {

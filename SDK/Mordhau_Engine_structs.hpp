@@ -3300,7 +3300,7 @@ enum class EDefaultBackBufferPixelFormat : uint8_t
 	DBBPF_FloatRGB                 = 2,
 	DBBPF_FloatRGBA                = 3,
 	DBBPF_A2B10G10R10              = 4,
-	DBBPF_MAX                      = 5
+	_DBBPF_MAX                     = 5
 };
 
 

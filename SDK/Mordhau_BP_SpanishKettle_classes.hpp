@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SpanishKettle.BP_SpanishKettle_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_SpanishKettle_C : public UBP_Tier2HeadWearable_C
 {
 public:

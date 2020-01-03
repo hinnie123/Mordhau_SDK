@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CapturePoint.BP_CapturePoint_C.OnObjectivesCompleted
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CapturePoint_C::OnObjectivesCompleted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_CapturePoint.BP_CapturePoint_C.OnObjectivesCompleted");
+
+	ABP_CapturePoint_C_OnObjectivesCompleted_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_CapturePoint.BP_CapturePoint_C.ShowPushDefenderAnnouncement
 // (Public, BlueprintCallable, BlueprintEvent)
 

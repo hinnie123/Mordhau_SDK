@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FeintedMotion.BP_FeintedMotion_C
-// 0x0000 (0x00D0 - 0x00D0)
+// 0x0000 (0x00E0 - 0x00E0)
 class UBP_FeintedMotion_C : public UFeintedMotion
 {
 public:

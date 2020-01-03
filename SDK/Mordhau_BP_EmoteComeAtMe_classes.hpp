@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EmoteComeAtMe.BP_EmoteComeAtMe_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x0108 - 0x0108)
 class UBP_EmoteComeAtMe_C : public UEmoteMotion
 {
 public:

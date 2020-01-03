@@ -30,11 +30,11 @@ public:
 	TArray<class USoundCue*>                           DeliveryProgressSound;                                    // 0x04D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TArray<class UParticleSystem*>                     DeliveryProgressParticles;                                // 0x04E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	int                                                VisualStage;                                              // 0x04F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x04F4(0x0004) MISSED OFFSET
+	int                                                MaxVisualStage;                                           // 0x04F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UTexture2D*                                  DeliverySpotDeliverIcon;                                  // 0x04F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                ScoreAwardPerDelivery;                                    // 0x0500(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               FlipProgressBar;                                          // 0x0504(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0505(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0505(0x0003) MISSED OFFSET
 	float                                              ObjectiveWeight;                                          // 0x0508(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Progress;                                                 // 0x050C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               OriginalFlipProgressBar;                                  // 0x0510(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)

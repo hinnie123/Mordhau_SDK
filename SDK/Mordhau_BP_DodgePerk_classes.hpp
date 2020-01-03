@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DodgePerk.BP_DodgePerk_C
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_DodgePerk_C : public UBP_Perk_C
 {
 public:

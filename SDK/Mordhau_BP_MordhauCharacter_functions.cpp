@@ -211,26 +211,6 @@ void ABP_MordhauCharacter_C::ReceiveBeginPlay()
 }
 
 
-// Function BP_MordhauCharacter.BP_MordhauCharacter_C.BPLODTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float*                         DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_MordhauCharacter_C::BPLODTick(float* DeltaTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauCharacter.BP_MordhauCharacter_C.BPLODTick");
-
-	ABP_MordhauCharacter_C_BPLODTick_Params params;
-	params.DeltaTime = DeltaTime;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_MordhauCharacter.BP_MordhauCharacter_C.OnDied
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -407,6 +387,23 @@ void ABP_MordhauCharacter_C::ServerSetClimbLocation(const struct FVector_NetQuan
 
 	ABP_MordhauCharacter_C_ServerSetClimbLocation_Params params;
 	params.NewParam = NewParam;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauCharacter.BP_MordhauCharacter_C.DebugPossess
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MordhauCharacter_C::DebugPossess()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauCharacter.BP_MordhauCharacter_C.DebugPossess");
+
+	ABP_MordhauCharacter_C_DebugPossess_Params params;
 
 	auto flags = fn->FunctionFlags;
 

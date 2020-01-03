@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PugilistFistsWeapon.BP_PugilistFistsWeapon_C
-// 0x0000 (0x1AD0 - 0x1AD0)
+// 0x0000 (0x1B30 - 0x1B30)
 class ABP_PugilistFistsWeapon_C : public ABP_FistsWeapon_C
 {
 public:

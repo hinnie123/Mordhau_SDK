@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // WidgetBlueprintGeneratedClass BP_Leaderboards.BP_Leaderboards_C
-// 0x00C0 (0x02C8 - 0x0208)
+// 0x00D1 (0x02D9 - 0x0208)
 class UBP_Leaderboards_C : public UBP_MenuContentWidget_C
 {
 public:
@@ -37,6 +37,11 @@ public:
 	class UScrollBox*                                  ScrollBox_1;                                              // 0x0290(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	TArray<struct FS_LeaderboardExample>               PlaceholderStructs;                                       // 0x0298(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	struct FS_LeaderboardExample                       PlaceholderPlayerStruct;                                  // 0x02A8(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               bUpdatingLeaderboards;                                    // 0x02C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bUpdatedLeaderboards;                                     // 0x02C9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x02CA(0x0006) MISSED OFFSET
+	struct FDateTime                                   LastAvatarUpdateTime;                                     // 0x02D0(0x0008) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               bUpdatedAvatars;                                          // 0x02D8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -47,6 +52,8 @@ public:
 
 	void Update();
 	void Construct();
+	void OnGetLeaderboardComplete(bool bWasSuccessful, const struct FString& LeaderboardName, TArray<struct FLeaderboardEntry> Entries, const struct FLeaderboardEntry& SelfEntry);
+	void Tick(struct FGeometry* MyGeometry, float* InDeltaTime);
 	void ExecuteUbergraph_BP_Leaderboards(int EntryPoint);
 };
 

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AcrobatPerk.BP_AcrobatPerk_C
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_AcrobatPerk_C : public UBP_Perk_C
 {
 public:

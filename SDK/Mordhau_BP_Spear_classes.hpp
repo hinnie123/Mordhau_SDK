@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Spear.BP_Spear_C
-// 0x0000 (0x1AE8 - 0x1AE8)
+// 0x0000 (0x1B48 - 0x1B48)
 class ABP_Spear_C : public ABP_Polearm_C
 {
 public:

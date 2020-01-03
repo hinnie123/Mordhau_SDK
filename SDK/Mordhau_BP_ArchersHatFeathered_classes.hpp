@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ArchersHatFeathered.BP_ArchersHatFeathered_C
-// 0x0000 (0x01B0 - 0x01B0)
+// 0x0000 (0x01C0 - 0x01C0)
 class UBP_ArchersHatFeathered_C : public UBP_Tier1HeadWearable_C
 {
 public:

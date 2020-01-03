@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BlockedMotion.BP_BlockedMotion_C
-// 0x0000 (0x0240 - 0x0240)
+// 0x0000 (0x0248 - 0x0248)
 class UBP_BlockedMotion_C : public UBlockedMotion
 {
 public:

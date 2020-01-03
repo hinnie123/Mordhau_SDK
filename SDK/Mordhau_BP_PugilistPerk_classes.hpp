@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PugilistPerk.BP_PugilistPerk_C
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_PugilistPerk_C : public UBP_Perk_C
 {
 public:

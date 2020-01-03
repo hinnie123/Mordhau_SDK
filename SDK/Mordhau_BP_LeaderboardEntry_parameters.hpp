@@ -14,6 +14,11 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_LeaderboardEntry.BP_LeaderboardEntry_C.RefreshAvatar
+struct UBP_LeaderboardEntry_C_RefreshAvatar_Params
+{
+};
+
 // Function BP_LeaderboardEntry.BP_LeaderboardEntry_C.Get_MMRText_ColorAndOpacity_1
 struct UBP_LeaderboardEntry_C_Get_MMRText_ColorAndOpacity_1_Params
 {

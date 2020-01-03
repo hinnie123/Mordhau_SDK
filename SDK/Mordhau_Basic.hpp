@@ -52,6 +52,7 @@ class TUObjectArray
 public:
 	static uintptr_t g_total_objects;
 	static uintptr_t g_objects;
+
 	inline int32_t Num() const
 	{
 		return *(int32_t*)((uintptr_t)GetModuleHandleA(0) + g_total_objects);

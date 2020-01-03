@@ -128,6 +128,12 @@ struct ABP_FrontlineKillObjective_C_OnAnyObjectiveProgressChanged_Params
 {
 };
 
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.MoveBlockedBySlow
+struct ABP_FrontlineKillObjective_C_MoveBlockedBySlow_Params
+{
+	struct FHitResult*                                 Impact;                                                   // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
 // Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.ExecuteUbergraph_BP_FrontlineKillObjective
 struct ABP_FrontlineKillObjective_C_ExecuteUbergraph_BP_FrontlineKillObjective_Params
 {

@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RangedReleaseMotion.BP_RangedReleaseMotion_C
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00E8 - 0x00E8)
 class UBP_RangedReleaseMotion_C : public URangedReleaseMotion
 {
 public:

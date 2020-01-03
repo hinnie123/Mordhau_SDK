@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ItemDeliverySpawn.BP_ItemDeliverySpawn_C
-// 0x0038 (0x04B8 - 0x0480)
+// 0x0088 (0x0508 - 0x0480)
 class ABP_ItemDeliverySpawn_C : public AMordhauActor
 {
 public:
@@ -23,6 +23,7 @@ public:
 	class ABP_CapturePoint_C*                          CapturePoint;                                             // 0x0498(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 	class UClass*                                      DeliverableClass;                                         // 0x04A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TArray<class ABP_DeliverableEquipment_C*>          SpawnedDeliverables;                                      // 0x04A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TMap<class AMordhauCharacter*, class AMordhauEquipment*> SpawnedByCharacter;                                       // 0x04B8(0x0050) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

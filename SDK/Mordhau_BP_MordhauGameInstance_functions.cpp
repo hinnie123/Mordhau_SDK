@@ -60,46 +60,6 @@ void UBP_MordhauGameInstance_C::GetJoiningTextOld(const struct FServerSearchResu
 }
 
 
-// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_DE35634440D2DAD6E6ED319296DF3606
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FServerSearchResult     Result                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_MordhauGameInstance_C::OnFailure_DE35634440D2DAD6E6ED319296DF3606(const struct FServerSearchResult& Result)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_DE35634440D2DAD6E6ED319296DF3606");
-
-	UBP_MordhauGameInstance_C_OnFailure_DE35634440D2DAD6E6ED319296DF3606_Params params;
-	params.Result = Result;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_DE35634440D2DAD6E6ED319296DF3606
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FServerSearchResult     Result                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_MordhauGameInstance_C::OnSuccess_DE35634440D2DAD6E6ED319296DF3606(const struct FServerSearchResult& Result)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_DE35634440D2DAD6E6ED319296DF3606");
-
-	UBP_MordhauGameInstance_C_OnSuccess_DE35634440D2DAD6E6ED319296DF3606_Params params;
-	params.Result = Result;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_EC1BED794FBBC103AFC74FAD71124461
 // (BlueprintCallable, BlueprintEvent)
 

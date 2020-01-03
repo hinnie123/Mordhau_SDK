@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.OnBuilt
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                  Structure                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_MordhauPlayerController_C::OnBuilt(class AActor* Structure)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.OnBuilt");
+
+	ABP_MordhauPlayerController_C_OnBuilt_Params params;
+	params.Structure = Structure;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.HandleTeamKill
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1035,6 +1055,23 @@ void ABP_MordhauPlayerController_C::ReceiveOfferToForgive(class AMordhauPlayerSt
 
 	ABP_MordhauPlayerController_C_ReceiveOfferToForgive_Params params;
 	params.Candidate = Candidate;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.DoBattlecry
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_MordhauPlayerController_C::DoBattlecry()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MordhauPlayerController.BP_MordhauPlayerController_C.DoBattlecry");
+
+	ABP_MordhauPlayerController_C_DoBattlecry_Params params;
 
 	auto flags = fn->FunctionFlags;
 

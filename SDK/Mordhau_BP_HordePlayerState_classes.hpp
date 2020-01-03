@@ -13,11 +13,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HordePlayerState.BP_HordePlayerState_C
-// 0x0004 (0x0464 - 0x0460)
+// 0x0005 (0x0465 - 0x0460)
 class ABP_HordePlayerState_C : public ABP_MordhauPlayerState_C
 {
 public:
 	int                                                Coins;                                                    // 0x0460(0x0004) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      SkillPoints;                                              // 0x0464(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 	}
 
 
+	void OnRep_SkillPoints();
+	void GetDiscountedPrice(int BasePrice, int* DiscountedPrice);
 	void OnRep_Coins();
 	void UserConstructionScript();
 };

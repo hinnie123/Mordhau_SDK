@@ -131,6 +131,23 @@ void ABP_PushObjectivePoint_C::ShowPushDefenderAnnouncement()
 }
 
 
+// Function BP_PushObjectivePoint.BP_PushObjectivePoint_C.OnObjectivesCompleted
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_PushObjectivePoint_C::OnObjectivesCompleted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_PushObjectivePoint.BP_PushObjectivePoint_C.OnObjectivesCompleted");
+
+	ABP_PushObjectivePoint_C_OnObjectivesCompleted_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_PushObjectivePoint.BP_PushObjectivePoint_C.ExecuteUbergraph_BP_PushObjectivePoint
 // (HasDefaults)
 // Parameters:

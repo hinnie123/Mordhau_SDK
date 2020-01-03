@@ -385,6 +385,26 @@ void ABP_FrontlineKillObjective_C::OnAnyObjectiveProgressChanged()
 }
 
 
+// Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.MoveBlockedBySlow
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FHitResult*             Impact                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
+
+void ABP_FrontlineKillObjective_C::MoveBlockedBySlow(struct FHitResult* Impact)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.MoveBlockedBySlow");
+
+	ABP_FrontlineKillObjective_C_MoveBlockedBySlow_Params params;
+	params.Impact = Impact;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_FrontlineKillObjective.BP_FrontlineKillObjective_C.ExecuteUbergraph_BP_FrontlineKillObjective
 // (HasDefaults)
 // Parameters:

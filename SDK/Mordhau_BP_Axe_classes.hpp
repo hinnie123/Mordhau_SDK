@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Axe.BP_Axe_C
-// 0x0000 (0x1AE8 - 0x1AE8)
+// 0x0000 (0x1B48 - 0x1B48)
 class ABP_Axe_C : public ABP_OneHandedSword_C
 {
 public:

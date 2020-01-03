@@ -28,18 +28,6 @@ struct UBP_MordhauGameInstance_C_GetJoiningTextOld_Params
 	struct FText                                       Text;                                                     // (Parm, OutParm)
 };
 
-// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_DE35634440D2DAD6E6ED319296DF3606
-struct UBP_MordhauGameInstance_C_OnFailure_DE35634440D2DAD6E6ED319296DF3606_Params
-{
-	struct FServerSearchResult                         Result;                                                   // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-
-// Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnSuccess_DE35634440D2DAD6E6ED319296DF3606
-struct UBP_MordhauGameInstance_C_OnSuccess_DE35634440D2DAD6E6ED319296DF3606_Params
-{
-	struct FServerSearchResult                         Result;                                                   // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-};
-
 // Function BP_MordhauGameInstance.BP_MordhauGameInstance_C.OnFailure_EC1BED794FBBC103AFC74FAD71124461
 struct UBP_MordhauGameInstance_C_OnFailure_EC1BED794FBBC103AFC74FAD71124461_Params
 {

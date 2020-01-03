@@ -39,6 +39,7 @@ public:
 	}
 
 
+	void GetAgent(class AActor** Agent);
 	void UserConstructionScript();
 	void ReceiveTick(float* DeltaSeconds);
 	void BeginFieldDeactivation();

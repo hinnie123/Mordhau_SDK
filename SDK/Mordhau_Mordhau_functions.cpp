@@ -672,6 +672,38 @@ void AAdvancedCharacter::RegisterMaterialToDissolve(class UMaterialInstanceDynam
 }
 
 
+// Function Mordhau.AdvancedCharacter.ReceiveMordhauDamage
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                          Damage                         (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              HitResult                      (Parm, IsPlainOldData)
+// EMordhauDamageType             DamageType                     (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char                  SubDamageType                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Source                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Agent                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AController*             EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAdvancedCharacter::ReceiveMordhauDamage(float Damage, const struct FHitResult& HitResult, EMordhauDamageType DamageType, unsigned char SubDamageType, class AActor* Source, class AActor* Agent, class AController* EventInstigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.ReceiveMordhauDamage");
+
+	AAdvancedCharacter_ReceiveMordhauDamage_Params params;
+	params.Damage = Damage;
+	params.HitResult = HitResult;
+	params.DamageType = DamageType;
+	params.SubDamageType = SubDamageType;
+	params.Source = Source;
+	params.Agent = Agent;
+	params.EventInstigator = EventInstigator;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.AdvancedCharacter.PlayHitEffectParticle
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -679,8 +711,9 @@ void AAdvancedCharacter::RegisterMaterialToDissolve(class UMaterialInstanceDynam
 // struct FRotator                Rotation                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FName                   bone                           (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFindOptimalSpot               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void AAdvancedCharacter::PlayHitEffectParticle(const struct FVector& Location, const struct FRotator& Rotation, const struct FName& bone, bool bFindOptimalSpot)
+bool AAdvancedCharacter::PlayHitEffectParticle(const struct FVector& Location, const struct FRotator& Rotation, const struct FName& bone, bool bFindOptimalSpot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.PlayHitEffectParticle");
 
@@ -696,6 +729,8 @@ void AAdvancedCharacter::PlayHitEffectParticle(const struct FVector& Location, c
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -988,6 +1023,27 @@ void AAdvancedCharacter::OnHighlightStart()
 }
 
 
+// Function Mordhau.AdvancedCharacter.OnHighlightMaintained
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class AMordhauCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAdvancedCharacter::OnHighlightMaintained(class AMordhauCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.OnHighlightMaintained");
+
+	AAdvancedCharacter_OnHighlightMaintained_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.AdvancedCharacter.OnHighlightEnd
 // (Native, Event, Public, BlueprintEvent)
 
@@ -1220,6 +1276,40 @@ float AAdvancedCharacter::MordhauTakeDamage(float DamageAmount, const struct FHi
 	params.Hit = Hit;
 	params.DamageType = DamageType;
 	params.DamageSubType = DamageSubType;
+	params.Source = Source;
+	params.Agent = Agent;
+	params.EventInstigator = EventInstigator;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.AdvancedCharacter.ModifyDamage
+// (Native, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// float                          DamageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
+// EMordhauDamageType             DamageType                     (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              HitInfo                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AActor*                  Source                         (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  Agent                          (Parm, ZeroConstructor, IsPlainOldData)
+// class AController*             EventInstigator                (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AAdvancedCharacter::ModifyDamage(float DamageAmount, EMordhauDamageType DamageType, const struct FHitResult& HitInfo, class AActor* Source, class AActor* Agent, class AController* EventInstigator)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.ModifyDamage");
+
+	AAdvancedCharacter_ModifyDamage_Params params;
+	params.DamageAmount = DamageAmount;
+	params.DamageType = DamageType;
+	params.HitInfo = HitInfo;
 	params.Source = Source;
 	params.Agent = Agent;
 	params.EventInstigator = EventInstigator;
@@ -1541,6 +1631,50 @@ float AAdvancedCharacter::GetLookUpValue()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.GetLookUpValue");
 
 	AAdvancedCharacter_GetLookUpValue_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.AdvancedCharacter.GetLastNetDamageType
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// EMordhauDamageType             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+EMordhauDamageType AAdvancedCharacter::GetLastNetDamageType()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.GetLastNetDamageType");
+
+	AAdvancedCharacter_GetLastNetDamageType_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.AdvancedCharacter.GetLastNetDamageSource
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* AAdvancedCharacter::GetLastNetDamageSource()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AdvancedCharacter.GetLastNetDamageSource");
+
+	AAdvancedCharacter_GetLastNetDamageSource_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -2249,6 +2383,28 @@ void UMordhauMotion::OnBegin()
 }
 
 
+// Function Mordhau.MordhauMotion.GetOwnerCharacter
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AMordhauCharacter*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AMordhauCharacter* UMordhauMotion::GetOwnerCharacter()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauMotion.GetOwnerCharacter");
+
+	UMordhauMotion_GetOwnerCharacter_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauMotion.CanInitiateMotion
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -2288,6 +2444,28 @@ void UAttackMotion::SetHasHitIncludingCosmeticHit()
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.AttackMotion.ComputeWindup
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAttackMotion::ComputeWindup()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.AttackMotion.ComputeWindup");
+
+	UAttackMotion_ComputeWindup_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -4857,6 +5035,27 @@ void AMordhauActor::OnHighlightStart()
 }
 
 
+// Function Mordhau.MordhauActor.OnHighlightMaintained
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class AMordhauCharacter*       Character                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauActor::OnHighlightMaintained(class AMordhauCharacter* Character)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauActor.OnHighlightMaintained");
+
+	AMordhauActor_OnHighlightMaintained_Params params;
+	params.Character = Character;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauActor.OnHighlightEnd
 // (Native, Event, Public, BlueprintEvent)
 
@@ -6440,6 +6639,72 @@ void AMordhauWeapon::IncreaseBloodLevel(float Amount)
 }
 
 
+// Function Mordhau.MordhauWeapon.GetTraceStart
+// (Native, Event, Public, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector AMordhauWeapon::GetTraceStart()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauWeapon.GetTraceStart");
+
+	AMordhauWeapon_GetTraceStart_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauWeapon.GetTraceEnd
+// (Native, Event, Public, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector AMordhauWeapon::GetTraceEnd()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauWeapon.GetTraceEnd");
+
+	AMordhauWeapon_GetTraceEnd_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauWeapon.GetIsCurrentlyUsingAdditionalTracers
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMordhauWeapon::GetIsCurrentlyUsingAdditionalTracers()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauWeapon.GetIsCurrentlyUsingAdditionalTracers");
+
+	AMordhauWeapon_GetIsCurrentlyUsingAdditionalTracers_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauWeapon.GetBaseAttackInfo
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -6452,6 +6717,50 @@ struct FAttackInfo AMordhauWeapon::GetBaseAttackInfo(EAttackMove Move)
 
 	AMordhauWeapon_GetBaseAttackInfo_Params params;
 	params.Move = Move;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauWeapon.GetAdditionalTraceStart
+// (Native, Event, Public, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector AMordhauWeapon::GetAdditionalTraceStart()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauWeapon.GetAdditionalTraceStart");
+
+	AMordhauWeapon_GetAdditionalTraceStart_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauWeapon.GetAdditionalTraceEnd
+// (Native, Event, Public, HasDefaults, BlueprintEvent)
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector AMordhauWeapon::GetAdditionalTraceEnd()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauWeapon.GetAdditionalTraceEnd");
+
+	AMordhauWeapon_GetAdditionalTraceEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -7283,6 +7592,27 @@ void AMordhauAIController::StartFacingActor(class AActor* Actor, float LocationU
 }
 
 
+// Function Mordhau.MordhauAIController.SetClosestEnemyOverride
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AMordhauCharacter*       Override                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauAIController::SetClosestEnemyOverride(class AMordhauCharacter* Override)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauAIController.SetClosestEnemyOverride");
+
+	AMordhauAIController_SetClosestEnemyOverride_Params params;
+	params.Override = Override;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauAIController.RequestVoiceCommand
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -7616,6 +7946,28 @@ EAIFacingMode AMordhauAIController::GetCurrentFacingMode()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauAIController.GetCurrentFacingMode");
 
 	AMordhauAIController_GetCurrentFacingMode_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauAIController.GetClosestEnemyOverride
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AMordhauCharacter*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AMordhauCharacter* AMordhauAIController::GetClosestEnemyOverride()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauAIController.GetClosestEnemyOverride");
+
+	AMordhauAIController_GetClosestEnemyOverride_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8350,6 +8702,42 @@ bool AMordhauCharacter::TryClimbing()
 }
 
 
+// Function Mordhau.MordhauCharacter.ToggleWeaponModeReleased
+// (Final, Native, Public, BlueprintCallable)
+
+void AMordhauCharacter::ToggleWeaponModeReleased()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.ToggleWeaponModeReleased");
+
+	AMordhauCharacter_ToggleWeaponModeReleased_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.ToggleWeaponModePressed
+// (Final, Native, Public, BlueprintCallable)
+
+void AMordhauCharacter::ToggleWeaponModePressed()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.ToggleWeaponModePressed");
+
+	AMordhauCharacter_ToggleWeaponModePressed_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauCharacter.SwitchToFists
 // (Final, Native, Public, BlueprintCallable)
 
@@ -8478,6 +8866,24 @@ void AMordhauCharacter::StopSprinting()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.StopSprinting");
 
 	AMordhauCharacter_StopSprinting_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.StopScreaming
+// (Final, Native, Public, BlueprintCallable)
+
+void AMordhauCharacter::StopScreaming()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.StopScreaming");
+
+	AMordhauCharacter_StopScreaming_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -8648,6 +9054,24 @@ void AMordhauCharacter::StartSprinting()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.StartSprinting");
 
 	AMordhauCharacter_StartSprinting_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.StartScreaming
+// (Final, Native, Public, BlueprintCallable)
+
+void AMordhauCharacter::StartScreaming()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.StartScreaming");
+
+	AMordhauCharacter_StartScreaming_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -10276,6 +10700,87 @@ void AMordhauCharacter::OnPostDismember(const struct FName& bone, class ASeparat
 }
 
 
+// Function Mordhau.MordhauCharacter.OnPickedUp
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class AMordhauEquipment*       Eq                             (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauCharacter::OnPickedUp(class AMordhauEquipment* Eq)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.OnPickedUp");
+
+	AMordhauCharacter_OnPickedUp_Params params;
+	params.Eq = Eq;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.OnDropped
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class AMordhauEquipment*       Eq                             (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauCharacter::OnDropped(class AMordhauEquipment* Eq)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.OnDropped");
+
+	AMordhauCharacter_OnDropped_Params params;
+	params.Eq = Eq;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.OnBlockedMelee
+// (Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// struct FHitResult              HitResult                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AMordhauCharacter*       Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void AMordhauCharacter::OnBlockedMelee(const struct FHitResult& HitResult, class AMordhauCharacter* Attacker)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.OnBlockedMelee");
+
+	AMordhauCharacter_OnBlockedMelee_Params params;
+	params.HitResult = HitResult;
+	params.Attacker = Attacker;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.OnAttackStarted
+// (Event, Public, BlueprintEvent)
+
+void AMordhauCharacter::OnAttackStarted()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.OnAttackStarted");
+
+	AMordhauCharacter_OnAttackStarted_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.MordhauCharacter.OnActionFailed
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -10337,6 +10842,34 @@ void AMordhauCharacter::MoveBlockedBySlow(const struct FHitResult& Impact)
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauCharacter.ModifyParryResult
+// (Native, Event, Public, HasOutParms, BlueprintEvent)
+// Parameters:
+// bool                           InResult                       (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              HitResult                      (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// class AMordhauCharacter*       Attacker                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AMordhauCharacter::ModifyParryResult(bool InResult, const struct FHitResult& HitResult, class AMordhauCharacter* Attacker)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.ModifyParryResult");
+
+	AMordhauCharacter_ModifyParryResult_Params params;
+	params.InResult = InResult;
+	params.HitResult = HitResult;
+	params.Attacker = Attacker;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -11142,6 +11675,28 @@ class ACustomizationReplicationActor* AMordhauCharacter::GetCustomizationReplica
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.GetCustomizationReplicationActor");
 
 	AMordhauCharacter_GetCustomizationReplicationActor_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauCharacter.GetCurrentNetMotion
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FNetMotion              ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FNetMotion AMordhauCharacter::GetCurrentNetMotion()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauCharacter.GetCurrentNetMotion");
+
+	AMordhauCharacter_GetCurrentNetMotion_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -14683,14 +15238,16 @@ void AMordhauGameMode::AddBots(int Amount, int Team)
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FSteamID                SteamID                        (ConstParm, Parm, OutParm, ReferenceParm)
+// bool                           bExpired                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AMordhauGameSession::UnmutePlayer(const struct FSteamID& SteamID)
+bool AMordhauGameSession::UnmutePlayer(const struct FSteamID& SteamID, bool bExpired)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameSession.UnmutePlayer");
 
 	AMordhauGameSession_UnmutePlayer_Params params;
 	params.SteamID = SteamID;
+	params.bExpired = bExpired;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -14707,14 +15264,16 @@ bool AMordhauGameSession::UnmutePlayer(const struct FSteamID& SteamID)
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
 // struct FSteamID                SteamID                        (ConstParm, Parm, OutParm, ReferenceParm)
+// bool                           bExpired                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool AMordhauGameSession::UnbanPlayer(const struct FSteamID& SteamID)
+bool AMordhauGameSession::UnbanPlayer(const struct FSteamID& SteamID, bool bExpired)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameSession.UnbanPlayer");
 
 	AMordhauGameSession_UnbanPlayer_Params params;
 	params.SteamID = SteamID;
+	params.bExpired = bExpired;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -15611,6 +16170,28 @@ bool AMordhauGameState::CanImmediatelyChangeProfile(class AController* Controlle
 }
 
 
+// Function Mordhau.MordhauGameUserSettings.ShouldUseNewServerBrowser
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMordhauGameUserSettings::ShouldUseNewServerBrowser()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.ShouldUseNewServerBrowser");
+
+	UMordhauGameUserSettings_ShouldUseNewServerBrowser_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauGameUserSettings.ShouldShowWatermark
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -15709,6 +16290,28 @@ bool UMordhauGameUserSettings::ShouldShowSpawnInfo()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.ShouldShowSpawnInfo");
 
 	UMordhauGameUserSettings_ShouldShowSpawnInfo_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.ShouldShowServerInScoreboard
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMordhauGameUserSettings::ShouldShowServerInScoreboard()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.ShouldShowServerInScoreboard");
+
+	UMordhauGameUserSettings_ShouldShowServerInScoreboard_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -16232,6 +16835,27 @@ void UMordhauGameUserSettings::SetShowSpawnInfo(int NewShowSpawnInfo)
 
 	UMordhauGameUserSettings_SetShowSpawnInfo_Params params;
 	params.NewShowSpawnInfo = NewShowSpawnInfo;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.SetShowServerInScoreboard
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewShowServerInScoreboard      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UMordhauGameUserSettings::SetShowServerInScoreboard(int NewShowServerInScoreboard)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.SetShowServerInScoreboard");
+
+	UMordhauGameUserSettings_SetShowServerInScoreboard_Params params;
+	params.NewShowServerInScoreboard = NewShowServerInScoreboard;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -17540,6 +18164,28 @@ int UMordhauGameUserSettings::GetShowSpawnInfo()
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetShowSpawnInfo");
 
 	UMordhauGameUserSettings_GetShowSpawnInfo_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function Mordhau.MordhauGameUserSettings.GetShowServerInScoreboard
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UMordhauGameUserSettings::GetShowServerInScoreboard()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauGameUserSettings.GetShowServerInScoreboard");
+
+	UMordhauGameUserSettings_GetShowServerInScoreboard_Params params;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -23647,6 +24293,32 @@ class UTexture2D* AMordhauPlayerController::GetSteamAvatar(EAvatarSize Size)
 }
 
 
+// Function Mordhau.MordhauPlayerController.GetNextViewablePlayerNonAuth
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            dir                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bOnlyOwnTeam                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AAdvancedCharacter*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AAdvancedCharacter* AMordhauPlayerController::GetNextViewablePlayerNonAuth(int dir, bool bOnlyOwnTeam)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauPlayerController.GetNextViewablePlayerNonAuth");
+
+	AMordhauPlayerController_GetNextViewablePlayerNonAuth_Params params;
+	params.dir = dir;
+	params.bOnlyOwnTeam = bOnlyOwnTeam;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function Mordhau.MordhauPlayerController.GetLastControlledCharacter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -28321,14 +28993,16 @@ bool UMordhauUtilityLibrary::STATIC_UnmountPak(const struct FString& PakPath)
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UWorld*                  WorldObject                    (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bIsForced                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMordhauUtilityLibrary::STATIC_TryExecuteHeavydutyOperation(class UWorld* WorldObject)
+bool UMordhauUtilityLibrary::STATIC_TryExecuteHeavydutyOperation(class UWorld* WorldObject, bool bIsForced)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.TryExecuteHeavydutyOperation");
 
 	UMordhauUtilityLibrary_TryExecuteHeavydutyOperation_Params params;
 	params.WorldObject = WorldObject;
+	params.bIsForced = bIsForced;
 
 	auto flags = fn->FunctionFlags;
 	fn->FunctionFlags |= 0x400;
@@ -29090,6 +29764,30 @@ void UMordhauUtilityLibrary::STATIC_ReserveCharacterRagdoll(class AAdvancedChara
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.MordhauUtilityLibrary.RequestSteamUserInformation
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FSteamID                SteamID                        (ConstParm, Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UMordhauUtilityLibrary::STATIC_RequestSteamUserInformation(const struct FSteamID& SteamID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.MordhauUtilityLibrary.RequestSteamUserInformation");
+
+	UMordhauUtilityLibrary_RequestSteamUserInformation_Params params;
+	params.SteamID = SteamID;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
@@ -33421,6 +34119,27 @@ bool UPlayFabAPI::IsPlayerLoggedIn()
 }
 
 
+// Function Mordhau.PlayFabAPI.GetLeaderboard
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FString                 LeaderboardName                (Parm, ZeroConstructor)
+
+void UPlayFabAPI::GetLeaderboard(const struct FString& LeaderboardName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.PlayFabAPI.GetLeaderboard");
+
+	UPlayFabAPI_GetLeaderboard_Params params;
+	params.LeaderboardName = LeaderboardName;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function Mordhau.PushableActor.SetProgress
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -33605,6 +34324,70 @@ void ASeparatedBodyPart::InitializeDismemberment(class AMordhauCharacter* Source
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.SpawnGroup.SetSpawnsTeam
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int                            NewTeam                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpawnGroup::SetSpawnsTeam(int NewTeam)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.SpawnGroup.SetSpawnsTeam");
+
+	ASpawnGroup_SetSpawnsTeam_Params params;
+	params.NewTeam = NewTeam;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.SpawnGroup.SetAreSpawnsEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           bValue                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpawnGroup::SetAreSpawnsEnabled(bool bValue)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.SpawnGroup.SetAreSpawnsEnabled");
+
+	ASpawnGroup_SetAreSpawnsEnabled_Params params;
+	params.bValue = bValue;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function Mordhau.SpawnGroup.GetAreSpawnsEnabled
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ASpawnGroup::GetAreSpawnsEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function Mordhau.SpawnGroup.GetAreSpawnsEnabled");
+
+	ASpawnGroup_GetAreSpawnsEnabled_Params params;
+
+	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

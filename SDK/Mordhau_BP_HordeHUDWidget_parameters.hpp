@@ -14,6 +14,36 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_HordeHUDWidget.BP_HordeHUDWidget_C.GetVisibility_3
+struct UBP_HordeHUDWidget_C_GetVisibility_3_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_HordeHUDWidget.BP_HordeHUDWidget_C.GetVisibility_2
+struct UBP_HordeHUDWidget_C_GetVisibility_2_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BP_HordeHUDWidget.BP_HordeHUDWidget_C.Get_TextBlock_1_Text_1
+struct UBP_HordeHUDWidget_C_Get_TextBlock_1_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function BP_HordeHUDWidget.BP_HordeHUDWidget_C.Get_TextBlock_3_Text_1
+struct UBP_HordeHUDWidget_C_Get_TextBlock_3_Text_1_Params
+{
+	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function BP_HordeHUDWidget.BP_HordeHUDWidget_C.Get_SkillPointsContainer_Visibility_1
+struct UBP_HordeHUDWidget_C_Get_SkillPointsContainer_Visibility_1_Params
+{
+	ESlateVisibility                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BP_HordeHUDWidget.BP_HordeHUDWidget_C.Get_KillsElement_Visibility_1
 struct UBP_HordeHUDWidget_C_Get_KillsElement_Visibility_1_Params
 {

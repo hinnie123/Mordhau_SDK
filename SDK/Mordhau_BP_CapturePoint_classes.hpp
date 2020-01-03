@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CapturePoint.BP_CapturePoint_C
-// 0x00F6 (0x0536 - 0x0440)
+// 0x00F7 (0x0537 - 0x0440)
 class ABP_CapturePoint_C : public AControlPoint
 {
 public:
@@ -28,12 +28,12 @@ public:
 	TArray<class ABP_ItemDeliverySpot_C*>              DeliverySpots;                                            // 0x0490(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
 	TArray<class ABP_FrontlinePushable_C*>             Pushables;                                                // 0x04A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
 	TArray<class ABP_FrontlineInteractable_C*>         Interactables;                                            // 0x04B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
-	TArray<class ABP_FrontlineKillObjective_C*>        Kill;                                                     // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
+	TArray<class ABP_FrontlineKillObjectiveWrapper_C*> Kill;                                                     // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate)
 	float                                              ObjectiveProgress;                                        // 0x04D0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x04D4(0x0004) MISSED OFFSET
 	class UBP_CapPointWidget_C*                        SpawnPointWidget;                                         // 0x04D8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UBP_FloatingCapPointWidget_C*                FloaterWidget;                                            // 0x04E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	bool                                               ShowAnnouncements;                                        // 0x04E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShowAnnouncements;                                        // 0x04E8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x04E9(0x0007) MISSED OFFSET
 	class UTexture2D*                                  Icon;                                                     // 0x04F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FText                                       ObjectiveAttack;                                          // 0x04F8(0x0018) (Edit, BlueprintVisible)
@@ -44,6 +44,7 @@ public:
 	float                                              ObjectiveBiasFactor;                                      // 0x0530(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               ObjectivesCompleted;                                      // 0x0534(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               FlashShouldOnlyPulse;                                     // 0x0535(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               HideOnSpawnScreen;                                        // 0x0536(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -52,6 +53,7 @@ public:
 	}
 
 
+	void OnObjectivesCompleted();
 	void ShowPushDefenderAnnouncement();
 	void ShowPushAttackerAnnouncement();
 	void ObjectivesChanged();

@@ -14,6 +14,16 @@ namespace SDK
 //Parameters
 //---------------------------------------------------------------------------
 
+// Function BP_DeployableBallista.BP_DeployableBallista_C.ClearFireEffects
+struct ABP_DeployableBallista_C_ClearFireEffects_Params
+{
+};
+
+// Function BP_DeployableBallista.BP_DeployableBallista_C.OnRep_Fire
+struct ABP_DeployableBallista_C_OnRep_Fire_Params
+{
+};
+
 // Function BP_DeployableBallista.BP_DeployableBallista_C.OnRep_Ammo
 struct ABP_DeployableBallista_C_OnRep_Ammo_Params
 {
@@ -138,6 +148,11 @@ struct ABP_DeployableBallista_C_ReceiveAnyDamage_Params
 
 // Function BP_DeployableBallista.BP_DeployableBallista_C.ReplenishAmmo
 struct ABP_DeployableBallista_C_ReplenishAmmo_Params
+{
+};
+
+// Function BP_DeployableBallista.BP_DeployableBallista_C.ReceiveDestroyed
+struct ABP_DeployableBallista_C_ReceiveDestroyed_Params
 {
 };
 

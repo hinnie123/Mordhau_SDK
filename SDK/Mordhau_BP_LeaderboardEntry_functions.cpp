@@ -12,6 +12,23 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_LeaderboardEntry.BP_LeaderboardEntry_C.RefreshAvatar
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_LeaderboardEntry_C::RefreshAvatar()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_LeaderboardEntry.BP_LeaderboardEntry_C.RefreshAvatar");
+
+	UBP_LeaderboardEntry_C_RefreshAvatar_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BP_LeaderboardEntry.BP_LeaderboardEntry_C.Get_MMRText_ColorAndOpacity_1
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -49,6 +49,11 @@ struct ABP_PushObjectivePoint_C_ShowPushDefenderAnnouncement_Params
 {
 };
 
+// Function BP_PushObjectivePoint.BP_PushObjectivePoint_C.OnObjectivesCompleted
+struct ABP_PushObjectivePoint_C_OnObjectivesCompleted_Params
+{
+};
+
 // Function BP_PushObjectivePoint.BP_PushObjectivePoint_C.ExecuteUbergraph_BP_PushObjectivePoint
 struct ABP_PushObjectivePoint_C_ExecuteUbergraph_BP_PushObjectivePoint_Params
 {

@@ -77,6 +77,7 @@ public:
 	}
 
 
+	void OnBuilt(class AActor* Structure);
 	void HandleTeamKill(class AMordhauPlayerState* KilledBy, class AActor* Agent, float Damage);
 	void OnRep_ReplicatedAmmoBoxCooldown();
 	void WipePlaceables(const struct FName& Key);
@@ -129,6 +130,7 @@ public:
 	void HandleTeamSelect();
 	void ForgivePlayer();
 	void ReceiveOfferToForgive(class AMordhauPlayerState* Candidate);
+	void DoBattlecry();
 	void ExecuteUbergraph_BP_MordhauPlayerController(int EntryPoint);
 };
 

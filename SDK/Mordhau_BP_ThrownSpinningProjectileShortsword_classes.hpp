@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ThrownSpinningProjectileShortsword.BP_ThrownSpinningProjectileShortsword_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_ThrownSpinningProjectileShortsword_C : public ABP_ThrownWeaponProjectile_C
 {
 public:

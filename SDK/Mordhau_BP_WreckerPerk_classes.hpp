@@ -13,7 +13,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WreckerPerk.BP_WreckerPerk_C
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0068 - 0x0068)
 class UBP_WreckerPerk_C : public UBP_Perk_C
 {
 public:
